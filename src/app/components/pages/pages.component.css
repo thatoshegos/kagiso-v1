@@ -1,0 +1,60 @@
+.bg-white {
+  background-color: white !important;
+}
+.contact {
+  width: 480px;
+  height: 400px;
+  background-color: lightblue;
+  margin-left: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 8px 8px 8px;
+  margin-top: 0px;
+  margin-left: 30px;
+
+  color: black;
+}
+.johansberg-contact.panel-body {
+  padding: 10px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.send-us-email {
+  width: 480px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.panel-default {
+  border: 2px solid darkcyan;
+}
+.panel-heading {
+  background-color: darkcyan;
+  color: white;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
