@@ -4,7 +4,7 @@
     <div
       class="swiper-slide cover-background"
       *ngFor="let slider of sliders"
-      style="background-image:url('assets/images/goblet-hero-only.jpg');"
+      [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
     >
       <div class="opacity-extra-medium"></div>
       <div
