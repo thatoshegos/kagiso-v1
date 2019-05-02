@@ -85,11 +85,28 @@
         <div class="col-sm-6 col-md-6 bg-white">
           <div class="cap-town-contact panel panel-default">
             <div class="panel-heading">Cape Town</div>
-            <div class="panel-body"></div>
+            <div class="panel-body">
+              <p>
+                <span>Telephone: {{ page.acf.name }}</span
+                ><br />
+                <span>Fax: {{ page.acf.fax }}</span
+                ><br />
+                <span>Email:{{ page.acf.email }}</span>
+              </p>
+              <p>
+                <span>Physical Address:</span><br />
+                {{ page.acf.physical_address }}<br />
+                <a [href]="page.acf.google_map_url" class="google-map">Map</a
+                ><br />
+                <span>Postal Address:</span><br />
+
+                {{ page.acf.postal_address }}
+              </p>
+            </div>
           </div>
 
           <div class="johansberg-contact panel panel-default">
-            <div class="panel-heading">{{ page.acf.name }}</div>
+            <div class="panel-heading">{{ page.acf.johannesburg_name }}</div>
             <div class="panel-body">
               <p>
                 <span>Telephone: {{ page.acf.johannesburg_telephone }}</span
@@ -101,6 +118,11 @@
               <p>
                 <span>Physical Address:</span><br />
                 {{ page.acf.johannesburg_physical_address }}<br />
+                <a
+                  [href]="page.acf.johannesburg_google_map_url"
+                  class="google-map"
+                  >Map</a
+                ><br />
                 <span>Postal Address:</span><br />
                 {{ page.acf.postal_address }}
               </p>

@@ -19,10 +19,10 @@ export class PagesComponent implements OnInit {
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.formStatus = true;
-              console.log(this.page);
+              // console.log(typeof this.page);
             });
           }
-          // console.log(this.page);
+          // console.log(typeof this.page.formStatus);
         });
       }
     });
