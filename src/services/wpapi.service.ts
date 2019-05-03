@@ -20,13 +20,10 @@ export class WPAPIService {
     return this.http.get(`${this.menuEndPoints}/menus/header-menu-second`);
   }
   getPages(id) {
-    const headers = new HttpHeaders().set(
-      "Content-Type",
-      "text/plain; charset=utf-8"
-    );
-    return this.http.get(`${this.pagesEndPoint}/posts/${id}`, {
-      headers
-      // responseType: "text"
-    });
+    // const headers = new HttpHeaders().set(
+    //   "Content-Type",
+    //   "text/plain; charset=utf-8"
+    // );
+    return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
   }
 }

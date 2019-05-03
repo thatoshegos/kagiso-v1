@@ -9,6 +9,7 @@ import { WPAPIService } from "../../../services/wpapi.service";
 })
 export class PagesComponent implements OnInit {
   page = null;
+  contactUs = false;
   constructor(private wpservice: WPAPIService, private route: ActivatedRoute) {
     route.params.subscribe(val => {
       if (val.ID) {
@@ -19,14 +20,26 @@ export class PagesComponent implements OnInit {
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.formStatus = true;
-              // console.log(typeof this.page);
+              this.contactUs = true;
+              console.log(this.page);
+            });
+          } else if (this.page.id == 10) {
+            this.page.formStatus = true;
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.aboutStatus = true;
+              this.contactUs = true;
+              console.log(this.page);
             });
           }
+
           // console.log(typeof this.page.formStatus);
         });
       }
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("SDf");
+  }
 }

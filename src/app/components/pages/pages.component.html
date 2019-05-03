@@ -1,11 +1,27 @@
-<br /><br /><br /><br /><br />
+<section
+  class="wow fadeIn no-padding main-slider mobile-height top-space"
+  *ngIf="page && page.aboutStatus"
+>
+  <app-slider [sliders]="page.acf.home_slider"></app-slider>
+</section>
+<div class="container" *ngIf="page && page.aboutStatus">
+  <section style="padding:0px;">
+    <app-unconventional-thinking
+      [unconventionalThink]="page.acf"
+    ></app-unconventional-thinking>
+  </section>
+</div>
+
 <div class="container">
-  <div class="row" *ngIf="page && !page.formStatus">
-    <div [class]="col - md - 12">
-      <h3>{{ page.title.rendered }}</h3>
-      <p [innerHTML]="page.content.rendered"></p>
+  <br /><br /><br /><br /><br />
+
+  <!-- <div class="row" *ngIf="page && page.aboutStatus">
+    <div >
+    
+      <h3>"asdasdadasdads"</h3>
+      <p [innerHTML]="page.acf.funds_designed_content"></p>
     </div>
-  </div>
+  </div> -->
 
   <!--  contact Us   -->
   <div class="row" *ngIf="page && page.formStatus">

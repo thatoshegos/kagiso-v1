@@ -18,6 +18,7 @@ import { PostComponent } from "./components/post/post.component";
 import { HomeComponent } from "./components/home/home.component";
 
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+import { UnconventionalThinkingComponent } from './components/pages/unconventional-thinking/unconventional-thinking.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
     FooterComponent,
     PagesComponent,
     PostComponent,
-    HomeComponent
+    HomeComponent,
+    UnconventionalThinkingComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

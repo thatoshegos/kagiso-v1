@@ -9,6 +9,8 @@ export class FundRangeComponent implements OnInit {
   @Input() FundRange;
   saFund = { title: "", desc: "", images: [] };
   glFund = { title: "", desc: "", images: [] };
+  viewChangeflag = false;
+  viewSChangeFlag = true;
   animation = ["fade-left", "fade-up", "fade-left", "fade-right"];
   constructor() {}
 
@@ -19,8 +21,16 @@ export class FundRangeComponent implements OnInit {
     this.glFund.title = this.FundRange.acf.global_funds_title;
     this.glFund.desc = this.FundRange.acf.global_funds_discription;
     this.glFund.images = this.FundRange.acf.global_funds_image;
-    console.log("----");
-    console.log(this.saFund);
-    console.log(this.glFund);
+    // console.log("----");
+    // console.log(this.saFund);
+    // console.log(this.glFund);
+  }
+  changeView() {
+    this.viewChangeflag = false;
+    this.viewSChangeFlag = true;
+  }
+  changeGView() {
+    this.viewSChangeFlag = false;
+    this.viewChangeflag = true;
   }
 }
