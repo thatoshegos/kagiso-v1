@@ -1,6 +1,6 @@
-<div class="swiper-full-screen swiper-container width-100 white-move">
+<!-- <div class="swiper-full-screen swiper-container width-100 white-move">
   <div class="swiper-wrapper">
-    <!-- start slider item -->
+    
     <div
       class="swiper-slide cover-background"
       *ngFor="let slider of sliders"
@@ -25,9 +25,9 @@
         </div>
       </div>
     </div>
-    <!-- end slider item -->
+ 
   </div>
-  <!-- Add Pagination -->
+ 
   <div
     class="swiper-pagination swiper-pagination-white swiper-full-screen-pagination"
   ></div>
@@ -38,4 +38,36 @@
       ><img src="assets/images/arrow-dropdown-large-white.svg"
     /></a>
   </div>
-</div>
+</div> -->
+
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+    <div
+      *ngFor="let slider of sliders; let i = index"
+      class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+      [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
+      style="width: 1295px;"
+    >
+      <div class="opacity-extra-medium"></div>
+      <div
+        class="container position-relative one-fourth-screen xs-height-400px"
+      >
+        <div class="slider-typography text-center">
+          <div class="slider-text-middle-main">
+            <div class="slider-text-bottom">
+              <h1><span>Deep</span><span>consideration</span></h1>
+              <div class="btn-dual">
+                <a href="#" target="_blank" class="more-btn">START INVESTNG</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>

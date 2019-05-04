@@ -20,7 +20,8 @@ import { HomeComponent } from "./components/home/home.component";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { UnconventionalThinkingComponent } from "./components/pages/unconventional-thinking/unconventional-thinking.component";
 import { CommonComponent } from "./components/pages/common/common.component";
-import { InvestmentApprochAboutComponent } from './components/pages/investment-approch-about/investment-approch-about.component';
+import { InvestmentApprochAboutComponent } from "./components/pages/investment-approch-about/investment-approch-about.component";
+import { SwiperModule } from "angular2-useful-swiper";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { InvestmentApprochAboutComponent } from './components/pages/investment-a
     CommonComponent,
     InvestmentApprochAboutComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],
   bootstrap: [AppComponent]
 })
