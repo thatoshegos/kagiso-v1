@@ -3,34 +3,34 @@
   data-wow-delay="0.6s"
   data-aos="fade-up"
 >
-  <div class="row" *ngFor="let investment of investments">
+  <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="bg-white text-center">
-        <p>{{ investment.heading }}</p>
+        <h2 class="section-heading">Investment Approach</h2>
       </div>
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="bg-white text-center">
-        <p class="p-text" [innerHTML]="investment.idea"></p>
-        <a [href]="" class="btn btn-success btn-lg">Read More..</a>
+      <div class="main-content" *ngFor="let investment of investments">
+        <div class="bg-white text-center" style="margin-top:-1%;">
+          <p class="heading">{{ investment.heading }}</p>
+          <p class="p-text idea" [innerHTML]="investment.idea"></p>
+          <a [href]="" class="btn btn-success btn-lg btn-block read-more"
+            >Read More...</a
+          >
+          <iframe
+            width="100%"
+            height="615"
+            src="https://www.youtube.com/embed/b2q5OFtxm6A"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p
+            class="p-text"
+            [innerHTML]="investment.about_us_investment_approach_content"
+          ></p>
+        </div>
       </div>
     </div>
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="bg-white text-center">
-        <iframe
-          width="100%"
-          height="615"
-          src="https://www.youtube.com/embed/ukzFI9rgwfU"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <p
-          class="p-text"
-          [innerHTML]="investment.about_us_investment_approach_content"
-        ></p>
-      </div>
-    </div>
-    <div class="col-md-12 col-sm-12 col-xs-12" style="height:20px"></div>
   </div>
 </div>
