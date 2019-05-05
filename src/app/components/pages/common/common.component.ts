@@ -7,6 +7,13 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CommonComponent implements OnInit {
   @Input() fundDesign;
+  @Input() independent;
+  @Input() owners;
+  @Input() history;
+  @Input() our_culture;
+  @Input() responsible;
+  @Input() social_corporate;
+
   constructor() {}
 
   ngOnInit() {}

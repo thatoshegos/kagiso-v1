@@ -2,3 +2,18 @@
   padding: 20px;
   text-align: justify;
 }
+.i-text {
+  padding: 20px;
+  text-align: justify;
+}
+.i-text p {
+  padding: 10px;
+}
+
+.o-text {
+  padding: 20px;
+  text-align: justify;
+}
+.o-text p {
+  padding: 10px;
+}

@@ -40,23 +40,30 @@
 
   <div
     class="row padding-40px-tb bg-medium-gray-light margin-40px-top margin-100px-lr xs-margin-40px-lr text-center"
+    *ngIf="fImage"
   >
     <div
       class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInLeft"
       data-wow-delay="0.6s"
       data-aos="fade-right"
+      *ngFor="let fImage of fadviser.financial_adviser_image"
     >
-      <a href="javascript:void(0);"
-        ><img src="assets/images/corporate-brochure.jpg"
-      /></a>
+      <a [href]="fImage.image1_url"><img [src]="fImage.image1.url"/></a>
     </div>
-    <div
+    <!-- <div
+      class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInLeft"
+      data-wow-delay="0.6s"
+      data-aos="fade-right"
+    >
+      <a href=""><img src="assets/images/corporate-brochure.jpg"/></a>
+    </div> -->
+    <!-- <div
       class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp"
       data-wow-delay="0.6s"
     >
       <a href="javascript:void(0);"><img src="assets/images/up-report.jpg"/></a>
-    </div>
-    <div
+    </div> -->
+    <!-- <div
       class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInRight"
       data-wow-delay="0.6s"
       data-aos="fade-right"
@@ -64,6 +71,6 @@
       <a href="javascript:void(0);"
         ><img src="assets/images/annual-report.jpg"
       /></a>
-    </div>
+    </div> -->
   </div>
 </div>

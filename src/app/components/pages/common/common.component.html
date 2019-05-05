@@ -5,12 +5,66 @@
 >
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="bg-white text-center">
-      <h2>{{ fundDesign.funds_designed_title }}</h2>
+      <h2 *ngIf="fundDesign">{{ fundDesign.funds_designed_title }}</h2>
+      <h2 *ngIf="independent">
+        {{ independent.independent_thinkers_title }}
+      </h2>
+      <h2 *ngIf="owners">
+        {{ owners.ownership_structure_title }}
+      </h2>
+      <h2 *ngIf="history">
+        {{ history.our_history_title }}
+      </h2>
+      <h2 *ngIf="our_culture">{{ our_culture.our_culture_title }}</h2>
+      <h2 *ngIf="responsible">{{ responsible.responsible_investing_title }}</h2>
+      <h2 *ngIf="social_corporate">
+        {{ social_corporate.social_investment_title }}
+      </h2>
     </div>
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="bg-white text-center">
-      <p class="p-text" [innerHTML]="fundDesign.funds_designed_content"></p>
+      <p
+        *ngIf="fundDesign"
+        class="p-text"
+        [innerHTML]="fundDesign.funds_designed_content"
+      ></p>
+      <p
+        *ngIf="independent"
+        class="i-text"
+        [innerHTML]="independent.independent_thinkers_content"
+      ></p>
+      <p
+        *ngIf="owners"
+        class="o-text"
+        [innerHTML]="owners.ownership_structure_content"
+      ></p>
+      <a [href]="" class="btn btn-success btn-lg" *ngIf="owners"
+        >Read More...</a
+      >
+      <p
+        *ngIf="history"
+        class="o-text"
+        [innerHTML]="history.our_history_content"
+      ></p>
+      <p
+        *ngIf="our_culture"
+        class="o-text"
+        [innerHTML]="our_culture.our_culture_content"
+      ></p>
+      <p
+        *ngIf="responsible"
+        class="o-text"
+        [innerHTML]="responsible.responsible_investing_content"
+      ></p>
+      <p
+        *ngIf="social_corporate"
+        class="o-text"
+        [innerHTML]="social_corporate.social_investment_content"
+      ></p>
+      <!-- <div class="second-slide" *ngIf="social_corporate">
+        <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
+      </div> -->
     </div>
   </div>
   <!-- <div class="col-md-12 col-sm-12 col-xs-12">

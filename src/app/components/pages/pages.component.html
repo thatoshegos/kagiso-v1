@@ -18,6 +18,38 @@
       [investments]="page.acf.about_us_investment_approach"
     ></app-investment-approch-about>
   </section>
+  <section style="padding:0px;">
+    <app-common [independent]="page.acf"></app-common>
+  </section>
+  <section style="padding:0px;">
+    <app-common [owners]="page.acf"></app-common>
+  </section>
+  <section
+    style="padding:0px;"
+    [style]="
+      page.acf.our_history_title
+        ? backgrond
+        : url('assets/images/goblet-hero-only.jpg')
+    "
+  >
+    <app-common [history]="page.acf"></app-common>
+  </section>
+  <section
+    style="padding:0px;"
+    [style]="
+      page.acf.our_history_title
+        ? backgrond
+        : url('assets/images/goblet-hero-only.jpg')
+    "
+  >
+    <app-common [our_culture]="page.acf"></app-common>
+  </section>
+  <section class="response" style="padding:0px;">
+    <app-common [responsible]="page.acf"></app-common>
+  </section>
+  <section class="social-corporate" style="padding:0px;">
+    <app-common [social_corporate]="page.acf"></app-common>
+  </section>
 </div>
 
 <div class="container">

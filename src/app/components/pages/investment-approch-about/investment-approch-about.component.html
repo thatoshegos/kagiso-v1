@@ -14,6 +14,11 @@
         <div class="bg-white text-center" style="margin-top:-1%;">
           <p class="heading">{{ investment.heading }}</p>
           <p class="p-text idea" [innerHTML]="investment.idea"></p>
+
+          <p
+            class="p-text"
+            [innerHTML]="investment.about_us_investment_approach_content"
+          ></p>
           <a [href]="" class="btn btn-success btn-lg btn-block read-more"
             >Read More...</a
           >
@@ -25,10 +30,6 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          <p
-            class="p-text"
-            [innerHTML]="investment.about_us_investment_approach_content"
-          ></p>
         </div>
       </div>
     </div>
