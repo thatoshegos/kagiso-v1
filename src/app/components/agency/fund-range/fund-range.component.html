@@ -51,7 +51,7 @@
             {{ image.south_african_fund_image_title }}
           </div>
           <div class="fund-range-graph bg-light-green margin-30px-bottom">
-            <img [src]="image.south_african_fund_image_uploader.url" />
+             <a [href]="image.south_african_fund_url"><img [src]="image.south_african_fund_image_uploader.url" /></a>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
             {{ image.global_funds_image_title }}
           </div>
           <div class="fund-range-graph bg-light-green margin-30px-bottom">
-            <img [src]="image.global_funds_image_uploader.url" />
+             <a [href]="image.global_funds_url"><img [src]="image.global_funds_image_uploader.url" /></a>
           </div>
         </div>
       </div>
