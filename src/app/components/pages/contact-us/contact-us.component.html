@@ -1,0 +1,129 @@
+<div class="container">
+  <!--  contact Us   -->
+  <div class="row" *ngIf="page">
+    <div
+      class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
+      data-wow-delay="0.6s"
+    >
+      <div class="bg-white text-center">
+        <h2>Contact Us</h2>
+        <div
+          class="padding-45px-all sm-padding-15px-all inner-match-height margin-45px-lr xs-margin-20px-lr padding-100px-lr xs-no-padding-lr"
+        >
+          <p class="padding-30px-top">
+            We offer a range of complementary equity and multi-asset class unit
+            trust funds that are clearly differentiated by expected risk and
+            return characteristics
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-sm-12 col-md-12   sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp "
+    >
+      <div class="bg-white">
+        <div class="col-sm-6 col-md-6 bg-white">
+          <div class="contact">
+            <br /><br />
+            <h1>
+              <span>Phone us on:<br />{{ page.acf.phone }}</span>
+            </h1>
+            <h1>
+              <span>Fax us on: <br />{{ page.acf.fax }}</span>
+            </h1>
+            <h1>
+              <span>Email us on: <br />{{ page.acf.email_us_on }}</span>
+            </h1>
+          </div>
+          <div class="send-us-email panel panel-default">
+            <div class="panel-heading">Send us an Email</div>
+            <div class="panel-body">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your name.."
+                />
+
+                <label for="email">Country</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <label for="lname">Area of interest</label>
+                <input
+                  type="text"
+                  id="aoi"
+                  name="aoi"
+                  placeholder="Area Of Interest.."
+                />
+
+                <label for="subject">Comment</label>
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Write something.."
+                  style="height:80px"
+                ></textarea>
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 bg-white">
+          <div class="cap-town-contact panel panel-default">
+            <div class="panel-heading">Cape Town</div>
+            <div class="panel-body">
+              <p>
+                <span>Telephone: {{ page.acf.name }}</span
+                ><br />
+                <span>Fax: {{ page.acf.fax }}</span
+                ><br />
+                <span>Email:{{ page.acf.email }}</span>
+              </p>
+              <p>
+                <span>Physical Address:</span><br />
+                {{ page.acf.physical_address }}<br />
+                <a [href]="page.acf.google_map_url" class="google-map">Map</a
+                ><br />
+                <span>Postal Address:</span><br />
+
+                {{ page.acf.postal_address }}
+              </p>
+            </div>
+          </div>
+
+          <div class="johansberg-contact panel panel-default">
+            <div class="panel-heading">{{ page.acf.johannesburg_name }}</div>
+            <div class="panel-body">
+              <p>
+                <span>Telephone: {{ page.acf.johannesburg_telephone }}</span
+                ><br />
+                <span>Fax: {{ page.acf.johannesburg_fax }}</span
+                ><br />
+                <span>Email:{{ page.acf.johannesburg_email }}</span>
+              </p>
+              <p>
+                <span>Physical Address:</span><br />
+                {{ page.acf.johannesburg_physical_address }}<br />
+                <a
+                  [href]="page.acf.johannesburg_google_map_url"
+                  class="google-map"
+                  >Map</a
+                ><br />
+                <span>Postal Address:</span><br />
+                {{ page.acf.postal_address }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  end contact us-->
+</div>

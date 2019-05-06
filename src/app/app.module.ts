@@ -22,6 +22,7 @@ import { UnconventionalThinkingComponent } from "./components/pages/unconvention
 import { CommonComponent } from "./components/pages/common/common.component";
 import { InvestmentApprochAboutComponent } from "./components/pages/investment-approch-about/investment-approch-about.component";
 import { SwiperModule } from "angular2-useful-swiper";
+import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SwiperModule } from "angular2-useful-swiper";
     HomeComponent,
     UnconventionalThinkingComponent,
     CommonComponent,
-    InvestmentApprochAboutComponent
+    InvestmentApprochAboutComponent,
+    ContactUsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

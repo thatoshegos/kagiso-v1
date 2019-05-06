@@ -56,11 +56,18 @@
           <div class="slider-text-middle-main">
             <div class="slider-text-bottom">
               <h1>
-                <span>{{ slider.image_title }}</span>
-				<span>{{ slider.image_title1 }}</span>
+                <span>{{
+                  slider.image_title ? slider.image_title : slider.slide_1.title
+                }}</span>
+                <span>{{ slider.image_title1 }}</span>
               </h1>
               <div class="btn-dual">
-                <a href="{{slider.image_url}}" target="_blank" class="more-btn">{{ slider.image_title2 }}</a>
+                <a
+                  href="{{ slider.image_url }}"
+                  target="_blank"
+                  class="more-btn"
+                  >{{ slider.image_title2 }}</a
+                >
               </div>
             </div>
           </div>

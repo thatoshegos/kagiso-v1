@@ -20,6 +20,9 @@
       <h2 *ngIf="social_corporate">
         {{ social_corporate.social_investment_title }}
       </h2>
+      <h2 *ngIf="transformation">
+        {{ transformation.committed_to_transformation_title }}
+      </h2>
     </div>
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12">
@@ -62,6 +65,11 @@
         class="o-text"
         [innerHTML]="social_corporate.social_investment_content"
       ></p>
+      <p
+        *ngIf="transformation"
+        class="o-text"
+        [innerHTML]="transformation.committed_to_transformation_content"
+      ></p>
       <!-- <div class="second-slide" *ngIf="social_corporate">
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
       </div> -->
@@ -79,5 +87,5 @@
       ></iframe>
     </div>
   </div> -->
-  <div class="col-md-12 col-sm-12 col-xs-12" style="height:20px"></div>
+  <!-- <div class="col-md-12 col-sm-12 col-xs-12" style="height:20px"></div> -->
 </div>

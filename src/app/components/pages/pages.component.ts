@@ -15,16 +15,18 @@ export class PagesComponent implements OnInit {
       if (val.ID) {
         this.wpservice.pages(`?slug=${val.ID}`).subscribe(page => {
           this.page = page[0];
-          if (this.page.id == 20) {
-            this.page.formStatus = true;
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.formStatus = true;
-              this.contactUs = true;
-              console.log(this.page);
-            });
-          } else if (this.page.id == 10) {
-            this.page.formStatus = true;
+          console.log(this.page);
+          // if (this.page.id == 20) {
+          //   this.page.formStatus = true;
+          //   // this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+          //   //   this.page = page;
+          //   //   this.page.formStatus = true;
+          //   //   this.contactUs = true;
+          //   //   console.log(this.page);
+          //   // });
+          // }
+          if (this.page.id == 10) {
+            //this.page.formStatus = true;
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.aboutStatus = true;

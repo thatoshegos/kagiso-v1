@@ -13,6 +13,7 @@ export class CommonComponent implements OnInit {
   @Input() our_culture;
   @Input() responsible;
   @Input() social_corporate;
+  @Input() transformation;
 
   constructor() {}
 

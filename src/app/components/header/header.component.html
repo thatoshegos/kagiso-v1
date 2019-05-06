@@ -26,11 +26,9 @@
             <div class="col-md-12">
               <ul class="nav navbar-nav pull-right" *ngIf="menuItems.primary">
                 <li *ngFor="let menu of menuItems.primary.items">
-                  <a
-                    [routerLink]="'/page/' + menu.slug"
-                    routerLinkActive="active"
-                    >{{ menu.title }}</a
-                  >
+                  <a [routerLink]="'/' + menu.slug" routerLinkActive="active">{{
+                    menu.title
+                  }}</a>
                 </li>
               </ul>
             </div>
@@ -64,7 +62,7 @@
                   <!-- start menu item -->
                   <li *ngFor="let menu of menuItems.secondry.items">
                     <a
-                      [routerLink]="'/page/' + menu.slug"
+                      [routerLink]="'/' + menu.slug"
                       routerLinkActive="active"
                       >{{ menu.title }}</a
                     >
