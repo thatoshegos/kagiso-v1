@@ -58,3 +58,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+.full-background {
+  background: url("/assets/images/hero.jpg");
+}
+.padding-30px-top {
+  padding: 0px !important;
+}
+.how-to-invest {
+  padding: 0px !important;
+}

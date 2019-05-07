@@ -15,7 +15,7 @@ export class PagesComponent implements OnInit {
       if (val.ID) {
         this.wpservice.pages(`?slug=${val.ID}`).subscribe(page => {
           this.page = page[0];
-          console.log(this.page);
+          //console.log(this.page);
           // if (this.page.id == 20) {
           //   this.page.formStatus = true;
           //   // this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
@@ -30,6 +30,13 @@ export class PagesComponent implements OnInit {
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.aboutStatus = true;
+              this.contactUs = true;
+              //console.log(this.page);
+            });
+          } else if (this.page.slug == "sharia-investor") {
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.saria = true;
               this.contactUs = true;
               console.log(this.page);
             });

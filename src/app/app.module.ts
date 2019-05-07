@@ -23,6 +23,7 @@ import { CommonComponent } from "./components/pages/common/common.component";
 import { InvestmentApprochAboutComponent } from "./components/pages/investment-approch-about/investment-approch-about.component";
 import { SwiperModule } from "angular2-useful-swiper";
 import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
+import { SariaCommonComponent } from './components/pages/saria-common/saria-common.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ContactUsComponent } from './components/pages/contact-us/contact-us.com
     UnconventionalThinkingComponent,
     CommonComponent,
     InvestmentApprochAboutComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SariaCommonComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

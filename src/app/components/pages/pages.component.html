@@ -24,24 +24,10 @@
   <section style="padding:0px;">
     <app-common [owners]="page.acf"></app-common>
   </section>
-  <section
-    style="padding:0px;"
-    [style]="
-      page.acf.our_history_title
-        ? backgrond
-        : url('assets/images/goblet-hero-only.jpg')
-    "
-  >
+  <section style="padding:0px;">
     <app-common [history]="page.acf"></app-common>
   </section>
-  <section
-    style="padding:0px;"
-    [style]="
-      page.acf.our_history_title
-        ? backgrond
-        : url('assets/images/goblet-hero-only.jpg')
-    "
-  >
+  <section style="padding:0px;">
     <app-common [our_culture]="page.acf"></app-common>
   </section>
   <section class="response" style="padding:0px;">
@@ -53,19 +39,38 @@
       <app-slider [sliders]="page.acf.corporate_slider"></app-slider>
     </div>
   </section>
-  <section class="transformation">
+  <section class="transformation-section">
     <app-common [transformation]="page.acf"></app-common>
   </section>
 </div>
 
-<div class="container">
-  <br /><br /><br /><br /><br />
-
-  <!-- <div class="row" *ngIf="page && page.aboutStatus">
-    <div >
-    
-      <h3>"asdasdadasdads"</h3>
-      <p [innerHTML]="page.acf.funds_designed_content"></p>
+<!-- Saria Page section -->
+<div *ngIf="page" [ngStyle]="{ display: page.saria ? block : none }">
+  <section
+    class="wow fadeIn no-padding main-slider mobile-height top-space"
+    *ngIf="page && page.saria"
+  >
+    <app-slider [sliders]="page.acf.home_slider"></app-slider>
+  </section>
+  <div class="container">
+    <section class="wow fadeIn" *ngIf="page && page.saria">
+      <app-feature-box [DataSets]="page"></app-feature-box>
+    </section>
+  </div>
+  <section class="full-background" *ngIf="page && page.saria">
+    <div class="container">
+      <app-saria-common></app-saria-common>
     </div>
-  </div> -->
+  </section>
+  <div class="container" *ngIf="page && page.saria">
+    <section>
+      <app-fund-range [FundRange]="page"></app-fund-range>
+    </section>
+    <section class="how-to-invest">
+      <app-invest-slider
+        [dataset]="page"
+        style="padding:0px;"
+      ></app-invest-slider>
+    </section>
+  </div>
 </div>
