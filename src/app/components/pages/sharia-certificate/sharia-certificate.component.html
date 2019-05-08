@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row" *ngIf="shariaCerticate">
+    <div class="col-md-12 col-sm-12">
+      <div
+        class="col-md-4"
+        *ngFor="let sharia of shariaCerticate.acf.sharia_image"
+      >
+        <a [href]="sharia.sharia_image.link">
+          <img [src]="sharia.sharia_image.url" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

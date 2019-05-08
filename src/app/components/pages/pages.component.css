@@ -61,6 +61,8 @@ input[type="submit"]:hover {
 
 .full-background {
   background: url("/assets/images/hero.jpg");
+  min-height: 500px;
+  padding: 60px;
 }
 .padding-30px-top {
   padding: 0px !important;

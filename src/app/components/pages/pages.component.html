@@ -59,18 +59,58 @@
   </div>
   <section class="full-background" *ngIf="page && page.saria">
     <div class="container">
-      <app-saria-common></app-saria-common>
+      <app-saria-common [reba]="page"></app-saria-common>
     </div>
   </section>
   <div class="container" *ngIf="page && page.saria">
-    <section>
+    <section class="bg-white" style="margin-top:20px;">
       <app-fund-range [FundRange]="page"></app-fund-range>
     </section>
-    <section class="how-to-invest">
+    <section class="how-to-invest bg-white" style="margin-top:20px;">
       <app-invest-slider
         [dataset]="page"
         style="padding:0px;"
       ></app-invest-slider>
     </section>
   </div>
+  <section
+    class="full-background"
+    *ngIf="page && page.saria"
+    style="margin-top:20px;"
+  >
+    <div class="container">
+      <app-saria-common [shariaInvest]="page"></app-saria-common>
+    </div>
+  </section>
+  <section
+    class="full-background"
+    *ngIf="page && page.saria"
+    style="margin-top:20px;"
+  >
+    <div class="container">
+      <app-saria-common [investProcess]="page"></app-saria-common>
+    </div>
+  </section>
+  <section
+    class="full-background"
+    *ngIf="page && page.saria"
+    style="margin-top:20px;"
+  >
+    <div class="container">
+      <app-saria-common [screenProcess]="page"></app-saria-common>
+    </div>
+  </section>
+
+  <section *ngIf="page && page.saria">
+    <div class="container">
+      <app-sharia-certificate [shariaCerticate]="page"></app-sharia-certificate>
+    </div>
+  </section>
+  <section *ngIf="page && page.saria">
+    <div class="container">
+      <app-thought-financial-adviser
+        [financialAdviser]="page"
+      ></app-thought-financial-adviser>
+    </div>
+  </section>
 </div>

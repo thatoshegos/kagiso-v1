@@ -24,6 +24,8 @@ import { InvestmentApprochAboutComponent } from "./components/pages/investment-a
 import { SwiperModule } from "angular2-useful-swiper";
 import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
 import { SariaCommonComponent } from './components/pages/saria-common/saria-common.component';
+import { ShariaCertificateComponent } from './components/pages/sharia-certificate/sharia-certificate.component';
+import { ThoughtFinancialAdviserComponent } from './components/pages/thought-financial-adviser/thought-financial-adviser.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { SariaCommonComponent } from './components/pages/saria-common/saria-comm
     CommonComponent,
     InvestmentApprochAboutComponent,
     ContactUsComponent,
-    SariaCommonComponent
+    SariaCommonComponent,
+    ShariaCertificateComponent,
+    ThoughtFinancialAdviserComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

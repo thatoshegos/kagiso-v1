@@ -1,38 +1,46 @@
 <div
-  class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
+  class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top "
   data-wow-delay="0.6s"
   data-aos="fade-up"
 >
   <div
-    class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2"
+    class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 "
   >
     <div class="bg-white text-center">
-      <h2>Reba</h2>
+      <h2 *ngIf="reba">{{ reba.acf.what_is_riba }}</h2>
+      <h2 *ngIf="shariaInvest">{{ shariaInvest.acf.sharia_title }}</h2>
+      <h2 *ngIf="investProcess">
+        {{ investProcess.acf.investment_process_title }}
+      </h2>
+      <h2 *ngIf="screenProcess">
+        {{ screenProcess.acf.screening_process_title }}
+      </h2>
     </div>
   </div>
   <div
     class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2"
   >
     <div class="bg-white text-center">
-      <p class="p-text">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-        of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of
-        ethics, very popular during the Renaissance. The first line of Lorem
-        Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-        1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is
-        reproduced below for those interested. Sections 1.10.32 and 1.10.33 from
-        "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-        exact original form, accompanied by English versions from the 1914
-        translation by H. Rackham.
-      </p>
-
+      <p
+        class="p-text"
+        *ngIf="reba"
+        [innerHTML]="reba.acf.what_is_riba_content"
+      ></p>
+      <p
+        class="p-text"
+        *ngIf="shariaInvest"
+        [innerHTML]="shariaInvest.acf.our_sharia_investment_philosophy_content"
+      ></p>
+      <p
+        class="p-text"
+        *ngIf="investProcess"
+        [innerHTML]="investProcess.acf.investment_process_content"
+      ></p>
+      <p
+        class="p-text"
+        *ngIf="screenProcess"
+        [innerHTML]="screenProcess.acf.screening_process_content"
+      ></p>
       <!-- <div class="second-slide" *ngIf="social_corporate">
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
       </div> -->
