@@ -37,7 +37,12 @@ export class PagesComponent implements OnInit {
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.saria = true;
-              this.contactUs = true;
+              //console.log(this.page);
+            });
+          } else if (this.page.slug == "our-funds") {
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.ourfunds = true;
               console.log(this.page);
             });
           }
