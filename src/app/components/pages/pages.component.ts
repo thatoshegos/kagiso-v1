@@ -12,6 +12,7 @@ export class PagesComponent implements OnInit {
   contactUs = false;
   constructor(private wpservice: WPAPIService, private route: ActivatedRoute) {
     route.params.subscribe(val => {
+      console.log(val);
       if (val.ID) {
         this.wpservice.pages(`?slug=${val.ID}`).subscribe(page => {
           this.page = page[0];
@@ -25,27 +26,27 @@ export class PagesComponent implements OnInit {
           //   //   console.log(this.page);
           //   // });
           // }
-          if (this.page.id == 10) {
-            //this.page.formStatus = true;
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.aboutStatus = true;
-              this.contactUs = true;
-              //console.log(this.page);
-            });
-          } else if (this.page.slug == "sharia-investor") {
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.saria = true;
-              //console.log(this.page);
-            });
-          } else if (this.page.slug == "our-funds") {
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.ourfunds = true;
-              console.log(this.page);
-            });
-          }
+          // if (this.page.id == 10) {
+          //   //this.page.formStatus = true;
+          //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+          //     this.page = page;
+          //     this.page.aboutStatus = true;
+          //     this.contactUs = true;
+          //     //console.log(this.page);
+          //   });
+          // } else if (this.page.slug == "sharia-investor") {
+          //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+          //     this.page = page;
+          //     this.page.saria = true;
+          //     //console.log(this.page);
+          //   });
+          // } else if (this.page.slug == "our-funds") {
+          //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+          //     this.page = page;
+          //     this.page.ourfunds = true;
+          //     console.log(this.page);
+          //   });
+          // }
 
           // console.log(typeof this.page.formStatus);
         });

@@ -7,19 +7,27 @@ import { ContactUsComponent } from "./components/pages/contact-us/contact-us.com
 const routes: Routes = [
   {
     path: "",
-    pathMatch: "full",
-    component: HomeComponent
+    redirectTo: "/individual-investor/invest-with-us",
+    pathMatch: "full"
   },
   {
     path: "contact-us",
     pathMatch: "full",
     component: ContactUsComponent
   },
+
+  {
+    path: "individual-investor/invest-with-us",
+    pathMatch: "full",
+    component: HomeComponent
+  },
+
   {
     path: "pages/:slug",
     pathMatch: "full",
     component: PagesComponent
   },
+  { path: ":parent/:slug", pathMatch: "full", component: PagesComponent },
   {
     path: ":ID",
     pathMatch: "full",
