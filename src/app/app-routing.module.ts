@@ -15,12 +15,22 @@ const routes: Routes = [
     pathMatch: "full",
     component: ContactUsComponent
   },
+  // {
+  //   path: "sharia-investor",
+  //   pathMatch: "full",
+  //   redirectTo: "/sharia-investor/invest-with-us"
+  // },
 
   {
     path: "individual-investor/invest-with-us",
     pathMatch: "full",
     component: HomeComponent
   },
+  // {
+  //   path: "sharia-investor/invest-with-us",
+  //   pathMatch: "full",
+  //   component: HomeComponent
+  // },
 
   {
     path: "pages/:slug",

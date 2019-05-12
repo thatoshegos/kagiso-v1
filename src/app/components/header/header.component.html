@@ -62,10 +62,25 @@
                   <!-- start menu item -->
                   <li *ngFor="let menu of childrenMenu">
                     <a
+                      *ngIf="
+                        (menu.slug == 'invest-with-us' ||
+                          menu.slug == 'our-funds' ||
+                          menu.slug == 'insights') &&
+                          menu.display;
+                        else elseSection
+                      "
                       [routerLink]="menu.parent + '/' + menu.slug"
                       routerLinkActive="active"
-                      >{{ menu.name }}</a
-                    >
+                      >{{ menu.name }}
+                    </a>
+                    <ng-template #elseSection>
+                      <a
+                        *ngIf="menu.display"
+                        [routerLink]="'/' + menu.slug"
+                        routerLinkActive="active"
+                        >{{ menu.name }}</a
+                      >
+                    </ng-template>
                   </li>
                 </ul>
               </div>

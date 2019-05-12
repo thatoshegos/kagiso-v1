@@ -26,15 +26,16 @@ export class PagesComponent implements OnInit {
           //   //   console.log(this.page);
           //   // });
           // }
-          // if (this.page.id == 10) {
-          //   //this.page.formStatus = true;
-          //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-          //     this.page = page;
-          //     this.page.aboutStatus = true;
-          //     this.contactUs = true;
-          //     //console.log(this.page);
-          //   });
-          // } else if (this.page.slug == "sharia-investor") {
+          if (this.page.id == 10) {
+            //this.page.formStatus = true;
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.aboutStatus = true;
+              this.contactUs = true;
+              //console.log(this.page);
+            });
+          }
+          //else if (this.page.slug == "sharia-investor") {
           //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
           //     this.page = page;
           //     this.page.saria = true;

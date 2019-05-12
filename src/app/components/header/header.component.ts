@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       name: "Sharia Investor",
-      slug: "sharia-nvestor"
+      slug: "sharia-investor"
     },
 
     {
@@ -36,27 +36,37 @@ export class HeaderComponent implements OnInit {
     {
       name: "INVEST WITH US",
       slug: "invest-with-us",
-      parent: "individual-investor"
+      parent: "individual-investor",
+      id: 1,
+      display: true
     },
     {
       name: "OUR FUNDS",
       slug: "our-funds",
-      parent: "individual-investor"
+      parent: "individual-investor",
+      id: 2,
+      display: true
     },
     {
       name: "ABOUT US",
       slug: "about-us",
-      parent: "individual-investor"
+      parent: "individual-investor",
+      id: 3,
+      display: true
     },
     {
       name: "INSIGHTS",
       slug: "insights",
-      parent: "individual-investor"
+      parent: "individual-investor",
+      id: 4,
+      display: true
     },
     {
       name: "CONTACT US",
       slug: "contact-us",
-      parent: "individual-investor"
+      parent: "individual-investor",
+      id: 5,
+      display: true
     }
   ];
   parentSlug;
@@ -75,14 +85,29 @@ export class HeaderComponent implements OnInit {
           });
         } else {
           this.childrenMenu.forEach(child => {
-            console.log(strId.parent);
+            // console.log(strId.parent);
             if (typeof strId.ID != "undefined") {
-              console.log("iff" + strId.ID);
-              child.parent = strId.ID;
+              // console.log("iff" + strId.ID);
+              // removing parent for about us and contact us pages
+              if (strId.ID != "about-us" && strId.ID != "contact-us") {
+                child.parent = strId.ID;
+              }
+              // for hiding menu
+              if (strId.ID == "institutional-investor") {
+                if (child.slug == "invest-with-us") {
+                  child.display = false;
+                  // console.log(child);
+                }
+              } else {
+                child.display = true;
+              }
+              // end hiding memu
             } else {
-              console.log("iff" + strId.ID);
-              console.log("else");
-              child.parent = strId.parent;
+              // console.log("iff" + strId.ID);
+              // console.log("else");
+              if (strId.parent != "about-us" && strId.parent != "contact-us") {
+                child.parent = strId.parent;
+              }
             }
           });
         }
