@@ -4,7 +4,7 @@
   data-aos="fade-up"
 >
   <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="bg-white text-center">
+    <div class="bg-white text-center ">
       <h2 *ngIf="fundDesign">{{ fundDesign.funds_designed_title }}</h2>
       <h2 *ngIf="independent">
         {{ independent.independent_thinkers_title }}
@@ -26,25 +26,30 @@
     </div>
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="bg-white text-center">
+    <div
+      class="bg-white text-center padding-45px-all sm-padding-15px-all inner-match-height"
+    >
       <p
         *ngIf="fundDesign"
         class="p-text"
         [innerHTML]="fundDesign.funds_designed_content"
       ></p>
-      <p
+      <div
+        class="padding-45px-all sm-padding-15px-all inner-match-height"
         *ngIf="independent"
-        class="i-text"
-        [innerHTML]="independent.independent_thinkers_content"
-      ></p>
+      >
+        <p
+          class="p-text text-deep-pink padding-40px-top"
+          [innerHTML]="independent.independent_thinkers_content"
+        ></p>
+      </div>
+
       <p
         *ngIf="owners"
         class="o-text"
         [innerHTML]="owners.ownership_structure_content"
       ></p>
-      <a [href]="" class="btn btn-success btn-lg" *ngIf="owners"
-        >Read More...</a
-      >
+      <a [href]="" class="more-btn read-more" *ngIf="owners">Read More...</a>
       <p
         *ngIf="history"
         class="o-text"

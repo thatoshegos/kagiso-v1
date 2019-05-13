@@ -87,9 +87,13 @@ export class HeaderComponent implements OnInit {
           this.childrenMenu.forEach(child => {
             // console.log(strId.parent);
             if (typeof strId.ID != "undefined") {
-              // console.log("iff" + strId.ID);
+              console.log("iff" + strId);
               // removing parent for about us and contact us pages
-              if (strId.ID != "about-us" && strId.ID != "contact-us") {
+              if (
+                strId.ID != "about-us" &&
+                strId.ID != "contact-us" &&
+                strId.ID != "insights"
+              ) {
                 child.parent = strId.ID;
               }
               // for hiding menu
@@ -105,7 +109,11 @@ export class HeaderComponent implements OnInit {
             } else {
               // console.log("iff" + strId.ID);
               // console.log("else");
-              if (strId.parent != "about-us" && strId.parent != "contact-us") {
+              if (
+                strId.parent != "about-us" &&
+                strId.parent != "contact-us" &&
+                strId.parent != "insights"
+              ) {
                 child.parent = strId.parent;
               }
             }
