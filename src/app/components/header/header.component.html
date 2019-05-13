@@ -4,6 +4,15 @@
     class="navbar navbar-default bootsnav navbar-top header-light-transparent bg-transparent"
   >
     <div class="nav-header-container">
+	<ul>
+		<li *ngFor="let mi of headerMenuItems"><a [routerLink]="'/' + mi.slug" routerLinkActive="active">{{mi.name}}</a></li>
+	</ul>
+	<ng-container *ngFor="let mi of headerMenuItems">
+		<ul *ngIf="route.url.includes(mi.slug)">
+			<li *ngFor="let ch of mi.childrens"><a [routerLink]="'/' + mi.slug+'/'+ch.slug" routerLinkActive="active">{{ch.name}}</a></li>
+		</ul>
+	</ng-container>	
+	
       <!-- start logo -->
       <div class="row">
         <div class="col-md-3 col-xs-5 text-center">

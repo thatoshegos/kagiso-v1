@@ -70,6 +70,135 @@ export class HeaderComponent implements OnInit {
     }
   ];
   parentSlug;
+  
+  /**
+  ** 
+  **/
+  headerMenuItems = [
+	{
+      name: "Individual Investor",
+      slug: "individual-investor",
+	  childrens : [
+			{
+			  name: "INVEST WITH US",
+			  slug: "invest-with-us",
+			  parent: "individual-investor",
+			  id: 1,
+			  display: true
+			},
+			{
+			  name: "OUR FUNDS",
+			  slug: "our-funds",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "ABOUT US",
+			  slug: "about-us",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "INSIGHTS",
+			  slug: "insights",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "CONTACT US",
+			  slug: "contact-us",
+			}
+		]
+    },
+    {
+      name: "Sharia Investor",
+      slug: "sharia-investor",
+	  childrens : [
+			{
+			  name: "INVEST WITH US",
+			  slug: "invest-with-us",
+			  parent: "individual-investor",
+			  id: 1,
+			  display: true
+			},
+			{
+			  name: "OUR FUNDS",
+			  slug: "our-funds",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "ABOUT US",
+			  slug: "about-us",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "INSIGHTS",
+			  slug: "insights",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "CONTACT US",
+			  slug: "contact-us",
+			}
+		]
+    },
+
+    {
+      name: "Institutional Investor",
+      slug: "institutional-investor",
+	  childrens : [
+			{
+			  name: "INVEST WITH US",
+			  slug: "invest-with-us",
+			  parent: "individual-investor",
+			  id: 1,
+			  display: true
+			},
+			{
+			  name: "OUR FUNDS",
+			  slug: "our-funds",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "ABOUT US",
+			  slug: "about-us",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "INSIGHTS",
+			  slug: "insights",
+			  parent: "individual-investor",
+			},
+			{
+			  name: "CONTACT US",
+			  slug: "contact-us",
+			}
+		]
+    },
+    {
+      name: "Investor Login",
+      slug: "investor-login",
+	  childrens : [
+			{
+			  name: "INVEST WITH US",
+			  slug: "invest-with-us",
+			},
+			{
+			  name: "OUR FUNDS",
+			  slug: "our-funds",
+			},
+			{
+			  name: "ABOUT US",
+			  slug: "about-us",
+			},
+			{
+			  name: "INSIGHTS",
+			  slug: "insights",
+			},
+			{
+			  name: "CONTACT US",
+			  slug: "contact-us",
+			}
+		]
+    }
+  ];
   constructor(private WPService: WPAPIService, private route: Router) {
     /************************************************************
      * this code is related to make relatetion between parent   *
