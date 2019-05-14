@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { WPAPIService } from "../../../services/wpapi.service";
-import { url } from "inspector";
 
 @Component({
   selector: "app-home",

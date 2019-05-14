@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { WPAPIService } from "../../../services/wpapi.service";
-import { url } from "inspector";
 
 @Component({
   selector: "app-pages",
@@ -11,6 +10,7 @@ import { url } from "inspector";
 export class PagesComponent implements OnInit {
   page = null;
   contactUs = false;
+  faq;
   constructor(
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
@@ -47,13 +47,44 @@ export class PagesComponent implements OnInit {
               this.contactUs = true;
               console.log(this.page);
             });
-          } else if (this.page.slug == "our-funds") {
+          } else if (
+            currentUrl.parent == "sharia-investor" &&
+            this.page.slug == "our-funds"
+          ) {
             this.page.id = 8;
-            console.log("our page");
+
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
               this.page = page;
               this.page.ourfunds = true;
-              console.log(this.page);
+              this.faq = this.page.acf["qa-ans"];
+              // console.log(this.page);
+              // console.log(this.faq);
+            });
+          } else if (
+            currentUrl.parent == "individual-investor" &&
+            this.page.slug == "our-funds"
+          ) {
+            this.page.id = 355;
+
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.ourfunds = true;
+              this.faq = this.page.acf["qa-ans"];
+              // console.log(this.page);
+              // console.log(this.faq);
+            });
+          } else if (
+            currentUrl.parent == "institutional-investor" &&
+            this.page.slug == "our-funds"
+          ) {
+            this.page.id = 351;
+
+            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+              this.page = page;
+              this.page.ourfunds = true;
+              this.faq = this.page.acf["qa-ans"];
+              // console.log(this.page);
+              // console.log(this.faq);
             });
           } else if (
             currentUrl.parent == "sharia-investor" &&
@@ -62,7 +93,7 @@ export class PagesComponent implements OnInit {
             this.wpservice.getPages("89").subscribe(page => {
               this.page = page;
               this.page.saria = true;
-              //console.log(this.page);
+              console.log(this.page);
             });
           }
           // } else if (this.page.slug == "our-funds") {

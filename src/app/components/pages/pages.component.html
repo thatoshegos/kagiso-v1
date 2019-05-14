@@ -68,7 +68,7 @@
       <app-feature-box [DataSets]="page"></app-feature-box>
     </section>
   </div>
-  <section class="full-background" *ngIf="page && page.saria">
+  <section class="riba-background" *ngIf="page && page.saria">
     <div class="container">
       <app-saria-common [reba]="page"></app-saria-common>
     </div>
@@ -85,7 +85,7 @@
     </section>
   </div>
   <section
-    class="full-background"
+    class="sharia-investment-background"
     *ngIf="page && page.saria"
     style="margin-top:20px;"
   >
@@ -94,7 +94,7 @@
     </div>
   </section>
   <section
-    class="full-background"
+    class="sharia-investment-process-background"
     *ngIf="page && page.saria"
     style="margin-top:20px;"
   >
@@ -103,7 +103,7 @@
     </div>
   </section>
   <section
-    class="full-background"
+    class="screen-process-background"
     *ngIf="page && page.saria"
     style="margin-top:20px;"
   >
@@ -117,6 +117,12 @@
       <app-sharia-certificate [shariaCerticate]="page"></app-sharia-certificate>
     </div>
   </section>
+  <section *ngIf="page && page.saria">
+    <div class="container">
+      <app-saria-common [podcast]="page"></app-saria-common>
+    </div>
+  </section>
+
   <section *ngIf="page && page.saria">
     <div class="container">
       <app-thought-financial-adviser
@@ -155,3 +161,11 @@
     <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
   </section>
 </div>
+<section
+  class="border-none no-padding wow fadeIn faq"
+  *ngIf="page && page.ourfunds"
+>
+  <div class="container">
+    <app-faq [faqs]="faq"></app-faq>
+  </div>
+</section>

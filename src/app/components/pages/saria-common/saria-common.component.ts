@@ -11,6 +11,7 @@ export class SariaCommonComponent implements OnInit {
   @Input() investProcess;
   @Input() screenProcess;
   @Input() shariaBoard;
+  @Input() podcast;
   constructor() {}
 
   ngOnInit() {}
