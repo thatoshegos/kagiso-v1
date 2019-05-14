@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router, RoutesRecognized } from "@angular/router";
 import { WPAPIService } from "../../../services/wpapi.service";
+import { CompileShallowModuleMetadata } from "@angular/compiler";
 
 @Component({
   selector: "app-header",
@@ -210,59 +211,76 @@ export class HeaderComponent implements OnInit {
      * component and child component if some on click any parent*
      * then parent slug us replace in child link                *
      * **********************************************************/
+    console.log(this.route.url);
+
     this.route.events.subscribe(val => {
       if (val instanceof RoutesRecognized) {
+        var strIdurl = val.state.root.firstChild.routeConfig.path;
+        var strIdArr = strIdurl.split("/");
         var strId = val.state.root.firstChild.params;
-        if (Object.keys(strId).length === 0) {
-          this.childrenMenu.forEach(child => {
+        this.childrenMenu.forEach(child => {
+          if (typeof strId.ID != "undefined") {
             child.parent = "individual-investor";
-          });
-        } else {
-          this.childrenMenu.forEach(child => {
-            // console.log(strId.parent);
-            // if (typeof strId.ID != "undefined") {
-            //   console.log("iff" + strId);
-            //   // removing parent for about us and contact us pages
-            //   if (
-            //     strId.ID != "about-us" &&
-            //     strId.ID != "contact-us" &&
-            //     strId.ID != "insights"
-            //   ) {
-            //     child.parent = strId.ID;
-            //   }
-            //   // for hiding menu
-            //   if (strId.ID == "institutional-investor") {
-            //     if (child.slug == "invest-with-us") {
-            //       child.display = false;
-            //       // console.log(child);
-            //     }
-            //   } else {
-            //     child.display = true;
-            //   }
-            //   // end hiding memu
-            // }
-            //else {
-            // console.log("iff" + strId.ID);
-            // console.log("else");
-
-            if (
-              strId.parent != "about-us" &&
-              strId.parent != "contact-us" &&
-              strId.parent != "insights"
-            ) {
-              if (typeof strId.ID != "undefined") {
-                child.parent = "individual-investor";
-              } else {
-                child.parent = strId.parent;
-              }
+          } else {
+            if (strIdArr[0] != "contact-us") {
+              child.parent = strIdArr[0];
+            } else {
+              child.parent = "individual-investor";
             }
-            if (strId.parent) {
-              this.activeStatus = true;
-            }
+          }
+        });
 
-            // }
-          });
-        }
+        // if (Object.keys(strId).length === 0) {
+        //   console.log(strId);
+        //   this.childrenMenu.forEach(child => {
+        //     child.parent = "individual-investor";
+        //   });
+        //  } else {
+        //   this.childrenMenu.forEach(child => {
+        //     // console.log(strId.parent);
+        //     // if (typeof strId.ID != "undefined") {
+        //     //   console.log("iff" + strId);
+        //     //   // removing parent for about us and contact us pages
+        //     //   if (
+        //     //     strId.ID != "about-us" &&
+        //     //     strId.ID != "contact-us" &&
+        //     //     strId.ID != "insights"
+        //     //   ) {
+        //     //     child.parent = strId.ID;
+        //     //   }
+        //     //   // for hiding menu
+        //     //   if (strId.ID == "institutional-investor") {
+        //     //     if (child.slug == "invest-with-us") {
+        //     //       child.display = false;
+        //     //       // console.log(child);
+        //     //     }
+        //     //   } else {
+        //     //     child.display = true;
+        //     //   }
+        //     //   // end hiding memu
+        //     // }
+        //     //else {
+        //     // console.log("iff" + strId.ID);
+        //     // console.log("else");
+
+        //     if (
+        //       strId.parent != "about-us" &&
+        //       strId.parent != "contact-us" &&
+        //       strId.parent != "insights"
+        //     ) {
+        //       if (typeof strId.ID != "undefined") {
+        //         child.parent = "individual-investor";
+        //       } else {
+        //         child.parent = strId.parent;
+        //       }
+        //     }
+        //     if (strId.parent) {
+        //       this.activeStatus = true;
+        //     }
+
+        //     // }
+        //   });
+        // }
       }
     });
   }
@@ -273,7 +291,7 @@ export class HeaderComponent implements OnInit {
       this.menuItems.primary.items.forEach(item => {
         var urlArr = item.url.split("/");
         item.slug = urlArr[5];
-        console.log(item);
+        //console.log(item);
       });
     });
 

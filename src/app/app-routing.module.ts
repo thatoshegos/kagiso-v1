@@ -15,29 +15,39 @@ const routes: Routes = [
     pathMatch: "full",
     component: ContactUsComponent
   },
-  // {
-  //   path: "sharia-investor",
-  //   pathMatch: "full",
-  //   redirectTo: "/sharia-investor/invest-with-us"
-  // },
 
   {
     path: "individual-investor/invest-with-us",
     pathMatch: "full",
     component: HomeComponent
   },
-  // {
-  //   path: "sharia-investor/invest-with-us",
-  //   pathMatch: "full",
-  //   component: HomeComponent
-  // },
+  {
+    path: "individual-investor/our-funds",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "sharia-investor/invest-with-us",
+    pathMatch: "full",
+    component: HomeComponent
+  },
+  {
+    path: "sharia-investor/our-funds",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds",
+    component: PagesComponent
+  },
 
   {
     path: "pages/:slug",
     pathMatch: "full",
     component: PagesComponent
   },
-  { path: ":parent/:slug", pathMatch: "full", component: HomeComponent },
+
+  // { path: ":parent/:slug", pathMatch: "full", component: PagesComponent },
   {
     path: ":ID",
     pathMatch: "full",
