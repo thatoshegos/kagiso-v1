@@ -13,23 +13,28 @@ export class HeaderComponent implements OnInit {
     secondry: null
   };
   secondMenus = null;
+  activeStatus = false;
   parentMenu = [
     {
       name: "Individual Investor",
-      slug: "individual-investor"
+      slug: "individual-investor",
+      defulturl: "individual-investor/invest-with-us"
     },
     {
       name: "Sharia Investor",
-      slug: "sharia-investor"
+      slug: "sharia-investor",
+      defulturl: "sharia-investor/invest-with-us"
     },
 
     {
       name: "Institutional Investor",
-      slug: "institutional-investor"
+      slug: "institutional-investor",
+      defulturl: "institutional-investor/our-funds"
     },
     {
       name: "Investor Login",
-      slug: "investor-login"
+      slug: "investor-login",
+      defulturl: "investor-login"
     }
   ];
   childrenMenu = [
@@ -70,133 +75,133 @@ export class HeaderComponent implements OnInit {
     }
   ];
   parentSlug;
-  
+
   /**
-  ** 
-  **/
+   **
+   **/
   headerMenuItems = [
-	{
+    {
       name: "Individual Investor",
       slug: "individual-investor",
-	  childrens : [
-			{
-			  name: "INVEST WITH US",
-			  slug: "invest-with-us",
-			  parent: "individual-investor",
-			  id: 1,
-			  display: true
-			},
-			{
-			  name: "OUR FUNDS",
-			  slug: "our-funds",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "ABOUT US",
-			  slug: "about-us",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "INSIGHTS",
-			  slug: "insights",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "CONTACT US",
-			  slug: "contact-us",
-			}
-		]
+      childrens: [
+        {
+          name: "INVEST WITH US",
+          slug: "invest-with-us",
+          parent: "individual-investor",
+          id: 1,
+          display: true
+        },
+        {
+          name: "OUR FUNDS",
+          slug: "our-funds",
+          parent: "individual-investor"
+        },
+        {
+          name: "ABOUT US",
+          slug: "about-us",
+          parent: "individual-investor"
+        },
+        {
+          name: "INSIGHTS",
+          slug: "insights",
+          parent: "individual-investor"
+        },
+        {
+          name: "CONTACT US",
+          slug: "contact-us"
+        }
+      ]
     },
     {
       name: "Sharia Investor",
       slug: "sharia-investor",
-	  childrens : [
-			{
-			  name: "INVEST WITH US",
-			  slug: "invest-with-us",
-			  parent: "individual-investor",
-			  id: 1,
-			  display: true
-			},
-			{
-			  name: "OUR FUNDS",
-			  slug: "our-funds",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "ABOUT US",
-			  slug: "about-us",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "INSIGHTS",
-			  slug: "insights",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "CONTACT US",
-			  slug: "contact-us",
-			}
-		]
+      childrens: [
+        {
+          name: "INVEST WITH US",
+          slug: "invest-with-us",
+          parent: "individual-investor",
+          id: 1,
+          display: true
+        },
+        {
+          name: "OUR FUNDS",
+          slug: "our-funds",
+          parent: "individual-investor"
+        },
+        {
+          name: "ABOUT US",
+          slug: "about-us",
+          parent: "individual-investor"
+        },
+        {
+          name: "INSIGHTS",
+          slug: "insights",
+          parent: "individual-investor"
+        },
+        {
+          name: "CONTACT US",
+          slug: "contact-us"
+        }
+      ]
     },
 
     {
       name: "Institutional Investor",
       slug: "institutional-investor",
-	  childrens : [
-			{
-			  name: "INVEST WITH US",
-			  slug: "invest-with-us",
-			  parent: "individual-investor",
-			  id: 1,
-			  display: true
-			},
-			{
-			  name: "OUR FUNDS",
-			  slug: "our-funds",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "ABOUT US",
-			  slug: "about-us",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "INSIGHTS",
-			  slug: "insights",
-			  parent: "individual-investor",
-			},
-			{
-			  name: "CONTACT US",
-			  slug: "contact-us",
-			}
-		]
+      childrens: [
+        {
+          name: "INVEST WITH US",
+          slug: "invest-with-us",
+          parent: "individual-investor",
+          id: 1,
+          display: true
+        },
+        {
+          name: "OUR FUNDS",
+          slug: "our-funds",
+          parent: "individual-investor"
+        },
+        {
+          name: "ABOUT US",
+          slug: "about-us",
+          parent: "individual-investor"
+        },
+        {
+          name: "INSIGHTS",
+          slug: "insights",
+          parent: "individual-investor"
+        },
+        {
+          name: "CONTACT US",
+          slug: "contact-us"
+        }
+      ]
     },
     {
       name: "Investor Login",
       slug: "investor-login",
-	  childrens : [
-			{
-			  name: "INVEST WITH US",
-			  slug: "invest-with-us",
-			},
-			{
-			  name: "OUR FUNDS",
-			  slug: "our-funds",
-			},
-			{
-			  name: "ABOUT US",
-			  slug: "about-us",
-			},
-			{
-			  name: "INSIGHTS",
-			  slug: "insights",
-			},
-			{
-			  name: "CONTACT US",
-			  slug: "contact-us",
-			}
-		]
+      childrens: [
+        {
+          name: "INVEST WITH US",
+          slug: "invest-with-us"
+        },
+        {
+          name: "OUR FUNDS",
+          slug: "our-funds"
+        },
+        {
+          name: "ABOUT US",
+          slug: "about-us"
+        },
+        {
+          name: "INSIGHTS",
+          slug: "insights"
+        },
+        {
+          name: "CONTACT US",
+          slug: "contact-us"
+        }
+      ]
     }
   ];
   constructor(private WPService: WPAPIService, private route: Router) {
@@ -215,37 +220,42 @@ export class HeaderComponent implements OnInit {
         } else {
           this.childrenMenu.forEach(child => {
             // console.log(strId.parent);
-            if (typeof strId.ID != "undefined") {
-              console.log("iff" + strId);
-              // removing parent for about us and contact us pages
-              if (
-                strId.ID != "about-us" &&
-                strId.ID != "contact-us" &&
-                strId.ID != "insights"
-              ) {
-                child.parent = strId.ID;
-              }
-              // for hiding menu
-              if (strId.ID == "institutional-investor") {
-                if (child.slug == "invest-with-us") {
-                  child.display = false;
-                  // console.log(child);
-                }
-              } else {
-                child.display = true;
-              }
-              // end hiding memu
-            } else {
-              // console.log("iff" + strId.ID);
-              // console.log("else");
-              if (
-                strId.parent != "about-us" &&
-                strId.parent != "contact-us" &&
-                strId.parent != "insights"
-              ) {
-                child.parent = strId.parent;
-              }
+            // if (typeof strId.ID != "undefined") {
+            //   console.log("iff" + strId);
+            //   // removing parent for about us and contact us pages
+            //   if (
+            //     strId.ID != "about-us" &&
+            //     strId.ID != "contact-us" &&
+            //     strId.ID != "insights"
+            //   ) {
+            //     child.parent = strId.ID;
+            //   }
+            //   // for hiding menu
+            //   if (strId.ID == "institutional-investor") {
+            //     if (child.slug == "invest-with-us") {
+            //       child.display = false;
+            //       // console.log(child);
+            //     }
+            //   } else {
+            //     child.display = true;
+            //   }
+            //   // end hiding memu
+            // }
+            //else {
+            // console.log("iff" + strId.ID);
+            // console.log("else");
+            if (
+              strId.parent != "about-us" &&
+              strId.parent != "contact-us" &&
+              strId.parent != "insights"
+            ) {
+              child.parent = strId.parent;
             }
+            if (strId.parent) {
+              this.activeStatus = true;
+            }
+
+            // }
           });
         }
       }

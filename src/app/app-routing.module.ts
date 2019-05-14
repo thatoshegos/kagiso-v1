@@ -37,7 +37,7 @@ const routes: Routes = [
     pathMatch: "full",
     component: PagesComponent
   },
-  { path: ":parent/:slug", pathMatch: "full", component: PagesComponent },
+  { path: ":parent/:slug", pathMatch: "full", component: HomeComponent },
   {
     path: ":ID",
     pathMatch: "full",

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { WPAPIService } from "../../../services/wpapi.service";
 
 @Component({
@@ -9,13 +10,26 @@ import { WPAPIService } from "../../../services/wpapi.service";
 export class HomeComponent implements OnInit {
   homePage = null;
   faqs;
-  constructor(private wpservice: WPAPIService) {}
+  constructor(private wpservice: WPAPIService, private route: ActivatedRoute) {
+    route.params.subscribe(params => {
+      console.log(params.parent);
 
-  ngOnInit() {
-    this.wpservice.getPages("100").subscribe(data => {
-      this.homePage = data;
-      this.faqs = this.homePage.acf["qa-ans"];
-      console.log(this.homePage);
+      if (params.parent == "sharia-investor") {
+        alert("SDf");
+        this.wpservice.getPages("89").subscribe(data => {
+          this.homePage = data;
+          this.faqs = this.homePage.acf["qa-ans"];
+          console.log(this.homePage);
+        });
+      } else {
+        this.wpservice.getPages("100").subscribe(data => {
+          this.homePage = data;
+          this.faqs = this.homePage.acf["qa-ans"];
+          console.log(this.homePage);
+        });
+      }
     });
   }
+
+  ngOnInit() {}
 }

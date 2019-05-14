@@ -1,59 +1,60 @@
-<section
-  class="wow fadeIn no-padding main-slider mobile-height top-space"
-  *ngIf="page && page.aboutStatus"
->
-  <app-slider [sliders]="page.acf.home_slider"></app-slider>
-</section>
-<div class="container" *ngIf="page && page.aboutStatus">
-  <section style="padding:0px;">
-    <app-unconventional-thinking
-      [unconventionalThink]="page.acf"
-    ></app-unconventional-thinking>
+<div *ngIf="page && page.aboutStatus">
+  <section
+    class="wow fadeIn no-padding main-slider mobile-height top-space"
+    *ngIf="page && page.aboutStatus"
+  >
+    <app-slider [sliders]="page.acf.home_slider"></app-slider>
   </section>
-  <section style="padding:0px">
-    <app-common [fundDesign]="page.acf"></app-common>
+  <div class="container" *ngIf="page && page.aboutStatus">
+    <section style="padding:0px;">
+      <app-unconventional-thinking
+        [unconventionalThink]="page.acf"
+      ></app-unconventional-thinking>
+    </section>
+    <section style="padding:0px">
+      <app-common [fundDesign]="page.acf"></app-common>
+    </section>
+    <section style="padding:0px;">
+      <app-investment-approch-about
+        [investments]="page.acf.about_us_investment_approach"
+      ></app-investment-approch-about>
+    </section>
+    <section style="padding:0px;">
+      <app-common [independent]="page.acf"></app-common>
+    </section>
+    <section style="padding:0px;">
+      <app-common [owners]="page.acf"></app-common>
+    </section>
+  </div>
+  <section style="padding:0px;" class="our-history-area">
+    <div class="container" *ngIf="page">
+      <app-common [history]="page.acf"></app-common>
+    </div>
   </section>
-  <section style="padding:0px;">
-    <app-investment-approch-about
-      [investments]="page.acf.about_us_investment_approach"
-    ></app-investment-approch-about>
+  <section class="our-culture-area">
+    <div class="container" *ngIf="page">
+      <app-common [our_culture]="page.acf"></app-common>
+    </div>
   </section>
-  <section style="padding:0px;">
-    <app-common [independent]="page.acf"></app-common>
+  <section class="responsible-investing-area" *ngIf="page">
+    <div class="container">
+      <app-common [responsible]="page.acf"></app-common>
+    </div>
   </section>
-  <section style="padding:0px;">
-    <app-common [owners]="page.acf"></app-common>
+  <section class="corporate-social-area margin-40px-top" *ngIf="page">
+    <div class="container">
+      <app-common [social_corporate]="page.acf"></app-common>
+      <div class="corporate-slider">
+        <app-slider [sliders]="page.acf.corporate_slider"></app-slider>
+      </div>
+    </div>
+  </section>
+  <section class="committed-transformation-area " *ngIf="page">
+    <div class="container">
+      <app-common [transformation]="page.acf"></app-common>
+    </div>
   </section>
 </div>
-<section style="padding:0px;" class="our-history-area">
-  <div class="container" *ngIf="page">
-    <app-common [history]="page.acf"></app-common>
-  </div>
-</section>
-<section class="our-culture-area">
-  <div class="container" *ngIf="page">
-    <app-common [our_culture]="page.acf"></app-common>
-  </div>
-</section>
-<section class="responsible-investing-area" *ngIf="page">
-  <div class="container">
-    <app-common [responsible]="page.acf"></app-common>
-  </div>
-</section>
-<section class="corporate-social-area margin-40px-top" *ngIf="page">
-  <div class="container">
-    <app-common [social_corporate]="page.acf"></app-common>
-    <div class="corporate-slider">
-      <app-slider [sliders]="page.acf.corporate_slider"></app-slider>
-    </div>
-  </div>
-</section>
-<section class="committed-transformation-area " *ngIf="page">
-  <div class="container">
-    <app-common [transformation]="page.acf"></app-common>
-  </div>
-</section>
-
 <!-- Saria Page section -->
 <div *ngIf="page" [ngStyle]="{ display: page.saria ? block : none }">
   <section
