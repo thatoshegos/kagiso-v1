@@ -26,14 +26,15 @@ export class HomeComponent implements OnInit {
         this.faqs = this.homePage.acf["qa-ans"];
         console.log(this.homePage);
       });
-    } else if (urlArr[1] == "sharia-investor") {
-      // console.log("sharia-investor");
-      this.wpservice.getPages("89").subscribe(data => {
-        this.homePage = data;
-        this.faqs = this.homePage.acf["qa-ans"];
-        console.log(this.homePage);
-      });
     }
+    //  else if (urlArr[1] == "sharia-investor") {
+    //   // console.log("sharia-investor");
+    //   this.wpservice.getPages("89").subscribe(data => {
+    //     this.homePage = data;
+    //     this.faqs = this.homePage.acf["qa-ans"];
+    //     console.log(this.homePage);
+    //   });
+    // }
 
     // route.params.subscribe(params => {
     //   console.log(params);

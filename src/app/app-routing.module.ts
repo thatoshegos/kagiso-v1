@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: "sharia-investor/invest-with-us",
     pathMatch: "full",
-    component: HomeComponent
+    component: PagesComponent
   },
   {
     path: "sharia-investor/our-funds",

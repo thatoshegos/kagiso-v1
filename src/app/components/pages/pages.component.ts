@@ -26,6 +26,7 @@ export class PagesComponent implements OnInit {
       };
       if (val.ID || currentUrl.child) {
         var slug = val.ID ? val.ID : currentUrl.child;
+        console.log(slug);
         this.wpservice.pages(`?slug=${slug}`).subscribe(page => {
           this.page = page[0];
           // console.log(this.page);
@@ -44,7 +45,7 @@ export class PagesComponent implements OnInit {
               this.page = page;
               this.page.aboutStatus = true;
               this.contactUs = true;
-              //console.log(this.page);
+              console.log(this.page);
             });
           } else if (this.page.slug == "our-funds") {
             this.page.id = 8;
@@ -54,13 +55,16 @@ export class PagesComponent implements OnInit {
               this.page.ourfunds = true;
               console.log(this.page);
             });
+          } else if (
+            currentUrl.parent == "sharia-investor" &&
+            slug == "invest-with-us"
+          ) {
+            this.wpservice.getPages("89").subscribe(page => {
+              this.page = page;
+              this.page.saria = true;
+              //console.log(this.page);
+            });
           }
-          //else if (this.page.slug == "sharia-investor") {
-          //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-          //     this.page = page;
-          //     this.page.saria = true;
-          //     //console.log(this.page);
-          //   });
           // } else if (this.page.slug == "our-funds") {
           //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
           //     this.page = page;
