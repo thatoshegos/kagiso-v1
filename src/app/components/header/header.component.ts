@@ -244,12 +244,17 @@ export class HeaderComponent implements OnInit {
             //else {
             // console.log("iff" + strId.ID);
             // console.log("else");
+
             if (
               strId.parent != "about-us" &&
               strId.parent != "contact-us" &&
               strId.parent != "insights"
             ) {
-              child.parent = strId.parent;
+              if (typeof strId.ID != "undefined") {
+                child.parent = "individual-investor";
+              } else {
+                child.parent = strId.parent;
+              }
             }
             if (strId.parent) {
               this.activeStatus = true;

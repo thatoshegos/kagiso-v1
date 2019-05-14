@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       console.log(params.parent);
 
       if (params.parent == "sharia-investor") {
-        alert("SDf");
+       
         this.wpservice.getPages("89").subscribe(data => {
           this.homePage = data;
           this.faqs = this.homePage.acf["qa-ans"];
