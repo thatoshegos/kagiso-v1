@@ -46,8 +46,8 @@
         *ngIf="screenProcess"
         [innerHTML]="screenProcess.acf.screening_process_content"
       ></p>
-      <div class="row" *ngIf="podcost">
-        <div class="col-md-12">{{ podcast[0].podcast_video }}</div>
+      <div class="row" *ngIf="podcast">
+        <div class="col-md-12">{{ podcast.acf.podcast[0].podcast_video }}</div>
       </div>
       <!-- <div class="second-slide" *ngIf="social_corporate">
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
