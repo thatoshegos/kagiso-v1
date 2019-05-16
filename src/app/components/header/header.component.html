@@ -44,11 +44,17 @@
           <div class="row top-nav">
             <div class="col-md-12">
               <ul class="nav navbar-nav pull-right" *ngIf="menuItems.primary">
-                <li *ngFor="let menu of parentMenu">
+                <li *ngFor="let menu of parentMenu; let i = index">
                   <a
                     [routerLink]="'/' + menu.defulturl"
                     routerLinkActive="active"
                     >{{ menu.name }}</a
+                  >
+                </li>
+                <li class="invester-login-btn">
+                  <a href="https://investoronline.kagisoam.co.za">
+                    <img src="assets/images/bag-iocn.png" />
+                    INVESTOR LOGIN</a
                   >
                 </li>
               </ul>

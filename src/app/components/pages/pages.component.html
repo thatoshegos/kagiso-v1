@@ -169,3 +169,12 @@
     <app-faq [faqs]="faq"></app-faq>
   </div>
 </section>
+
+<!-- meet our team section -->
+<div *ngIf="page && page.ourteamStatus">
+  <section *ngIf="page" style="margin-top:40px;">
+    <app-meet-our-team [meetOurTeam]="page"></app-meet-our-team>
+  </section>
+</div>
+
+<!-- end meet our team section -->

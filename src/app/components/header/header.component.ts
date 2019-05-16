@@ -19,24 +19,27 @@ export class HeaderComponent implements OnInit {
     {
       name: "Individual Investor",
       slug: "individual-investor",
-      defulturl: "individual-investor/invest-with-us"
+      defulturl: "individual-investor/invest-with-us",
+      activeClass: ""
     },
     {
       name: "Sharia Investor",
       slug: "sharia-investor",
-      defulturl: "sharia-investor/invest-with-us"
+      defulturl: "sharia-investor/invest-with-us",
+      activeClass: ""
     },
 
     {
       name: "Institutional Investor",
       slug: "institutional-investor",
-      defulturl: "institutional-investor/our-funds"
-    },
-    {
-      name: "Investor Login",
-      slug: "investor-login",
-      defulturl: "investor-login"
+      defulturl: "institutional-investor/our-funds",
+      activeClass: ""
     }
+    // {
+    //   name: "Investor Login",
+    //   slug: "investor-login",
+    //   defulturl: "investor-login"
+    // }
   ];
   childrenMenu = [
     {
@@ -224,6 +227,7 @@ export class HeaderComponent implements OnInit {
           } else {
             if (strIdArr[0] != "contact-us") {
               child.parent = strIdArr[0];
+              this.activeStatus = true;
             } else {
               child.parent = "individual-investor";
             }

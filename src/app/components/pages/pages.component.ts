@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import { DomSanitizer } from "@angular/platform-browser";
 import { WPAPIService } from "../../../services/wpapi.service";
 
 @Component({
@@ -14,7 +15,8 @@ export class PagesComponent implements OnInit {
   constructor(
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private santiser: DomSanitizer
   ) {
     route.params.subscribe(val => {
       console.log(val);
@@ -29,7 +31,16 @@ export class PagesComponent implements OnInit {
         console.log(slug);
         this.wpservice.pages(`?slug=${slug}`).subscribe(page => {
           this.page = page[0];
-          // console.log(this.page);
+
+          if (slug == "meet-our-leaders") {
+            this.page.ourteamStatus = true;
+            this.page.acf.meet_our_leaders.forEach(leader => {
+              leader.video_url = this.santiser.bypassSecurityTrustHtml(
+                leader.video_url
+              );
+            });
+            console.log(this.page);
+          }
           // if (this.page.id == 20) {
           //   this.page.formStatus = true;
           //   // this.wpservice.getPages(`${this.page.id}`).subscribe(page => {

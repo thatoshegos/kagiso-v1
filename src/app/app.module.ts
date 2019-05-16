@@ -27,6 +27,7 @@ import { SariaCommonComponent } from './components/pages/saria-common/saria-comm
 import { ShariaCertificateComponent } from './components/pages/sharia-certificate/sharia-certificate.component';
 import { ThoughtFinancialAdviserComponent } from './components/pages/thought-financial-adviser/thought-financial-adviser.component';
 import { FinancialImageTwoComponent } from './components/pages/financial-image-two/financial-image-two.component';
+import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-team.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FinancialImageTwoComponent } from './components/pages/financial-image-t
     SariaCommonComponent,
     ShariaCertificateComponent,
     ThoughtFinancialAdviserComponent,
-    FinancialImageTwoComponent
+    FinancialImageTwoComponent,
+    MeetOurTeamComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],
