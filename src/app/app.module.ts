@@ -28,6 +28,7 @@ import { ShariaCertificateComponent } from './components/pages/sharia-certificat
 import { ThoughtFinancialAdviserComponent } from './components/pages/thought-financial-adviser/thought-financial-adviser.component';
 import { FinancialImageTwoComponent } from './components/pages/financial-image-two/financial-image-two.component';
 import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-team.component';
+import { FaqDetailComponent } from './components/pages/faq-detail/faq-detail.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-
     ShariaCertificateComponent,
     ThoughtFinancialAdviserComponent,
     FinancialImageTwoComponent,
-    MeetOurTeamComponent
+    MeetOurTeamComponent,
+    FaqDetailComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

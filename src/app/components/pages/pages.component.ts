@@ -39,17 +39,12 @@ export class PagesComponent implements OnInit {
                 leader.video_url
               );
             });
-            console.log(this.page);
           }
-          // if (this.page.id == 20) {
-          //   this.page.formStatus = true;
-          //   // this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-          //   //   this.page = page;
-          //   //   this.page.formStatus = true;
-          //   //   this.contactUs = true;
-          //   //   console.log(this.page);
-          //   // });
-          // }
+          if (slug == "faq") {
+            this.page.faqStatus = true;
+          }
+          console.log(this.page);
+
           if (this.page.id == 10) {
             //this.page.formStatus = true;
             this.wpservice.getPages(`${this.page.id}`).subscribe(page => {

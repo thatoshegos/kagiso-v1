@@ -178,3 +178,10 @@
 </div>
 
 <!-- end meet our team section -->
+
+<!-- FAQ Details  -->
+<section *ngIf="page && page.faqStatus" style="margin-top:100px;">
+  <app-faq-detail [faqs]="page"></app-faq-detail>
+</section>
+
+<!-- End FAQ Detail -->
