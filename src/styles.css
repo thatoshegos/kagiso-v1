@@ -328,7 +328,7 @@ section.half-section {padding:80px 0;}
 
 .extra-small-input, .extra-small-textarea, .extra-small-select select { padding: 9px 17px; font-size: 12px; line-height: normal}
 
-.select-style { width: 100%; overflow: hidden; background: url("assets/images/select-arrow.png") no-repeat 97% 50%; border: 1px solid #d1d1d1; margin-bottom: 20px }
+.select-style { width: 100%; overflow: hidden; background: url("./assets/images/select-arrow.png") no-repeat 97% 50%; border: 1px solid #d1d1d1; margin-bottom: 20px }
 .select-style select { width: 100%; border: none; box-shadow: none; background-color: transparent; background-image: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;  cursor: pointer; }
 .select-style select:focus { outline: none; border: none; box-shadow: none }
 
@@ -366,7 +366,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 
 .more-btn {
     padding: 11px 80px 11px 20px;
-    background: #BCDAD7 url('/assets/images/arrow-icon.jpg') no-repeat right;
+    background: #BCDAD7 url('./assets/images/arrow-icon.jpg') no-repeat right;
     color: #000;
     display: inline-block;
     font-size: 14px;
@@ -453,6 +453,16 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .btn.btn-extra-large { font-size: 16px; line-height: 0.93; text-align: center;color: #323232;}
 .btn-dual .btn {margin: 0 10px; }
 .btn i {margin-left: 6px; vertical-align: middle; position: relative; top:-1px}
+.btn-meet-leaders {
+    display: inline-block;
+    color: #323232;
+    font-size: 18px;
+    padding: 20px 40px 20px 100px;
+    min-width: 175px;
+    text-align: center;
+    background: url('./assets/images/meet-leader-btnbg.jpg') no-repeat left center #fff;
+    font-weight: 500;
+}
 
 /* button background */
 .btn.btn-white {background:#ffffff; border-color: #ffffff; color: #232323}
@@ -1850,23 +1860,23 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     list-style: none;
     padding: 10px 10px 10px 30px;
     text-align: left;
-    background: url('/assets/images/li-bg.jpg') no-repeat left 13px;
+    background: url('./assets/images/li-bg.jpg') no-repeat left 13px;
 }
 
 .our-history-area {
-    background: url('/assets/images/branch.jpg') no-repeat;
+    background: url('./assets/images/branch.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 .our-culture-area {
-    background: url('/assets/images/stamps.jpg') no-repeat center;
+    background: url('./assets/images/stamps.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 80px;
 }
 
 .riba-background{
-    background: url('/assets/images/stamps.jpg') no-repeat center;
+    background: url('./assets/images/stamps.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-top:200px;
@@ -1874,21 +1884,21 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     
 }
 .sharia-investment-background{
-    background: url('/assets/images/branch.jpg') no-repeat center;
+    background: url('./assets/images/branch.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-top:200px;
     padding-bottom: 250px;
 }
 .sharia-investment-process-background{
-    background: url('/assets/images/kaleidoscope.jpg') no-repeat center;
+    background: url('./assets/images/kaleidoscope.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-top:200px;
     padding-bottom: 250px;
 }
 .screen-process-background{
-    background: url('/assets/images/dirham.jpg') no-repeat center;
+    background: url('./assets/images/dirham.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-top:200px;
@@ -1896,19 +1906,19 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 }
 
 .responsible-investing-area {
-    background: url('/assets/images/dirham.jpg') no-repeat center;
+    background: url('./assets/images/dirham.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 80px;
 }
 .corporate-social-area {
-    background: url('/assets/images/children.jpg') no-repeat center;
+    background: url('./assets/images/children.jpg') no-repeat center;
     background-size: contain;
     padding-bottom: 80px;
 }
 
 .committed-transformation-area {
-    background: url('/assets/images/kaleidoscope.jpg') no-repeat center top;
+    background: url('./assets/images/kaleidoscope.jpg') no-repeat center top;
     background-size: 200%;
     padding-bottom: 80px;
 }
