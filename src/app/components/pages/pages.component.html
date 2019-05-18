@@ -205,14 +205,25 @@
     data-aos="fade-up"
   >
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="bg-white text-center ">
-        <h2>{{ page.title.rendered }}</h2>
-      </div>
-      <section class="podcast"></section>
-      <section style="padding:15px 0 !important;">
-        <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
-      </section>
+      <div
+        class="bg-white text-center "
+        [innerHtml]="page.content.rendered"
+      ></div>
     </div>
+
+    <div class="col-md-12" *ngIf="page && page.insightStatus">
+      <h2>
+        Podcast
+      </h2>
+    </div>
+    <div
+      class="col-md-12 podcost-div"
+      *ngIf="page && page.insightStatus"
+      [innerHTML]="page.acf.podcast[0].podcast_video"
+    ></div>
+  </div>
+  <div class="row">
+    <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
   </div>
 </div>
 <!-- end insight-->
