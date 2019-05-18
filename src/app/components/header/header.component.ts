@@ -214,9 +214,17 @@ export class HeaderComponent implements OnInit {
      * component and child component if some on click any parent*
      * then parent slug us replace in child link                *
      * **********************************************************/
-    console.log(this.route.url);
+
 
     this.route.events.subscribe(val => {
+	  console.log(this.route.url);
+	  
+	  if (this.route.url.includes('institutional-investor')) {
+		this.childrenMenu[0]['display'] = false;
+	  }
+	  else {
+		this.childrenMenu[0]['display'] = true;
+	  }
       if (val instanceof RoutesRecognized) {
         var strIdurl = val.state.root.firstChild.routeConfig.path;
         var strIdArr = strIdurl.split("/");

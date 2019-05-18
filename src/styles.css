@@ -2027,3 +2027,6 @@ footer .extra-small-icon li:last-child, footer .small-icon li:last-child, footer
 .contact-sec .bg-light-green{background:#e6f0ef; border:none; margin:0 0 2px 0 }
 .contact-sec a.text-deep-pink{font-weight:700}
 .contact-sec .box-2.padding-5px-all{background:#a9d0cc}
+.header-menu-selected {
+	color: #B60C2F !important;
+}
