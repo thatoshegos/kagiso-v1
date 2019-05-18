@@ -43,7 +43,7 @@
         <div class="col-md-8">
           <div class="row top-nav">
             <div class="col-md-12">
-              <ul class="nav navbar-nav pull-right" *ngIf="menuItems.primary">
+              <ul class="nav navbar-nav first pull-right" *ngIf="menuItems.primary">
                 <li *ngFor="let menu of parentMenu; let i = index">
                   <a
                     [routerLink]="'/' + menu.defulturl"
