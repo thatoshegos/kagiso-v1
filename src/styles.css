@@ -2019,3 +2019,7 @@ footer .extra-small-icon li:last-child, footer .small-icon li:last-child, footer
 .medium-icon a {font-size: 20px; width: 50px; height:50px;line-height: 48px;}
 .large-icon a {font-size: 24px; width: 60px; height: 60px;line-height: 61px;}
 .extra-large-icon a {font-size: 30px; width: 70px; height: 70px;line-height: 68px;}
+
+.header-menu-selected {
+	color: #B60C2F !important;
+}
