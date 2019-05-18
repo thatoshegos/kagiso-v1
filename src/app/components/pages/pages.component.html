@@ -24,7 +24,7 @@
     </section>
     <section style="padding:0px;">
       <div class="row">
-      <app-common [owners]="page.acf"></app-common>
+        <app-common [owners]="page.acf"></app-common>
       </div>
     </section>
   </div>
@@ -131,15 +131,30 @@
   </section>
   <section *ngIf="page && page.saria">
     <div class="container">
-      <app-saria-common [podcast]="page"></app-saria-common>
+      <div class="col-md-12">
+        <h2>Podcast</h2>
+      </div>
+
+      <div class="col-md-12">
+        <app-podcast-slider [sliders]="page.acf"></app-podcast-slider>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <a [href]="" class="more-btn read-more text-center margin-35px-top ">
+          PODCAST ARCHIVE</a
+        >
+      </div>
+
+      <!-- <app-saria-common [podcast]="page"></app-saria-common> -->
     </div>
   </section>
 
-  <section *ngIf="page && page.saria">
+  <section *ngIf="page && page.saria" style="padding: 0px;">
     <div class="container">
-      <app-thought-financial-adviser
-        [financialAdviser]="page"
-      ></app-thought-financial-adviser>
+      <div class="col-md-12">
+        <app-thought-financial-adviser
+          [financialAdviser]="page"
+        ></app-thought-financial-adviser>
+      </div>
     </div>
   </section>
 </div>

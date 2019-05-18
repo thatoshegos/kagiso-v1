@@ -8,8 +8,10 @@
     >
       <div class="bg-white text-center margin-100px-lr xs-no-margin-lr">
         <h2>{{ fadviser.acf.financial_adviser_title }}</h2>
-        <div class="financial-adviser-vedio">
-          {{ fadviser.acf.financial_adviser_content }}
+        <div
+          class="financial-adviser-vedio"
+          [innerHTML]="fadviser.acf.financial_adviser_content"
+        >
           <!--<iframe
             width="920"
             height="415"
