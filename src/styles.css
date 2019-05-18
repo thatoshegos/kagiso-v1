@@ -2021,10 +2021,13 @@ footer .extra-small-icon li:last-child, footer .small-icon li:last-child, footer
 .extra-large-icon a {font-size: 30px; width: 70px; height: 70px;line-height: 68px;}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .header-menu-selected {
 	color: #B60C2F !important;
 }
 =======
+=======
+>>>>>>> 4d58043ca409a6fec3743f7a51085ac1f0529dbc
 
 header ul.first:nth-of-type(1) li{border-bottom:2px solid #c4c4c4}
 header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
@@ -2036,6 +2039,11 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .contact-sec .bg-light-green{background:#e6f0ef; border:none; margin:0 0 2px 0 }
 .contact-sec a.text-deep-pink{font-weight:700}
 .contact-sec .box-2.padding-5px-all{background:#a9d0cc}
+<<<<<<< HEAD
+.header-menu-selected {
+	color: #B60C2F !important;
+}
+=======
 
 /*--------------- About Page ----------------*/
 .about-sec .p-text{padding:0 !important}

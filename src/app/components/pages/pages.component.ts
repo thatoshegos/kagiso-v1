@@ -43,6 +43,9 @@ export class PagesComponent implements OnInit {
           if (slug == "faq") {
             this.page.faqStatus = true;
           }
+          if(slug=="insights"){
+             this.page.insightStatus=true;  
+          }
           console.log(this.page);
 
           if (this.page.id == 10) {

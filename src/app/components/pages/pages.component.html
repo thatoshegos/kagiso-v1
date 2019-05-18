@@ -197,3 +197,35 @@
 </section>
 
 <!-- End FAQ Detail -->
+
+<!-- Insight Page start-->
+<div class="container" *ngIf="page && page.insightStatus">
+  <br /><br /><br /><br /><br />
+  <div
+    class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
+    data-wow-delay="0.6s"
+    data-aos="fade-up"
+  >
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div
+        class="bg-white text-center "
+        [innerHtml]="page.content.rendered"
+      ></div>
+    </div>
+
+    <div class="col-md-12" *ngIf="page && page.insightStatus">
+      <h2>
+        Podcast
+      </h2>
+    </div>
+    <div
+      class="col-md-12 podcost-div"
+      *ngIf="page && page.insightStatus"
+      [innerHTML]="page.acf.podcast[0].podcast_video"
+    ></div>
+  </div>
+  <div class="row">
+    <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
+  </div>
+</div>
+<!-- end insight-->

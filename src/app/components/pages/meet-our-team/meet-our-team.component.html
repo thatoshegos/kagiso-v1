@@ -1,4 +1,10 @@
 <section
+  class="wow fadeIn no-padding main-slider mobile-height top-space"
+  *ngIf="meetOurTeam"
+>
+  <app-slider [sliders]="meetOurTeam.acf.home_slider"></app-slider>
+</section>
+<section
   class="wow fadeIn bg-light-gray"
   style="visibility: visible; animation-name: fadeIn;"
   *ngIf="meetOurTeam"
