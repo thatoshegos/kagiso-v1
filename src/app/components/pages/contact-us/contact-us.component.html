@@ -1,6 +1,6 @@
 <!-- start about agency -->
 <section class="wow fadeIn bg-light-gray" *ngIf="page">
-  <div class="container">
+  <div class="container  contact-sec">
     <div class="row">
       <!-- start Contact us box item -->
       <div
@@ -28,7 +28,7 @@
                   </p>
                   <p>
                     Email us on:
-                    <span class="text-black">{{ page.acf.email_us_on }}</span>
+                    <span class="text-black email"><a href="mailto:{{ page.acf.email_us_on }"> {{ page.acf.email_us_on }}</a></span>
                   </p>
                 </div>
                 <div class="box-2 padding-5px-all margin-40px-bottom">
@@ -50,31 +50,38 @@
                           type="text"
                           name="name"
                           id="name"
-                          placeholder="Name*"
+                          placeholder="Name"
                           class="bg-light-green no-border medium-input margin-5px-bottom"
                         />
                         <input
-                          type="text"
+                          type="emailt"
                           name="email"
                           id="email"
-                          placeholder="E-mail*"
+                          placeholder="E-mail"
+                          class="bg-light-green no-border medium-input margin-5px-bottom"
+                        />
+                        <input
+                          type="tel"
+                          name="subject"
+                          id="subject"
+                          placeholder="Telephone"
                           class="bg-light-green no-border medium-input margin-5px-bottom"
                         />
                         <input
                           type="text"
                           name="subject"
                           id="subject"
-                          placeholder="Subject"
+                          placeholder="Area of Interest"
                           class="bg-light-green no-border medium-input margin-5px-bottom"
                         />
                         <textarea
                           name="comment"
                           id="comment"
-                          placeholder="Your Message"
+                          placeholder="Comment"
                           rows="5"
                           class="bg-light-green no-border medium-textarea margin-5px-bottom"
                         ></textarea>
-                        <div class="padding-30px-top text-center">
+                        <div class="padding-30px-top text-center ">
                           <a
                             href="#"
                             target="_blank"
@@ -95,10 +102,10 @@
                     Cape Town
                   </div>
                   <div class="box-2-content padding-20px-all">
-                    <p>
-                      Telephone:{{ page.acf.name }}<br />
-                      Fax:{{ page.acf.fax }}<br />
-                      Email: {{ page.acf.email }}
+                    <p class="email"> 
+                      Telephone: {{ page.acf.telephone }}<br />
+                      Fax: {{ page.acf.fax }}<br />
+                      Email: <a href="mailto:{{ page.acf.email }}">{{ page.acf.email }}</a>
                     </p>
                     <br />
                     <p>
@@ -124,15 +131,15 @@
                     {{ page.acf.johannesburg_name }}
                   </div>
                   <div class="box-2-content padding-20px-all">
-                    <p>
+                    <p class="email">
                       Telephone: {{ page.acf.johannesburg_telephone }}<br />
                       Fax:{{ page.acf.johannesburg_fax }}<br />
-                      Email: {{ page.acf.johannesburg_email }}
+                      Email: <a href="mailto:{{ page.acf.johannesburg_email }}">{{ page.acf.johannesburg_email }}</a>
                     </p>
                     <br />
                     <p>
-                      Physical address<br />
-                      {{ page.acf.johannesburg_physical_address }}<br />
+                      Physical address<br /><span [innerHTML]="page.acf.johannesburg_physical_address"></span>
+                    <br />
 
                       <a
                         [href]="page.acf.johannesburg_google_map_url"
@@ -140,11 +147,10 @@
                         >[view map]</a
                       >
                     </p>
-                    <br />
-                    <p>
+                    <!--p>
                       Postal address<br />
                       {{ page.acf.postal_address }}
-                    </p>
+                    </p-->
                   </div>
                 </div>
 

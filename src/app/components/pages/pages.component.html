@@ -23,35 +23,47 @@
       <app-common [independent]="page.acf"></app-common>
     </section>
     <section style="padding:0px;">
+      <div class="row">
       <app-common [owners]="page.acf"></app-common>
+      </div>
     </section>
   </div>
   <section style="padding:0px;" class="our-history-area">
     <div class="container" *ngIf="page">
-      <app-common [history]="page.acf"></app-common>
+      <div class="col-md-10 col-md-offset-1">
+        <app-common [history]="page.acf"></app-common>
+      </div>
     </div>
   </section>
   <section class="our-culture-area">
     <div class="container" *ngIf="page">
-      <app-common [our_culture]="page.acf"></app-common>
+      <div class="col-md-10 col-md-offset-1">
+        <app-common [our_culture]="page.acf"></app-common>
+      </div>
     </div>
   </section>
   <section class="responsible-investing-area" *ngIf="page">
     <div class="container">
-      <app-common [responsible]="page.acf"></app-common>
+      <div class="col-md-10 col-md-offset-1">
+        <app-common [responsible]="page.acf"></app-common>
+      </div>
     </div>
   </section>
   <section class="corporate-social-area margin-40px-top" *ngIf="page">
     <div class="container">
-      <app-common [social_corporate]="page.acf"></app-common>
-      <div class="corporate-slider">
-        <app-slider [sliders]="page.acf.corporate_slider"></app-slider>
+      <div class="col-md-10 col-md-offset-1">
+        <app-common [social_corporate]="page.acf"></app-common>
+        <div class="corporate-slider">
+          <app-slider [sliders]="page.acf.corporate_slider"></app-slider>
+        </div>
       </div>
     </div>
   </section>
   <section class="committed-transformation-area " *ngIf="page">
     <div class="container">
-      <app-common [transformation]="page.acf"></app-common>
+      <div class="col-md-10 col-md-offset-1">
+        <app-common [transformation]="page.acf"></app-common>
+      </div>
     </div>
   </section>
 </div>

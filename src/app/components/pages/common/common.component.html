@@ -31,15 +31,15 @@
     >
       <p
         *ngIf="fundDesign"
-        class="p-text"
+        class="p-text padding_left_0 padding-right_0"
         [innerHTML]="fundDesign.funds_designed_content"
       ></p>
       <div
-        class="padding-45px-all sm-padding-15px-all inner-match-height"
+        class="inner-match-height"
         *ngIf="independent"
       >
         <p
-          class="p-text text-deep-pink padding-40px-top"
+          class="text-deep-pink padding-40px-top"
           [innerHTML]="independent.independent_thinkers_content"
         ></p>
       </div>
@@ -49,7 +49,8 @@
         class="o-text"
         [innerHTML]="owners.ownership_structure_content"
       ></p>
-      <a [href]="" class="more-btn read-more" *ngIf="owners">Read More...</a>
+      <a [href]="" class="more-btn read-more" *ngIf="owners"> More</a>
+
       <p
         *ngIf="history"
         class="o-text"
@@ -60,6 +61,7 @@
         class="o-text"
         [innerHTML]="our_culture.our_culture_content"
       ></p>
+      <a [href]="" class="more-btn read-more" *ngIf="our_culture"> More</a>
       <p
         *ngIf="responsible"
         class="o-text"
@@ -70,6 +72,7 @@
         class="o-text"
         [innerHTML]="social_corporate.social_investment_content"
       ></p>
+      <a [href]="" class="more-btn read-more" *ngIf="social_corporate"> More</a>
       <p
         *ngIf="transformation"
         class="o-text"
