@@ -1,5 +1,5 @@
 <div
-  class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top "
+  class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp  "
   data-wow-delay="0.6s"
   data-aos="fade-up"
 >
@@ -11,9 +11,10 @@
     </div>
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12" *ngIf="financialAdviser">
-    <div style="text-align:center;padding:15px;">
-      {{ financialAdviser.acf.financial_adviser_content }}
-    </div>
+    <div
+      style="text-align:center;"
+      [innerHTML]="financialAdviser.acf.financial_adviser_content"
+    ></div>
 
     <!-- <div class="second-slide" *ngIf="social_corporate">
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
@@ -31,7 +32,7 @@
   </div>
   <div class="col-md-12" *ngIf="financialAdviser">
     <div
-      class="row padding-40px-tb bg-medium-gray-light margin-40px-top margin-100px-lr xs-margin-40px-lr text-center"
+      class="row padding-40px-tb bg-medium-gray-light margin-40px-top  text-center"
       *ngIf="financialAdviser"
     >
       <div
@@ -48,14 +49,13 @@
         /></a>
       </div>
     </div>
-    <div
-      class="col-md-12  faq"
-      *ngIf="financialAdviser"
-      style="margin-top:12px;"
-    >
-      <div class="row">
-        <app-faq [faqs]="financialAdviser.acf['qa-ans']"></app-faq>
-      </div>
+    <div class="row faq" *ngIf="financialAdviser" style="margin-top:12px;">
+      <!-- <div class="col-md-12"> -->
+      <app-faq
+        [faqs]="financialAdviser.acf['qa-ans']"
+        [fromStatusFaq]="financialAdviser.saria"
+      ></app-faq>
+      <!-- </div> -->
     </div>
     <!-- <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="bg-white text-center">

@@ -61,7 +61,7 @@
                 }}</span>
                 <span>{{ slider.image_title1 }}</span>
               </h1>
-              <div class="btn-dual">
+              <div class="btn-dual" *ngIf="slider.image_title2">
                 <a
                   href="{{ slider.image_url }}"
                   target="_blank"
