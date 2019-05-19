@@ -30,6 +30,7 @@ import { FinancialImageTwoComponent } from './components/pages/financial-image-t
 import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-team.component';
 import { FaqDetailComponent } from './components/pages/faq-detail/faq-detail.component';
 import { PodcastSliderComponent } from './components/pages/podcast-slider/podcast-slider.component';
+import { InsightYearwiseDataComponent } from './components/pages/insight-yearwise-data/insight-yearwise-data.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PodcastSliderComponent } from './components/pages/podcast-slider/podcas
     FinancialImageTwoComponent,
     MeetOurTeamComponent,
     FaqDetailComponent,
-    PodcastSliderComponent
+    PodcastSliderComponent,
+    InsightYearwiseDataComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

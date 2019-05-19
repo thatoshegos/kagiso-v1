@@ -1,6 +1,7 @@
 <div
-  class="row padding-40px-tb bg-medium-gray-light margin-40px-top margin-100px-lr xs-margin-40px-lr text-center"
+  class=" row padding-40px-tb bg-medium-gray-light margin-40px-top  xs-margin-40px-lr text-center "
   *ngIf="imageTwo"
+  [ngClass]="!imageTwo.insightStatus ? 'margin-100px-lr' : 'none'"
 >
   <div
     class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInLeft"

@@ -8,8 +8,18 @@ export class WPAPIService {
   endpoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
   menuEndPoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
   pagesEndPoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
+  postEndpoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
 
   constructor(private http: HttpClient) {}
+  getCategory(query) {
+    return this.http.get(`${this.endpoints}/categories/${query}`);
+  }
+  getSubcategory(query) {
+    return this.http.get(`${this.endpoints}/categories/${query}`);
+  }
+  getPostFromCategory(query) {
+    return this.http.get(`${this.postEndpoint}/posts/${query}`);
+  }
   pages(query) {
     return this.http.get(`${this.endpoints}/pages/${query}`);
   }

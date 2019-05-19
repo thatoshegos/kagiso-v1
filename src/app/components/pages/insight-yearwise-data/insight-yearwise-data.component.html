@@ -1,0 +1,76 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="bg-white text-center year-list">
+    <ul *ngIf="categories">
+      <li *ngFor="let category of categories">
+        <a
+          href="javascript:void(0)"
+          [id]="category.id"
+          (click)="getSubCategoryData(category.id, $event)"
+          >{{ category.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class=" margin-30px-bottom-insight">
+  <div class=" xs-no-margin-lr">
+    <!-- <h2>{{ faqs.title.rendered }}</h2> -->
+    <div class="row remove-margin equalize sm-equalize-auto">
+      <div class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp">
+        <div
+          class="display-table-cell-vertical-middle md-padding-ten-all sm-padding-six-all xs-no-padding-tb xs-no-padding-lr"
+        >
+          <div
+            class="panel-group accordion-style2"
+            id="accordion"
+            *ngIf="subCategories"
+          >
+            <div
+              class="panel panel-default"
+              *ngFor="let subCategory of subCategories; let i = index"
+            >
+              <div class="panel-heading">
+                <a
+                  class="accordion-toggle"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapseTwo-{{ i }}"
+                  (click)="getMonthPost(subCategory.id, $event)"
+                >
+                  <div class="panel-title">
+                    <!-- <span
+                        class="alt-font font-weight-600 text-deep-pink tab-tag"
+                        >0{{ i + 1 }}</span 
+                    >-->
+                    <span
+                      class="text-extra-dark-gray xs-width-80 display-inline-block"
+                      [innerHTML]="subCategory.name"
+                    ></span>
+                    <div class="indicator faq-plus pull-right"></div>
+                  </div>
+                </a>
+              </div>
+              <div id="collapseTwo-{{ i }}" class="panel-collapse collapse">
+                <div class="panel-body bg-white">
+                  <div class="repeat-loop" *ngFor="let post of posts">
+                    <div class="title" [innerHTML]="post.title.rendered"></div>
+                    <div
+                      class="content"
+                      [innerHTML]="post.content.rendered"
+                    ></div>
+                  </div>
+
+                  <!-- {{ faq.answer_label }} -->
+                </div>
+              </div>
+            </div>
+            <!-- end tab content -->
+          </div>
+          <!-- <div class="padding-30px-top padding-30px-bottom text-center">
+                <a routerLink="/faq" class="more-btn">MORE</a>
+              </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
