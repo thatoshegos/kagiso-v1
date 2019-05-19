@@ -2036,8 +2036,16 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .about-sec .p-text{padding:0 !important}
 .about-sec .padding-45px-all > .padding-45px-all{padding:0}
 .pad_top_0{padding-top:0 !important}
+.mb_30{margin-bottom:30px !important}
 .pad_bottom_0{padding-bottom:0 !important}
 .padding-right_0{padding-right:0 !important}
 .padding-left_0{padding-left:0 !important}
 .star{color:#b50c2f}
 .clearfix{clear:both}
+.invest-list-img{margin:0; padding:0; list-style-type:none; font-size:0}
+.invest-list-img li{display:inline-block; margin:0; padding:0 15px; width:25%; font-size:18px; vertical-align:top}
+.invest-list-img li .content-box {background:#e3efed; text-align:center}
+.invest-list-img li .content-box .title{padding:10px; min-height:75px}
+.invest-list-img li .content-box p{display:none}
+.invest-list-img li img{width:100%; max-width:100%; margin:0; padding:0}
+.inner-match-height.process{padding-top:0 !important}
