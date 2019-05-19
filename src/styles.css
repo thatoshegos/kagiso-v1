@@ -2046,7 +2046,6 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .padding-left_0{padding-left:0 !important}
 .star{color:#b50c2f}
 .clearfix{clear:both}
-<<<<<<< HEAD
 .invest-list-img{margin:0; padding:0; list-style-type:none; font-size:0}
 .invest-list-img li{display:inline-block; margin:0; padding:0 15px; width:25%; font-size:18px; vertical-align:top}
 .invest-list-img li .content-box {background:#e3efed; text-align:center}
@@ -2054,5 +2053,4 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .invest-list-img li .content-box p{display:none}
 .invest-list-img li img{width:100%; max-width:100%; margin:0; padding:0}
 .inner-match-height.process{padding-top:0 !important}
-=======
->>>>>>> 6d0b2b143f1ea7227b08e8519b08e28864c422ae
+
