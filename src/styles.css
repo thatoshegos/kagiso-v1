@@ -2053,4 +2053,21 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .invest-list-img li .content-box p{display:none}
 .invest-list-img li img{width:100%; max-width:100%; margin:0; padding:0}
 .inner-match-height.process{padding-top:0 !important}
+.year-list{border-bottom:4px solid #f7f7f7;}
+.year-list ul{margin: 0; padding: 30px 0; list-style-type: none; text-align: center;}
+.year-list ul li{display: inline-block; border-left:1px solid #000; padding: 0 10px}
+.year-list ul li:first-child{border-left:0;}
+.year-list ul li.active a{color:#b50c2f}
+.year-list ul li a{color:#000; font-weight: 700}
 
+.year-details{border-bottom:15px solid #f7f7f7; padding: 30px 0 0 0; color:#000;}
+
+.year-details .panel-default{border:none !important; border-bottom:4px solid #f7f7f7 !important;margin:0 !important; }
+.year-details .panel-body{border-top: none !important; padding:0 45px 15px 45px}
+.year-details .panel-title{font-weight: 700}
+.year-details .date{font-weight: 700; padding:10px 0;}
+.year-details .title{color:#b50c2f; padding: 0}
+.year-details p{padding: 0}
+.year-details .panel-heading{padding: 25px 45px !important}
+h1.black{color: #000 !important}
+.fund-title{color:#b50c2f; font-size: 24px}
