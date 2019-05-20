@@ -5,7 +5,8 @@
         <a
           href="javascript:void(0)"
           [id]="category.id"
-          (click)="getSubCategoryData(category.id, $event)"
+          (click)="getSubCategoryData(category, $event)"
+          [ngClass]="{ active: selectedItem == category }"
           >{{ category.name }}
         </a>
       </li>
@@ -37,7 +38,7 @@
                   href="#collapseTwo-{{ i }}"
                   (click)="getMonthPost(subCategory.id, $event)"
                 >
-                  <div class="panel-title">
+                  <div class="panel-title year-post">
                     <!-- <span
                         class="alt-font font-weight-600 text-deep-pink tab-tag"
                         >0{{ i + 1 }}</span 

@@ -26,3 +26,10 @@
   font-size: 29px;
   font-weight: 400;
 }
+.year-list > ul > li .active {
+  color: red;
+  font-weight: 800;
+}
+.year-post > span {
+  font-weight: 800;
+}
