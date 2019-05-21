@@ -12,6 +12,8 @@ export class PagesComponent implements OnInit {
   page = null;
   contactUs = false;
   faq;
+  annualReportUrl;
+  selectedYear;
   constructor(
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
@@ -43,8 +45,12 @@ export class PagesComponent implements OnInit {
           if (slug == "faq") {
             this.page.faqStatus = true;
           }
-          if(slug=="insights"){
-             this.page.insightStatus=true;  
+          if (slug == "insights") {
+            this.page.insightStatus = true;
+          }
+          if (slug == "unit-trusts-annual-report") {
+            this.page.annualReport = true;
+            this.annualReportUrl = this.page.acf.annual_report[0].report_url;
           }
           console.log(this.page);
 
@@ -119,6 +125,10 @@ export class PagesComponent implements OnInit {
     });
   }
 
+  getAnnualReport(event, year) {
+    this.annualReportUrl = year.report_url;
+    this.selectedYear = year;
+  }
   ngOnInit() {
     console.log("SDf");
   }

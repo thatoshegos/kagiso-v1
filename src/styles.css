@@ -70,6 +70,7 @@ p { font-size: 18px;
     font-weight: 400 !important;
   }
 
+
 b, strong { font-weight: 600;}
 .last-paragraph-no-margin p:last-of-type {margin-bottom:0}
 .alt-font strong {font-weight: 700 }
@@ -2078,3 +2079,28 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .year-details .panel-heading{padding: 25px 45px !important}
 h1.black{color: #000 !important}
 .fund-title{color:#b50c2f; font-size: 24px}
+.annual{
+    text-align:center;
+}
+.annual img {
+  left: 37% !important;
+  padding: 40px;
+}
+.annual-heading{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #b53737!important;
+    padding-bottom: 30px;
+}
+.annual-link{
+    padding-bottom: 30px;
+}
+.annual-link a{
+    color:#b53737;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left:46%;
+    padding-bottom: 30px;
+}

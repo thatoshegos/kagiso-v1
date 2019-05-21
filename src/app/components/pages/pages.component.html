@@ -241,7 +241,62 @@
     <!-- </div>     -->
   </div>
   <div class="col-md-12">
-    <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
+    <app-financial-image-two
+      [imageTwo]="page"
+      [insightStatus]="page.insightStatus"
+    ></app-financial-image-two>
   </div>
-  <!-- end insight-->
+  <div class="col-md-12 remove-margin">
+    <app-faq
+      [faqs]="page.acf['qa-ans']"
+      [insightStatus]="page.insightStatus"
+    ></app-faq>
+  </div>
 </div>
+<!-- end insight-->
+<!-- Annual Report -->
+<div class="container" *ngIf="page && page.annualReport">
+  <br /><br /><br /><br /><br />
+  <div
+    class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
+    data-wow-delay="0.6s"
+    data-aos="fade-up"
+  >
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2 [innerHTML]="page.title.rendered"></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="bg-white annual">
+        <img
+          class="annual-image"
+          src="assets/images/annual-report.jpg"
+          style="left:37%;"
+        />
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="bg-white annual-link">
+        <a [href]="annualReportUrl">Download</a>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="bg-white">
+        <div class="bg-white text-center year-list year-report-list">
+          <ul>
+            <li *ngFor="let getYear of page.acf.annual_report">
+              <a
+                href="javascript:void(0)"
+                (click)="getAnnualReport($event, getYear)"
+                [ngClass]="{ active: selectedYear == getYear }"
+                >{{ getYear.year }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end annual Report -->

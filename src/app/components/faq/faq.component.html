@@ -1,5 +1,7 @@
 <div class=" margin-100px-bottom">
-  <div [ngClass]="!fromStatusFaq ? 'margin-100px-lr' : 'none'">
+  <div
+    [ngClass]="!fromStatusFaq && !insightStatus ? 'margin-100px-lr' : 'none'"
+  >
     <h2>Frequently asked questions</h2>
     <div class="row equalize sm-equalize-auto">
       <div class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp">

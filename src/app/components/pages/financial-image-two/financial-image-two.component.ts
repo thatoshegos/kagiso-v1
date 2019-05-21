@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class FinancialImageTwoComponent implements OnInit {
   @Input() imageTwo;
+  @Input() insightStatus;
   constructor() {}
 
   ngOnInit() {}
