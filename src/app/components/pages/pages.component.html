@@ -161,6 +161,13 @@
 
 <!-- End sharia page  -->
 
+<!--Sharia Board start-->
+<div class="container" *ngIf="page && page.shariaBoardStatus">
+  <br /><br />
+  <app-sharia-board [shariaContent]="page"></app-sharia-board>
+</div>
+<!--Sharia board End-->
+
 <!--@start Fund range-->
 <section
   class="wow fadeIn no-padding main-slider mobile-height top-space"
@@ -314,15 +321,18 @@
   </div>
   <div class="clearfix"></div>
 
-  <div class="row margin-40px-top">
-    <div  *ngFor="let quaterlyData of page.acf.up_quarterly;let i=index"
-      [ngClass]="i%3==0 && quaterlyData.length>3 ?'row':'none' "
-    >
-      <app-quaterly-card class="col-md-4" [quaterlyData]="quaterlyData"></app-quaterly-card>
-    </div>
+  <div class="up-image margin-40px-top">
+    <ul>
+      <li
+        *ngFor="let quaterlyData of page.acf.up_quarterly; let i = index"
+        [ngClass]="i != 0 ? ((i + 1) % 3 == 0 ? 'row-end' : 'odd') : ''"
+      >
+        <app-quaterly-card [quaterlyData]="quaterlyData"></app-quaterly-card>
+      </li>
+    </ul>
+
+    <!-- </div> -->
+
+    <!--End Quaterly status-->
   </div>
-
-  <!-- </div> -->
-
-  <!--End Quaterly status-->
 </div>

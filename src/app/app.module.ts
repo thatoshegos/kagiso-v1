@@ -32,6 +32,7 @@ import { FaqDetailComponent } from './components/pages/faq-detail/faq-detail.com
 import { PodcastSliderComponent } from './components/pages/podcast-slider/podcast-slider.component';
 import { InsightYearwiseDataComponent } from './components/pages/insight-yearwise-data/insight-yearwise-data.component';
 import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly-card.component';
+import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-board.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly
     FaqDetailComponent,
     PodcastSliderComponent,
     InsightYearwiseDataComponent,
-    QuaterlyCardComponent
+    QuaterlyCardComponent,
+    ShariaBoardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

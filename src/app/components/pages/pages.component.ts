@@ -55,6 +55,9 @@ export class PagesComponent implements OnInit {
           if (slug == "april-2018-quarterly") {
             this.page.quaterlyStatus = true;
           }
+          if(slug=="our-sharia-board"){
+            this.page.shariaBoardStatus=true;
+          }
           console.log(this.page);
 
           if (this.page.id == 10) {
