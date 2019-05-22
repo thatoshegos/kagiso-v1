@@ -52,6 +52,9 @@ export class PagesComponent implements OnInit {
             this.page.annualReport = true;
             this.annualReportUrl = this.page.acf.annual_report[0].report_url;
           }
+          if (slug == "april-2018-quarterly") {
+            this.page.quaterlyStatus = true;
+          }
           console.log(this.page);
 
           if (this.page.id == 10) {

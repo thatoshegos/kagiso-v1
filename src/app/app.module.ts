@@ -31,6 +31,7 @@ import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-
 import { FaqDetailComponent } from './components/pages/faq-detail/faq-detail.component';
 import { PodcastSliderComponent } from './components/pages/podcast-slider/podcast-slider.component';
 import { InsightYearwiseDataComponent } from './components/pages/insight-yearwise-data/insight-yearwise-data.component';
+import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly-card.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { InsightYearwiseDataComponent } from './components/pages/insight-yearwis
     MeetOurTeamComponent,
     FaqDetailComponent,
     PodcastSliderComponent,
-    InsightYearwiseDataComponent
+    InsightYearwiseDataComponent,
+    QuaterlyCardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

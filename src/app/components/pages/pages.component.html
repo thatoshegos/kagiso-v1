@@ -300,3 +300,29 @@
   </div>
 </div>
 <!-- end annual Report -->
+
+<!---Quaterly Status-->
+<div class="container" *ngIf="page && page.quaterlyStatus">
+  <div
+    class="row margin-twelve-top sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
+    data-wow-delay="0.6s"
+    data-aos="fade-up"
+  >
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2 [innerHTML]="page.title.rendered"></h2>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="row margin-40px-top">
+    <div  *ngFor="let quaterlyData of page.acf.up_quarterly;let i=index"
+      [ngClass]="i%3==0 && quaterlyData.length>3 ?'row':'none' "
+    >
+      <app-quaterly-card class="col-md-4" [quaterlyData]="quaterlyData"></app-quaterly-card>
+    </div>
+  </div>
+
+  <!-- </div> -->
+
+  <!--End Quaterly status-->
+</div>
