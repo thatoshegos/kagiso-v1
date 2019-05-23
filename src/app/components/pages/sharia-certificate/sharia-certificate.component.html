@@ -5,7 +5,7 @@
         class="col-md-4"
         *ngFor="let sharia of shariaCerticate.acf.sharia_image"
       >
-        <a [href]="sharia.sharia_image_url">
+        <a [routerLink]="'/' + sharia.sharia_image_url">
           <img [src]="sharia.sharia_image.url" />
         </a>
       </div>

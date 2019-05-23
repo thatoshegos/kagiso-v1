@@ -28,7 +28,11 @@
                   </p>
                   <p>
                     Email us on:
-                    <span class="text-black email"><a href="mailto:{{ page.acf.email_us_on }"> {{ page.acf.email_us_on }}</a></span>
+                    <span class="text-black email"
+                      ><a href="mailto:{{ page.acf.email_us_on }">
+                        {{ page.acf.email_us_on }}</a
+                      ></span
+                    >
                   </p>
                 </div>
                 <div class="box-2 padding-5px-all margin-40px-bottom">
@@ -102,15 +106,20 @@
                     Cape Town
                   </div>
                   <div class="box-2-content padding-20px-all">
-                    <p class="email"> 
+                    <p class="email">
                       Telephone: {{ page.acf.telephone }}<br />
                       Fax: {{ page.acf.fax }}<br />
-                      Email: <a href="mailto:{{ page.acf.email }}">{{ page.acf.email }}</a>
+                      Email:
+                      <a href="mailto:{{ page.acf.email }}">{{
+                        page.acf.email
+                      }}</a>
                     </p>
                     <br />
                     <p>
                       Physical address<br />
-                      {{ page.acf.physical_address }}<br />
+                      <span [innerHTML]="page.acf.physical_address"></span>
+                      <!-- {{ page.acf.physical_address }} -->
+                      <br />
 
                       <a [href]="page.acf.google_map_url" class="text-deep-pink"
                         >[view map]</a
@@ -134,12 +143,17 @@
                     <p class="email">
                       Telephone: {{ page.acf.johannesburg_telephone }}<br />
                       Fax:{{ page.acf.johannesburg_fax }}<br />
-                      Email: <a href="mailto:{{ page.acf.johannesburg_email }}">{{ page.acf.johannesburg_email }}</a>
+                      Email:
+                      <a href="mailto:{{ page.acf.johannesburg_email }}">{{
+                        page.acf.johannesburg_email
+                      }}</a>
                     </p>
                     <br />
                     <p>
-                      Physical address<br /><span [innerHTML]="page.acf.johannesburg_physical_address"></span>
-                    <br />
+                      Physical address<br /><span
+                        [innerHTML]="page.acf.johannesburg_physical_address"
+                      ></span>
+                      <br />
 
                       <a
                         [href]="page.acf.johannesburg_google_map_url"
