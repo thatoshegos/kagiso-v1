@@ -341,5 +341,18 @@
       </div>
     </div>
   </div>
+  <div class="row margin-40px-top quaterly-image-1 margin-40px-bottom">
+    <div
+      class="col-md-4"
+      *ngFor="let quaterly of page.acf.up_quarterly_second_images"
+    >
+      <img
+        class="quaterly-image-2"
+        [src]="quaterly.up_image.url"
+        width="400"
+        height="200"
+      />
+    </div>
+  </div>
 </div>
 <!--End Quaterly status-->

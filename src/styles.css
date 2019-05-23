@@ -2133,3 +2133,8 @@ h1.black{color: #000 !important}
 /* .sharial-internal-contents p h2{
   font-weight: 500;  
 } */
+
+.quaterly-image-1 > .quaterly-image-2{
+    width: 400px;
+    height: 285px;
+}
