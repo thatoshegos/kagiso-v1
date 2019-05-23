@@ -2138,3 +2138,12 @@ h1.black{color: #000 !important}
     width: 400px;
     height: 285px;
 }
+
+.quaterly-images-accordan >
+.accordion-style2 .panel .panel-heading{
+    background: #fff;
+    border-radius: 0;
+    padding: 18px 28px 16px;
+    border-bottom: 2px solid #f4f6f7;
+    font-weight: 800;
+} 

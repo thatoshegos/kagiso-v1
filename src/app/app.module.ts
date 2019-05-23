@@ -33,6 +33,8 @@ import { PodcastSliderComponent } from './components/pages/podcast-slider/podcas
 import { InsightYearwiseDataComponent } from './components/pages/insight-yearwise-data/insight-yearwise-data.component';
 import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly-card.component';
 import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-board.component';
+import { UpQuaterlyLibraryComponent } from './components/pages/up-quaterly-library/up-quaterly-library.component';
+import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-image-grid/up-quaterly-image-grid.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-boa
     PodcastSliderComponent,
     InsightYearwiseDataComponent,
     QuaterlyCardComponent,
-    ShariaBoardComponent
+    ShariaBoardComponent,
+    UpQuaterlyLibraryComponent,
+    UpQuaterlyImageGridComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

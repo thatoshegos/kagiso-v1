@@ -55,8 +55,11 @@ export class PagesComponent implements OnInit {
           if (slug == "april-2018-quarterly") {
             this.page.quaterlyStatus = true;
           }
-          if(slug=="our-sharia-board"){
-            this.page.shariaBoardStatus=true;
+          if (slug == "our-sharia-board") {
+            this.page.shariaBoardStatus = true;
+          }
+          if (slug == "up-quarterly-library") {
+            this.page.quaterlyLibraryStatus = true;
           }
           console.log(this.page);
 
