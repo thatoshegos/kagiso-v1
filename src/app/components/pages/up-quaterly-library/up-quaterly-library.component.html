@@ -40,8 +40,9 @@
               <div id="collapseTwo-{{ i }}" class="panel-collapse collapse">
                 <div class="panel-body bg-white">
                   <div class="repeat-loop">
-                    <div class="title"></div>
-                    <div class="content"></div>
+                    <app-up-quaterly-image-grid
+                      [getImages]="imagePosts"
+                    ></app-up-quaterly-image-grid>
                   </div>
 
                   <!-- {{ faq.answer_label }} -->

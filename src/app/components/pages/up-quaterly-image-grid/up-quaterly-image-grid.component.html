@@ -1,3 +1,8 @@
-<p>
-  up-quaterly-image-grid works!
-</p>
+<div class="loop-data">
+  <ul>
+    <li
+      *ngFor="let image of getImages; let i = index"
+      [innerHTML]="image.content.rendered"
+    ></li>
+  </ul>
+</div>

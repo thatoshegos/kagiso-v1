@@ -9,6 +9,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
   @Input() getQuaterlyImage;
   categories;
   selectedItem;
+  imagePosts;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
@@ -20,6 +21,11 @@ export class UpQuaterlyLibraryComponent implements OnInit {
   }
   getYearPost(category, event) {
     this.selectedItem = category;
-    console.log(category);
+    this.wpservice
+      .getQuaterlyImagePostFromCategory(`?categories=${category.id}`)
+      .subscribe(imagePost => {
+        this.imagePosts = imagePost;
+        console.log(this.imagePosts);
+      });
   }
 }

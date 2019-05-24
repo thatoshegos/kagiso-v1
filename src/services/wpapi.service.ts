@@ -20,6 +20,9 @@ export class WPAPIService {
   getPostFromCategory(query) {
     return this.http.get(`${this.postEndpoint}/posts/${query}`);
   }
+  getQuaterlyImagePostFromCategory(query) {
+    return this.http.get(`${this.postEndpoint}/posts/${query}`);
+  }
   pages(query) {
     return this.http.get(`${this.endpoints}/pages/${query}`);
   }
