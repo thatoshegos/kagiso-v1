@@ -37,6 +37,11 @@ const routes: Routes = [
     component: PagesComponent
   },
   {
+    path: "sharia-investor/podcast-archive",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
     path: "institutional-investor/our-funds",
     component: PagesComponent
   },

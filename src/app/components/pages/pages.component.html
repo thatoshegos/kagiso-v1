@@ -139,7 +139,10 @@
         <app-podcast-slider [sliders]="page.acf"></app-podcast-slider>
       </div>
       <div class="col-md-4 col-md-offset-4">
-        <a [href]="" class="more-btn read-more text-center margin-35px-top ">
+        <a
+          routerLink="/sharia-investor/podcast-archive"
+          class="more-btn read-more text-center margin-35px-top "
+        >
           PODCAST ARCHIVE</a
         >
       </div>
@@ -374,3 +377,30 @@
 </div>
 
 <!--Start up Quaterly Library-->
+
+<!-- Podcast Archive -->
+<div class="container" *ngIf="page && page.podcastArchiveStatus">
+  <div class="row margin-twelve-top">
+    <h2>{{ page.title.rendered }}</h2>
+  </div>
+  <div class="row margin-30px-bottom">
+    <div class="bg-white">
+      <app-podcast-archive-list [getPodcast]="page"></app-podcast-archive-list>
+    </div>
+  </div>
+</div>
+<!-- End Podcast Archive -->
+
+<!-- Glossary page start -->
+<div class="container" *ngIf="page && page.glossaryStatus">
+  <div class="row margin-twelve-top">
+    <h2>Glossary</h2>
+  </div>
+  <div class="row margin-30px-bottom">
+    <app-faq
+      [faqs]="page.acf['qa-ans']"
+      [glossaryStatus]="page.glossaryStatus"
+    ></app-faq>
+  </div>
+</div>
+<!--Glossary Page End -->

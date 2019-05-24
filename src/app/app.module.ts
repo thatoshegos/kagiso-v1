@@ -35,6 +35,7 @@ import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly
 import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-board.component';
 import { UpQuaterlyLibraryComponent } from './components/pages/up-quaterly-library/up-quaterly-library.component';
 import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-image-grid/up-quaterly-image-grid.component';
+import { PodcastArchiveListComponent } from './components/pages/podcast-archive-list/podcast-archive-list.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-ima
     QuaterlyCardComponent,
     ShariaBoardComponent,
     UpQuaterlyLibraryComponent,
-    UpQuaterlyImageGridComponent
+    UpQuaterlyImageGridComponent,
+    PodcastArchiveListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

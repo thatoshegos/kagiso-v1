@@ -9,6 +9,7 @@ export class FaqComponent implements OnInit {
   @Input() faqs;
   @Input() fromStatusFaq;
   @Input() insightStatus;
+  @Input() glossaryStatus;
   constructor() {}
 
   ngOnInit() {

@@ -1,8 +1,12 @@
 <div class=" margin-100px-bottom">
   <div
-    [ngClass]="!fromStatusFaq && !insightStatus ? 'margin-100px-lr' : 'none'"
+    [ngClass]="
+      !fromStatusFaq && !insightStatus && !glossaryStatus
+        ? 'margin-100px-lr'
+        : 'none'
+    "
   >
-    <h2>Frequently asked questions</h2>
+    <h2 *ngIf="!glossaryStatus">Frequently asked questions</h2>
     <div class="row equalize sm-equalize-auto">
       <div class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp">
         <div
@@ -56,7 +60,7 @@
                   <div class="panel-title">
                     <span
                       class="alt-font font-weight-600 text-deep-pink tab-tag"
-                      >0{{ i + 1 }}</span
+                      >{{ i + 1 }}</span
                     >
                     <span
                       class="text-extra-dark-gray xs-width-80 display-inline-block"
@@ -80,7 +84,12 @@
             <!-- end tab content -->
           </div>
           <div class="padding-30px-top padding-30px-bottom text-center">
-            <a routerLink="/faq" class="more-btn">MORE</a>
+            <a routerLink="/faq" class="more-btn" *ngIf="!glossaryStatus"
+              >MORE</a
+            >
+            <a routerLink="/glossary" class="more-btn" *ngIf="glossaryStatus"
+              >MORE</a
+            >
           </div>
         </div>
       </div>

@@ -21,8 +21,8 @@ export class PagesComponent implements OnInit {
     private santiser: DomSanitizer
   ) {
     route.params.subscribe(val => {
-      console.log(val);
-      console.log(this.router.url);
+      // console.log(val);
+      //console.log(this.router.url);
       var urlArr = this.router.url.split("/");
       var currentUrl = {
         parent: urlArr.length > 2 ? urlArr[1] : "",
@@ -60,6 +60,12 @@ export class PagesComponent implements OnInit {
           }
           if (slug == "up-quarterly-library") {
             this.page.quaterlyLibraryStatus = true;
+          }
+          if (slug == "podcast-archive") {
+            this.page.podcastArchiveStatus = true;
+          }
+          if (slug == "glossary") {
+            this.page.glossaryStatus = true;
           }
           console.log(this.page);
 
