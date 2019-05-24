@@ -36,6 +36,7 @@ import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-boa
 import { UpQuaterlyLibraryComponent } from './components/pages/up-quaterly-library/up-quaterly-library.component';
 import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-image-grid/up-quaterly-image-grid.component';
 import { PodcastArchiveListComponent } from './components/pages/podcast-archive-list/podcast-archive-list.component';
+import { FundRangeGraphComponent } from './components/pages/fund-range-graph/fund-range-graph.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { PodcastArchiveListComponent } from './components/pages/podcast-archive-
     ShariaBoardComponent,
     UpQuaterlyLibraryComponent,
     UpQuaterlyImageGridComponent,
-    PodcastArchiveListComponent
+    PodcastArchiveListComponent,
+    FundRangeGraphComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

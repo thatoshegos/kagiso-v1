@@ -51,7 +51,9 @@
             {{ image.south_african_fund_image_title }}
           </div>
           <div class="fund-range-graph bg-light-green margin-30px-bottom">
-             <a [href]="image.south_african_fund_url"><img [src]="image.south_african_fund_image_uploader.url" /></a>
+            <a [href]="image.south_african_fund_url"
+              ><img [src]="image.south_african_fund_image_uploader.url"
+            /></a>
           </div>
         </div>
       </div>
@@ -69,7 +71,9 @@
             {{ image.global_funds_image_title }}
           </div>
           <div class="fund-range-graph bg-light-green margin-30px-bottom">
-             <a [href]="image.global_funds_url"><img [src]="image.global_funds_image_uploader.url" /></a>
+            <a [href]="image.global_funds_url"
+              ><img [src]="image.global_funds_image_uploader.url"
+            /></a>
           </div>
         </div>
       </div>
@@ -80,7 +84,7 @@
         data-aos="fade-right"
       >
         <div class="col-md-6 col-sm-6 col-xs-12 text-right padding-5px-bottom">
-          <a href="#" class="plateform-btn">PLATFORMS</a>
+          <a routerLink="/fund-range-test" class="plateform-btn">PLATFORMS</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 text-left">
           <a href="#" class="form-btn">FORMS</a>

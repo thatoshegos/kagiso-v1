@@ -14,6 +14,7 @@ export class PagesComponent implements OnInit {
   faq;
   annualReportUrl;
   selectedYear;
+  fundRangeTestStatus;
   constructor(
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
@@ -67,65 +68,71 @@ export class PagesComponent implements OnInit {
           if (slug == "glossary") {
             this.page.glossaryStatus = true;
           }
-          console.log(this.page);
-
-          if (this.page.id == 10) {
-            //this.page.formStatus = true;
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.aboutStatus = true;
-              this.contactUs = true;
-              console.log(this.page);
-            });
-          } else if (
-            currentUrl.parent == "sharia-investor" &&
-            this.page.slug == "our-funds"
-          ) {
-            this.page.id = 8;
-
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.ourfunds = true;
-              this.faq = this.page.acf["qa-ans"];
-              // console.log(this.page);
-              // console.log(this.faq);
-            });
-          } else if (
-            currentUrl.parent == "individual-investor" &&
-            this.page.slug == "our-funds"
-          ) {
-            this.page.id = 355;
-
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.ourfunds = true;
-              this.faq = this.page.acf["qa-ans"];
-              // console.log(this.page);
-              // console.log(this.faq);
-            });
-          } else if (
-            currentUrl.parent == "institutional-investor" &&
-            this.page.slug == "our-funds"
-          ) {
-            this.page.id = 351;
-
-            this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-              this.page = page;
-              this.page.ourfunds = true;
-              this.faq = this.page.acf["qa-ans"];
-              // console.log(this.page);
-              // console.log(this.faq);
-            });
-          } else if (
-            currentUrl.parent == "sharia-investor" &&
-            slug == "invest-with-us"
-          ) {
-            this.wpservice.getPages("89").subscribe(page => {
-              this.page = page;
-              this.page.saria = true;
-              console.log(this.page);
-            });
+          if (slug == "fund-range-test") {
+            this.fundRangeTestStatus = true;
           }
+
+          console.log(this.page);
+          if (this.page) {
+            if (this.page.id == 10) {
+              //this.page.formStatus = true;
+              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.aboutStatus = true;
+                this.contactUs = true;
+                console.log(this.page);
+              });
+            } else if (
+              currentUrl.parent == "sharia-investor" &&
+              this.page.slug == "our-funds"
+            ) {
+              this.page.id = 8;
+
+              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.ourfunds = true;
+                this.faq = this.page.acf["qa-ans"];
+                // console.log(this.page);
+                // console.log(this.faq);
+              });
+            } else if (
+              currentUrl.parent == "individual-investor" &&
+              this.page.slug == "our-funds"
+            ) {
+              this.page.id = 355;
+
+              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.ourfunds = true;
+                this.faq = this.page.acf["qa-ans"];
+                // console.log(this.page);
+                // console.log(this.faq);
+              });
+            } else if (
+              currentUrl.parent == "institutional-investor" &&
+              this.page.slug == "our-funds"
+            ) {
+              this.page.id = 351;
+
+              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.ourfunds = true;
+                this.faq = this.page.acf["qa-ans"];
+                // console.log(this.page);
+                // console.log(this.faq);
+              });
+            } else if (
+              currentUrl.parent == "sharia-investor" &&
+              slug == "invest-with-us"
+            ) {
+              this.wpservice.getPages("89").subscribe(page => {
+                this.page = page;
+                this.page.saria = true;
+                console.log(this.page);
+              });
+            }
+          }
+
           // } else if (this.page.slug == "our-funds") {
           //   this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
           //     this.page = page;
