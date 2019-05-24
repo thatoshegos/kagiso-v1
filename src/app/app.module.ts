@@ -1,6 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+
+import { ChartsModule } from 'ng2-charts';
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -17,7 +21,6 @@ import { PagesComponent } from "./components/pages/pages.component";
 import { PostComponent } from "./components/post/post.component";
 import { HomeComponent } from "./components/home/home.component";
 
-import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { UnconventionalThinkingComponent } from "./components/pages/unconventional-thinking/unconventional-thinking.component";
 import { CommonComponent } from "./components/pages/common/common.component";
 import { InvestmentApprochAboutComponent } from "./components/pages/investment-approch-about/investment-approch-about.component";
@@ -73,7 +76,7 @@ import { FundRangeGraphComponent } from './components/pages/fund-range-graph/fun
     PodcastArchiveListComponent,
     FundRangeGraphComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule, ChartsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
