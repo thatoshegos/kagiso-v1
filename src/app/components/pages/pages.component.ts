@@ -15,6 +15,11 @@ export class PagesComponent implements OnInit {
   annualReportUrl;
   selectedYear;
   fundRangeTestStatus;
+
+  getHomeSlider;
+  //textFreeInvesting = false;
+  taxFreeInvestment;
+
   constructor(
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
@@ -70,6 +75,19 @@ export class PagesComponent implements OnInit {
           }
           if (slug == "fund-range-test") {
             this.fundRangeTestStatus = true;
+          }
+          if (slug == "meet-the-fund-manager") {
+            this.page.meetFundManager = true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
+          if (slug == "tax-free-investing") {
+            this.page.textFreeInvesting = true;
+            // this.wpservice.getPost("11272").subscribe(taxFrees => {
+            //   this.taxFreeInvestment = taxFrees;
+            //   console.log(this.taxFreeInvestment);
+            // });
           }
 
           console.log(this.page);

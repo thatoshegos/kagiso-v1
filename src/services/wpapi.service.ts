@@ -23,6 +23,9 @@ export class WPAPIService {
   getQuaterlyImagePostFromCategory(query) {
     return this.http.get(`${this.postEndpoint}/posts/${query}`);
   }
+  getPost(id) {
+    return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
+  }
   pages(query) {
     return this.http.get(`${this.endpoints}/pages/${query}`);
   }

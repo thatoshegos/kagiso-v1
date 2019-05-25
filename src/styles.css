@@ -2147,3 +2147,19 @@ h1.black{color: #000 !important}
     border-bottom: 2px solid #f4f6f7;
     font-weight: 800;
 } 
+.content-div {
+    padding: 40px;
+    margin: 4px 104px 0px 161px;
+  }
+  .content-div p {
+   
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9;
+    text-align: justify;
+  }
+  .content-div ul li {
+      font-size:18px;
+      font-weight: 400;
+  }
+  
