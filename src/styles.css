@@ -2176,3 +2176,9 @@ h1.black{color: #000 !important}
 .swiper-container .swiper-pagination{text-align:right;}
 .plateform-btn:hover{background:#c8dbe5 url(./assets/images/plateform-icon-hover.jpg) no-repeat right;}
 .form-btn:hover{background: #c8dbe5 url(./assets/images/form-icon-hover.jpg) no-repeat right;}
+
+.faq-pan {
+    text-align: justify;
+    line-height: 1.7!important;
+  }
+  

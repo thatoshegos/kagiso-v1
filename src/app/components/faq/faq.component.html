@@ -55,8 +55,10 @@
                   class="accordion-toggle"
                   data-toggle="collapse"
                   data-parent="#accordion"
-                  href="#collapseTwo-{{ i }}"
+                  (click)="getClicked($event, faq, isfirst)"
+                  href="javascript:void(0)"
                 >
+                  <!-- #collapseTwo-{{ i }} -->
                   <div class="panel-title">
                     <span
                       class="alt-font font-weight-600 text-deep-pink tab-tag"
@@ -66,12 +68,22 @@
                       class="text-extra-dark-gray xs-width-80 display-inline-block"
                       [innerHTML]="faq.question_label"
                     ></span>
-                    <div class="indicator faq-plus pull-right"></div>
+                    <div
+                      class="indicator  pull-right"
+                      [ngClass]="
+                        faq == currentFaq && isfirst ? 'faq-minus' : 'faq-plus'
+                      "
+                    ></div>
                   </div>
                 </a>
               </div>
-              <div id="collapseTwo-{{ i }}" class="panel-collapse collapse">
-                <div class="panel-body">
+              <div
+                id="collapseTwo-{{ i }}"
+                class="panel-collapse collapse"
+                [ngClass]="faq == currentFaq && isfirst ? 'in' : 'none'"
+                attr.aria-expanded="{{ isfirst }}"
+              >
+                <div class="panel-body faq-pan">
                   <!-- Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
