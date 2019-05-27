@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class InvestSliderComponent implements OnInit {
   @Input() dataset;
+  @Input() fromNewInvesting;
+  slideDatas;
   constructor() {}
   config: SwiperOptions = {
     autoplay: 3000,
@@ -17,6 +19,14 @@ export class InvestSliderComponent implements OnInit {
     spaceBetween: 30
   };
   ngOnInit() {
-    // console.log(this.dataset);
+    if (this.dataset.acf) {
+      this.slideDatas = this.dataset.acf.how_do_i_invest;
+    } else {
+      this.slideDatas = this.dataset;
+      console.log(this.slideDatas);
+    }
+  }
+  ngOnChanges() {
+    this.slideDatas = this.dataset;
   }
 }

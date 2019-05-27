@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { DomSanitizer } from "@angular/platform-browser";
 import { WPAPIService } from "../../../services/wpapi.service";
-
+import { Observable } from "rxjs";
 @Component({
   selector: "app-pages",
   templateUrl: "./pages.component.html",
@@ -15,8 +15,11 @@ export class PagesComponent implements OnInit {
   annualReportUrl;
   selectedYear;
   fundRangeTestStatus;
-
+  getHowToInvestSlider;
   getHomeSlider;
+
+  activeClickedTab;
+
   //textFreeInvesting = false;
   taxFreeInvestment;
 
@@ -88,6 +91,11 @@ export class PagesComponent implements OnInit {
             //   this.taxFreeInvestment = taxFrees;
             //   console.log(this.taxFreeInvestment);
             // });
+          }
+          if (slug == "new-to-investing") {
+            this.page.newToInvestingStatus = true;
+            this.activeClickedTab = "unitTrust";
+            this.getHowToInvestSlider = this.page.acf.what_is_a_unit_trust;
           }
 
           console.log(this.page);
@@ -169,7 +177,11 @@ export class PagesComponent implements OnInit {
     this.annualReportUrl = year.report_url;
     this.selectedYear = year;
   }
-  ngOnInit() {
-    console.log("SDf");
+  ngOnInit() {}
+
+  changeSliderData(data, clickedTab) {
+    this.getHowToInvestSlider = data;
+    this.activeClickedTab = clickedTab;
+    console.log(this.getHowToInvestSlider);
   }
 }

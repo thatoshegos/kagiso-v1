@@ -34,10 +34,7 @@
         class="text-justify padding_left_0 padding-right_0"
         [innerHTML]="fundDesign.funds_designed_content"
       ></p>
-      <div
-        class="inner-match-height"
-        *ngIf="independent"
-      >
+      <div class="inner-match-height" *ngIf="independent">
         <p
           class="text-deep-pink padding-40px-top"
           [innerHTML]="independent.independent_thinkers_content"
@@ -78,9 +75,21 @@
         class="o-text"
         [innerHTML]="transformation.committed_to_transformation_content"
       ></p>
+
       <!-- <div class="second-slide" *ngIf="social_corporate">
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
       </div> -->
+    </div>
+  </div>
+  <div
+    class="col-md-12 margin-30px-top margin-30px-bottom"
+    *ngIf="transformation"
+  >
+    <div class=" col-md-8 col-md-offset-2 suscribe ">
+      <a href="#" class="btn-meet-leaders" style="margin-right:20px;"
+        >OUR FUNDS</a
+      >
+      <a href="#" class="btn-meet-leaders">NEWS & LITRATURE</a>
     </div>
   </div>
   <!-- <div class="col-md-12 col-sm-12 col-xs-12">

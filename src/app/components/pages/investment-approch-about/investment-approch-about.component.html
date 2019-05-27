@@ -12,19 +12,24 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="main-content" *ngFor="let investment of investments">
         <div
-          class="bg-white  padding-45px-all sm-padding-15px-all inner-match-height {{investment.heading.replace(' ','-') | lowercase}}"
+          class="bg-white   inner-match-height {{
+            investment.heading.replace(' ', '-') | lowercase
+          }}"
         >
-          <p class="text-deep-pink">{{ investment.heading }}</p>
-          <p class="text-light-blue text-italic" 
-            [innerHTML]="investment.idea">
-          </p>
+          <div class="padding-45px-all sm-padding-15px-all">
+            <p class="text-deep-pink">{{ investment.heading }}</p>
+            <p
+              class="text-light-blue text-italic"
+              [innerHTML]="investment.idea"
+            ></p>
 
-          <p
-            class="p-text"
-            [innerHTML]="investment.about_us_investment_approach_content"
-          ></p>
-          <div class="padding-30px-top text-center">
-            <a [href]="" class="more-btn mb_30 read-more">More</a>
+            <p
+              class="p-text"
+              [innerHTML]="investment.about_us_investment_approach_content"
+            ></p>
+            <div class="padding-30px-top text-center">
+              <a [href]="" class="more-btn mb_30 read-more">MORE</a>
+            </div>
           </div>
           <div [innerHTML]="investment.video"></div>
         </div>

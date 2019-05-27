@@ -39,7 +39,8 @@
 </div> -->
 
 <div
-  class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top how-to-investe"
+  class=" sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top how-to-investe"
+  [ngClass]="!fromNewInvesting ? 'col-md-12 col-sm-12 col-xs-12' : 'row'"
   data-wow-delay="0.2s"
 >
   <div class="bg-white text-center" *ngIf="dataset">
@@ -48,7 +49,7 @@
         <div
           class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
           style="background:url('assets/images/howitwork-bg.jpg') no-repeat #ececec;"
-          *ngFor="let slider of dataset.acf.how_do_i_invest"
+          *ngFor="let slider of slideDatas"
         >
           <div class="opacity-extra-medium"></div>
           <div

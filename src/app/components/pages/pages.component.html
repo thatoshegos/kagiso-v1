@@ -420,14 +420,12 @@
   <app-slider [sliders]="page.acf.home_slider"></app-slider>
   <div class="container">
     <div class="row margin-40px-top">
-      <h2>{{page.title.rendered}}</h2>
+      <h2>{{ page.title.rendered }}</h2>
     </div>
     <div class="row margin-5px-top">
-       <div class="bg-white">
-           <div class="content-div" [innerHTML]="page.content.rendered">
-
-           </div>
-       </div>
+      <div class="bg-white">
+        <div class="content-div" [innerHTML]="page.content.rendered"></div>
+      </div>
     </div>
     <div class="row margin-30px-bottom  margin-30px-top">
       <div class=" col-md-8 col-md-offset-2 suscribe">
@@ -442,16 +440,15 @@
 <!-- text-Free-Investing-->
 <div class="text-free-investing" *ngIf="page && page.textFreeInvesting">
   <div class="container">
-      <div class="row margin-twelve-top">
-          <h2>{{page.title.rendered}}</h2>
+    <div class="row margin-twelve-top">
+      <h2>{{ page.title.rendered }}</h2>
+    </div>
+    <div class="row">
+      <div class="bg-white">
+        <div class="content-div" [innerHTML]="page.content.rendered"></div>
       </div>
-      <div class="row">
-        <div class="bg-white">
-            <div class="content-div" [innerHTML]="page.content.rendered"></div> 
-        </div>
-          
-      </div>
-  <div class="row margin-20px-top">
+    </div>
+    <div class="row margin-20px-top">
       <h2>Tax-free Funds</h2>
     </div>
     <div class="row margin-30px-bottom margin-5px-top ">
@@ -459,10 +456,7 @@
         <div
           class="col-md-4 bg-white  wow fadeInLeft"
           data-wow-delay="0.4s"
-          *ngFor="
-            let invest of page.acf.tax_free_funds;
-            let i = index
-          "
+          *ngFor="let invest of page.acf.tax_free_funds; let i = index"
         >
           <div class="fund-range-graph-title">
             {{ invest.tax_free_funds_title }}
@@ -474,12 +468,74 @@
       </div>
     </div>
     <div class="row margin-30px-top margin-30px-bottom">
-        <div class=" col-md-8 col-md-offset-2 suscribe">
-            <a href="#" class="btn-meet-leaders">PLATFORMS</a>
-            <a href="#" class="btn-meet-leaders">INVESTMENT APPROCH</a>
-        </div>
+      <div class=" col-md-8 col-md-offset-2 suscribe">
+        <a href="#" class="btn-meet-leaders">PLATFORMS</a>
+        <a href="#" class="btn-meet-leaders">INVESTMENT APPROCH</a>
+      </div>
     </div>
   </div>
 </div>
 
 <!--text-Free-Investing -->
+
+<!--New to Investing -->
+<div class="container" *ngIf="page && page.newToInvestingStatus">
+  <div class="row margin-twelve-top ">
+    <h2>{{ page.title.rendered }}</h2>
+  </div>
+  <div class="row margin-20px-bottom">
+    <div class="bg-white">
+      <div class="content-div" [innerHTML]="page.content.rendered"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div
+     class=" bg-white padding-45px-all sm-padding-15px-all inner-match-height  padding-100px-lr xs-no-padding-lr"
+  >
+    <a
+      href="javascript:void(0);"
+      (click)="changeSliderData(page.acf.what_is_a_unit_trust,'unitTrust')"
+      class="padding-10px-all ul-tab "
+       [ngClass]="activeClickedTab=='unitTrust'?'active':'none'"
+      ><span >
+        WHAT ARE UNIT TRUSTS?
+      </span></a
+    >
+    |
+    <a
+      href="javascript:void(0);"
+      (click)="changeSliderData(page.acf.why_invest,'whyInvest')"
+      class="padding-10px-all ul-tab"
+      [ngClass]="activeClickedTab=='whyInvest'?'active':'none'"
+      ><span >WHY INVEST? </span></a
+    >
+    |
+    <a
+      href="javascript:void(0);"
+      (click)="changeSliderData(page.acf.your_investment_tax,'taxInvestment')"
+      class="padding-10px-all ul-tab"
+      [ngClass]="activeClickedTab=='taxInvestment'?'active':'none'"
+      ><span > YOUR INVESTMENT & TAX  </span></a
+    >
+    |
+    <a
+      href="javascript:void(0);"
+      (click)="changeSliderData(page.acf.how_do_invest,'doInvest')"
+      class="padding-10px-all ul-tab"
+      [ngClass]="activeClickedTab=='doInvest'?'active':'none'"
+      ><span >HOW DO I INVEST? </span></a
+    >
+    <div class="row" *ngIf="page && page.newToInvestingStatus">
+      <app-invest-slider [dataset]="getHowToInvestSlider" [fromNewInvesting]="page.newToInvestingStatus" ></app-invest-slider>
+    </div>
+  </div>
+  </div>
+  <div class="row margin-30px-top margin-30px-bottom">
+    <app-faq
+    [faqs]="page.acf['qa-ans']"
+    [fromNewInvesting]="page.newToInvestingStatus"
+  ></app-faq>                    
+  </div>
+</div>
+
+<!-- End New to Investing -->

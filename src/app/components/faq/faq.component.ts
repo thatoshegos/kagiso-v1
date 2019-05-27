@@ -11,6 +11,7 @@ export class FaqComponent implements OnInit {
   @Input() fromStatusFaq;
   @Input() insightStatus;
   @Input() glossaryStatus;
+  @Input() fromNewInvesting;
   isfirst = false;
   currentFaq;
   constructor() {}
