@@ -25,7 +25,14 @@
   data-wow-delay="0.4s"
 >
   <div class="min-height-440 bg-light-green-v2">
-    <a href="#"><img [src]="DataSets.acf.image.sizes.large" alt=""/></a>
+    <img [src]="DataSets.acf.image.sizes.large" alt="" />
+    <div
+      class="padding-30px-top padding-15px-bottom padding-60px-left text-left"
+    >
+      <a [routerLink]="'/' + DataSets.acf.buttonurl" class="more-btn">{{
+        DataSets.acf.button_title
+      }}</a>
+    </div>
   </div>
 </div>
 <!-- end feature box item -->

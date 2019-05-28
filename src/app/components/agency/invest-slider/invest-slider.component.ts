@@ -9,6 +9,7 @@ export class InvestSliderComponent implements OnInit {
   @Input() dataset;
   @Input() fromNewInvesting;
   slideDatas;
+  backgroundUrl;
   constructor() {}
   config: SwiperOptions = {
     autoplay: 3000,

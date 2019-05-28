@@ -48,8 +48,8 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
-          style="background:url('assets/images/howitwork-bg.jpg') no-repeat #ececec;"
           *ngFor="let slider of slideDatas"
+          [ngStyle]="{ background: 'url(' + slider.background_image.url + ')' }"
         >
           <div class="opacity-extra-medium"></div>
           <div
