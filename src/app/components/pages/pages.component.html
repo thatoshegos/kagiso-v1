@@ -226,8 +226,11 @@
 <!-- End FAQ Detail -->
 
 <!-- Insight Page start-->
+<div class="silders-div" *ngIf="page && page.insightStatus">
+  <app-slider [sliders]="page.acf.home_slider"></app-slider>
+</div>
 <div class="container" *ngIf="page && page.insightStatus">
-  <br /><br /><br /><br /><br />
+  <br /><br />
   <div
     class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top"
     data-wow-delay="0.6s"
