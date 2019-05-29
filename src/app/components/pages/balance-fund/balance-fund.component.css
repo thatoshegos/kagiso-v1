@@ -1,0 +1,200 @@
+.blanced-fund-box {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.blanced-fund-box .graph-box {
+  border-left: 4px solid #f7f7f7;
+}
+.blanced-fund-box .graph-box .graph-content {
+  margin: 0;
+  padding: 0 0 30px 0;
+  position: relative;
+  width: 100%;
+}
+.blanced-fund-box .graph-box .graph-content .graph-img {
+  width: 100%;
+}
+.blanced-fund-box .year-list {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  font-size: 0;
+}
+.blanced-fund-box .year-list li {
+  margin: 0 10px;
+  padding: 0;
+  display: inline-block;
+  font-size: 14px;
+}
+.blanced-fund-box .year-list li:last-child {
+  margin-right: 0;
+}
+.blanced-fund-box .year-list li a {
+  display: block;
+  padding: 8px 10px;
+  color: #000;
+  border: 1px solid #a8c3be;
+  margin: 0;
+  text-transform: uppercase;
+}
+.blanced-fund-box .year-list li.current a,
+.blanced-fund-box .year-list li:hover a {
+  background: #a8c3be;
+  color: #000;
+  text-decoration: none;
+}
+.blanced-fund-box .return-list {
+  margin: 0;
+  padding: 0 0 30px 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+}
+.blanced-fund-box .return-list li {
+  margin: 0 2px;
+  padding: 0;
+  display: inline-block;
+  font-size: 14px;
+}
+.blanced-fund-box .return-list li a {
+  display: block;
+  padding: 8px 6px;
+  color: #000;
+  border: 1px solid #a8c3be;
+  margin: 0;
+  background: #a8c3be;
+  text-transform: uppercase;
+}
+.blanced-fund-box .return-list li a span {
+  color: #b50c2f;
+}
+.blanced-fund-box .return-list li a:hover {
+  text-decoration: none;
+}
+.blanced-fund-box .graph-box .select-fund {
+  margin: 30px 0 0 0;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+.blanced-fund-box .graph-box .select-fund select {
+  padding: 11px;
+  border: 1px solid #a8c3be;
+  width: 100%;
+}
+.blanced-fund-box .graph-box .select-fund span {
+  padding: 10px;
+  border: 1px solid #a8c3be;
+  width: 100%;
+  display: block;
+  border-right: none;
+}
+.blanced-fund-box ul.fund-tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.blanced-fund-box ul.fund-tabs li {
+  background: #fff;
+  color: #000;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  margin: 0 10px;
+  border-bottom: 2px solid #fff;
+  font-size: 16px;
+}
+.blanced-fund-box ul.fund-tabs li:first-child {
+  margin-left: 0;
+}
+.blanced-fund-box ul.fund-tabs li.current {
+  background: #fff;
+  color: #b50c2f;
+  border-bottom: 2px dotted #b50c2f;
+}
+.blanced-fund-box .fund-tab-content {
+  display: none;
+  background: #fff;
+  padding: 15px 0;
+  color: #000;
+}
+.blanced-fund-box .fund-tab-content .red {
+  color: #b50c2f;
+}
+.blanced-fund-box .fund-tab-content.current {
+  display: inherit;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blanced-fund-box .return-list li a {
+    font-size: 12px;
+    padding: 8px 2px;
+  }
+}
+@media (max-width: 991px) {
+  .blanced-fund-box .year-list {
+    text-align: center;
+  }
+  .blanced-fund-box .graph-box {
+    padding: 30px 15px;
+    border-left: none;
+    border-top: 5px solid #ccc;
+  }
+}
+@media (max-width: 767px) {
+  .blanced-fund-box .year-list li {
+    margin: 0 5px;
+  }
+  .blanced-fund-box .return-list li {
+    margin: 5px;
+  }
+}
+
+.fund-img-box {
+  margin: 0;
+  padding: 0;
+  border-top: #f7f7f7 4px solid;
+}
+.fund-img-box ul {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  padding: 45px 100px;
+  margin: 0;
+}
+.fund-img-box ul li {
+  float: left;
+}
+.fund-img-box ul li .img-box {
+  margin: 0;
+  padding: 0;
+}
+.fund-img-box ul li .img-box img {
+  width: 100%;
+  max-width: 100%;
+}
+.fund-img-box ul li .title {
+  background: #e3edec;
+  padding: 10px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.blanced-fund-btn .btn-meet-leaders {
+  font-size: 16px;
+}
+.blanced-fund-btn-list {
+  margin: -115px 30px 0 0;
+  padding: 0;
+  float: right;
+}
+.blanced-fund-btn-list li {
+  display: block;
+  margin: 4px 0;
+}
+.blanced-fund-btn-list li a.red {
+  background: url("../../../../assets/images/red-arrow-icon.jpg") no-repeat
+    right;
+}

@@ -14,6 +14,7 @@ export class PagesComponent implements OnInit {
   faq;
   annualReportUrl;
   selectedYear;
+  balaceFundStatus;
   fundRangeTestStatus;
   getHowToInvestSlider;
   getHomeSlider;
@@ -96,6 +97,16 @@ export class PagesComponent implements OnInit {
             this.page.newToInvestingStatus = true;
             this.activeClickedTab = "unitTrust";
             this.getHowToInvestSlider = this.page.acf.what_is_a_unit_trust;
+          }
+          if (slug == "forms-documents") {
+            this.page.formDocumentStatus = true;
+          }
+
+          if (slug == "balance-fund") {
+            console.log("Sdfsdf");
+            this.balaceFundStatus = true;
+          } else {
+            this.balaceFundStatus = false;
           }
 
           console.log(this.page);

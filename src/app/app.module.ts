@@ -41,6 +41,10 @@ import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-ima
 import { PodcastArchiveListComponent } from './components/pages/podcast-archive-list/podcast-archive-list.component';
 import { FundRangeGraphComponent } from './components/pages/fund-range-graph/fund-range-graph.component';
 import { TaxFreeInvestmentComponent } from './components/pages/tax-free-investment/tax-free-investment.component';
+import { FormDocumentComponent } from './components/pages/form-document/form-document.component';
+import { BalanceFundComponent } from './components/pages/balance-fund/balance-fund.component';
+import { FundTabComponent } from './components/pages/balance-fund/fund-tab/fund-tab.component';
+import { GraphComponent } from './components/pages/balance-fund/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +80,11 @@ import { TaxFreeInvestmentComponent } from './components/pages/tax-free-investme
     UpQuaterlyImageGridComponent,
     PodcastArchiveListComponent,
     FundRangeGraphComponent,
-    TaxFreeInvestmentComponent
+    TaxFreeInvestmentComponent,
+    FormDocumentComponent,
+    BalanceFundComponent,
+    FundTabComponent,
+    GraphComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule, ChartsModule],
   providers: [],
