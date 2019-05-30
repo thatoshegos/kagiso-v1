@@ -1,23 +1,23 @@
 <ul class="fund-tabs">
   <li
     data-tab="overview"
-    (click)="getTabData('Overview', 'This is overview')"
-    [ngClass]="{ current: getSelected == 'Overview' }"
+    (click)="getTabData('overview', 'This is overview')"
+    [ngClass]="{ current: getSelected == 'overview' }"
   >
     Overview
   </li>
   <li
     data-tab="details"
-    (click)="getTabData('Details', 'This is Detail')"
-    [ngClass]="{ current: getSelected == 'Details' }"
+    (click)="getTabData('details', 'This is Detail')"
+    [ngClass]="{ current: getSelected == 'details' }"
   >
     Details
   </li>
   <li
     class=""
-    [ngClass]="{ current: getSelected == 'price' }"
+    [ngClass]="{ current: getSelected == 'prices' }"
     data-tab="price"
-    (click)="getTabData('price', 'This is price')"
+    (click)="getTabData('prices', 'This is price')"
   >
     Price
   </li>
@@ -31,9 +31,10 @@
   </li>
 </ul>
 
-<div class="get-tab-data fund-tab-content current">
-  {{ getTabDateSet }}
-</div>
+<div
+  class="get-tab-data fund-tab-content current"
+  [innerHTML]="getTabDateSet"
+></div>
 
 <!-- <div id="overview" class="fund-tab-content current">
   <p>

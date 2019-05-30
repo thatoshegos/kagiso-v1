@@ -102,11 +102,8 @@ export class PagesComponent implements OnInit {
             this.page.formDocumentStatus = true;
           }
 
-          if (slug == "balance-fund") {
-            console.log("Sdfsdf");
-            this.balaceFundStatus = true;
-          } else {
-            this.balaceFundStatus = false;
+          if (slug == "balanced-fund") {
+            this.page.balaceFundStatus = true;
           }
 
           console.log(this.page);

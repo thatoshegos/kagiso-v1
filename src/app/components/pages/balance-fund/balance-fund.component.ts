@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class BalanceFundComponent implements OnInit {
   @Input() getStatus;
+  @Input() getBalancedData;
   constructor() {}
 
   ngOnInit() {}

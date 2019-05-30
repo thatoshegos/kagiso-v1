@@ -563,8 +563,7 @@
 <!--End FormDocument start-->
 
 <!-- Balance Fund -->
-<div class="balance-fund" *ngIf="balaceFundStatus">
-  <app-balance-fund [getStatus]="balaceFundStatus"></app-balance-fund>
-
+<div class="balance-fund" *ngIf="page && page.balaceFundStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
 <!-- End Balance Fund-->

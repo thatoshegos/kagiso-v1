@@ -34,3 +34,6 @@ ul.fund-tabs li.current {
 .fund-tab-content.current {
   display: inherit;
 }
+.get-tab-data {
+  line-height: 2;
+}
