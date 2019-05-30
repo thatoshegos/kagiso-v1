@@ -107,16 +107,9 @@
           class="btn-meet-leaders"
           href="#"
           style="margin-right:10px;"
-          >INVESTMENT APPROACH</a
+          *ngFor="let buttonLink of getBalancedData.acf.buttons"
+          >{{ buttonLink.name }}</a
         >
-        <a
-          _ngcontent-c15=""
-          class="btn-meet-leaders"
-          href="#"
-          style="margin-right:10px;"
-          >MEET THE FUND MANAGER</a
-        >
-        <a _ngcontent-c15="" class="btn-meet-leaders" href="#">FAQ’s</a>
       </div>
     </div>
 
@@ -127,7 +120,8 @@
           data-wow-delay="0.2s"
         >
           <h2>Fund commentary</h2>
-          <img src="images/blanced-fund-video.jpg" alt="" title="" />
+          <div [innerHTML]="getBalancedData.acf.fund_commentary"></div>
+          <!-- <img src="images/blanced-fund-video.jpg" alt="" title="" /> -->
         </div>
       </div>
     </div>
