@@ -42,4 +42,8 @@ export class WPAPIService {
     // );
     return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
   }
+  getCSVData(url) {
+    const headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.get(url, { responseType: "json", headers });
+  }
 }

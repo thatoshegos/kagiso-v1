@@ -45,6 +45,7 @@ import { FormDocumentComponent } from './components/pages/form-document/form-doc
 import { BalanceFundComponent } from './components/pages/balance-fund/balance-fund.component';
 import { FundTabComponent } from './components/pages/balance-fund/fund-tab/fund-tab.component';
 import { GraphComponent } from './components/pages/balance-fund/graph/graph.component';
+import { FactSheetArchiveComponent } from './components/pages/fact-sheet-archive/fact-sheet-archive.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { GraphComponent } from './components/pages/balance-fund/graph/graph.comp
     FormDocumentComponent,
     BalanceFundComponent,
     FundTabComponent,
-    GraphComponent
+    GraphComponent,
+    FactSheetArchiveComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule, ChartsModule],
   providers: [],

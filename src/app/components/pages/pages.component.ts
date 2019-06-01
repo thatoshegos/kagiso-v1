@@ -105,6 +105,9 @@ export class PagesComponent implements OnInit {
           if (slug == "balanced-fund") {
             this.page.balaceFundStatus = true;
           }
+          if(slug=="fact-sheets-archive"){
+            this.page.factsheetStatus=true;
+          }
 
           console.log(this.page);
           if (this.page) {
