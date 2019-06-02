@@ -31,11 +31,28 @@
   </li>
 </ul>
 
-<div
-  class="get-tab-data fund-tab-content current"
-  [innerHTML]="getTabDateSet"
-></div>
+<div *ngIf="getTabDateSet != null">
+  <div
+    class="get-tab-data fund-tab-content current"
+    [innerHTML]="getTabDateSet"
+  ></div>
+</div>
 
+<div class="price-section" *ngIf="getPriceData && getPriceData.isPrice">
+  <table id="scrollable" class="table blanced-fund-table table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let header of getHeader">{{ header }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let getPrice of getPriceData.data">
+        <td>{{ getPrice.Date }}</td>
+        <td>{{ getPrice["price\r"] | number: "1.2-2" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <!-- <div id="overview" class="fund-tab-content current">
   <p>
     This fund aims to provide investors with high, long-term capital growth

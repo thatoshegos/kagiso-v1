@@ -2,8 +2,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+import { MalihuScrollbarModule } from "ngx-malihu-scrollbar";
 
-import { ChartsModule } from 'ng2-charts';
+import { ChartsModule } from "ng2-charts";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -25,27 +26,27 @@ import { UnconventionalThinkingComponent } from "./components/pages/unconvention
 import { CommonComponent } from "./components/pages/common/common.component";
 import { InvestmentApprochAboutComponent } from "./components/pages/investment-approch-about/investment-approch-about.component";
 import { SwiperModule } from "angular2-useful-swiper";
-import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
-import { SariaCommonComponent } from './components/pages/saria-common/saria-common.component';
-import { ShariaCertificateComponent } from './components/pages/sharia-certificate/sharia-certificate.component';
-import { ThoughtFinancialAdviserComponent } from './components/pages/thought-financial-adviser/thought-financial-adviser.component';
-import { FinancialImageTwoComponent } from './components/pages/financial-image-two/financial-image-two.component';
-import { MeetOurTeamComponent } from './components/pages/meet-our-team/meet-our-team.component';
-import { FaqDetailComponent } from './components/pages/faq-detail/faq-detail.component';
-import { PodcastSliderComponent } from './components/pages/podcast-slider/podcast-slider.component';
-import { InsightYearwiseDataComponent } from './components/pages/insight-yearwise-data/insight-yearwise-data.component';
-import { QuaterlyCardComponent } from './components/pages/quaterly-card/quaterly-card.component';
-import { ShariaBoardComponent } from './components/pages/sharia-board/sharia-board.component';
-import { UpQuaterlyLibraryComponent } from './components/pages/up-quaterly-library/up-quaterly-library.component';
-import { UpQuaterlyImageGridComponent } from './components/pages/up-quaterly-image-grid/up-quaterly-image-grid.component';
-import { PodcastArchiveListComponent } from './components/pages/podcast-archive-list/podcast-archive-list.component';
-import { FundRangeGraphComponent } from './components/pages/fund-range-graph/fund-range-graph.component';
-import { TaxFreeInvestmentComponent } from './components/pages/tax-free-investment/tax-free-investment.component';
-import { FormDocumentComponent } from './components/pages/form-document/form-document.component';
-import { BalanceFundComponent } from './components/pages/balance-fund/balance-fund.component';
-import { FundTabComponent } from './components/pages/balance-fund/fund-tab/fund-tab.component';
-import { GraphComponent } from './components/pages/balance-fund/graph/graph.component';
-import { FactSheetArchiveComponent } from './components/pages/fact-sheet-archive/fact-sheet-archive.component';
+import { ContactUsComponent } from "./components/pages/contact-us/contact-us.component";
+import { SariaCommonComponent } from "./components/pages/saria-common/saria-common.component";
+import { ShariaCertificateComponent } from "./components/pages/sharia-certificate/sharia-certificate.component";
+import { ThoughtFinancialAdviserComponent } from "./components/pages/thought-financial-adviser/thought-financial-adviser.component";
+import { FinancialImageTwoComponent } from "./components/pages/financial-image-two/financial-image-two.component";
+import { MeetOurTeamComponent } from "./components/pages/meet-our-team/meet-our-team.component";
+import { FaqDetailComponent } from "./components/pages/faq-detail/faq-detail.component";
+import { PodcastSliderComponent } from "./components/pages/podcast-slider/podcast-slider.component";
+import { InsightYearwiseDataComponent } from "./components/pages/insight-yearwise-data/insight-yearwise-data.component";
+import { QuaterlyCardComponent } from "./components/pages/quaterly-card/quaterly-card.component";
+import { ShariaBoardComponent } from "./components/pages/sharia-board/sharia-board.component";
+import { UpQuaterlyLibraryComponent } from "./components/pages/up-quaterly-library/up-quaterly-library.component";
+import { UpQuaterlyImageGridComponent } from "./components/pages/up-quaterly-image-grid/up-quaterly-image-grid.component";
+import { PodcastArchiveListComponent } from "./components/pages/podcast-archive-list/podcast-archive-list.component";
+import { FundRangeGraphComponent } from "./components/pages/fund-range-graph/fund-range-graph.component";
+import { TaxFreeInvestmentComponent } from "./components/pages/tax-free-investment/tax-free-investment.component";
+import { FormDocumentComponent } from "./components/pages/form-document/form-document.component";
+import { BalanceFundComponent } from "./components/pages/balance-fund/balance-fund.component";
+import { FundTabComponent } from "./components/pages/balance-fund/fund-tab/fund-tab.component";
+import { GraphComponent } from "./components/pages/balance-fund/graph/graph.component";
+import { FactSheetArchiveComponent } from "./components/pages/fact-sheet-archive/fact-sheet-archive.component";
 
 @NgModule({
   declarations: [
@@ -88,7 +89,14 @@ import { FactSheetArchiveComponent } from './components/pages/fact-sheet-archive
     GraphComponent,
     FactSheetArchiveComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule, ChartsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    SwiperModule,
+    ChartsModule,
+    MalihuScrollbarModule.forRoot()
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

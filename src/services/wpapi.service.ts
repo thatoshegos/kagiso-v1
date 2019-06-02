@@ -35,6 +35,7 @@ export class WPAPIService {
   getSecondMenu() {
     return this.http.get(`${this.menuEndPoints}/menus/header-menu-second`);
   }
+
   getPages(id) {
     // const headers = new HttpHeaders().set(
     //   "Content-Type",
@@ -44,6 +45,6 @@ export class WPAPIService {
   }
   getCSVData(url) {
     const headers = new HttpHeaders().set("Content-Type", "application/json");
-    return this.http.get(url, { responseType: "json", headers });
+    return this.http.get(url, { responseType: "text" });
   }
 }
