@@ -22,11 +22,14 @@
             "styles": [
               "node_modules/aos/dist/aos.css",
               "src/styles.css",
-              "node_modules/swiper/dist/css/swiper.css"
+              "node_modules/swiper/dist/css/swiper.css",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.js",
-              "node_modules/swiper/dist/js/swiper.js"
+              "node_modules/swiper/dist/js/swiper.js",
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
             ]
           },
           "configurations": {

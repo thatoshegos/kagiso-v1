@@ -567,3 +567,14 @@
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
 <!-- End Balance Fund-->
+
+<!--Fact Sheet Archive-->
+<div class="container" *ngIf="page && page.factsheetStatus">
+   <div class="row margin-twelve-top">
+        <h2>{{page.title.rendered }}</h2>
+   </div>
+  <div class="row">
+      <app-fact-sheet-archive></app-fact-sheet-archive>
+  </div>
+</div>
+<!--End Fact sheet archive-->
