@@ -45,7 +45,7 @@
           data-wow-delay="0.4s"
           *ngFor="let image of saFund.images; let i = index"
           attr.data-aos="{{ animation[i] }}"
-          [ngStyle]="{ 'margin-left': i == 3 ? '35%' : '' }"
+          [ngStyle]="{ 'margin-left': i == 3 ? '33.333%' : '' }"
         >
           <div class="fund-range-graph-title">
             {{ image.south_african_fund_image_title }}
@@ -65,7 +65,7 @@
           data-wow-delay="0.4s"
           *ngFor="let image of glFund.images; let i = index"
           attr.data-aos="{{ animation[i] }}"
-          [ngStyle]="{ 'margin-left': i == 3 ? '35%' : '' }"
+          [ngStyle]="{ 'margin-left': i == 3 ? '33.333%' : '' }"
         >
           <div class="fund-range-graph-title">
             {{ image.global_funds_image_title }}
