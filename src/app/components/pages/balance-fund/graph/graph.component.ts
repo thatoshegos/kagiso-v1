@@ -9,7 +9,6 @@ import * as pluginAnnotations from "chartjs-plugin-annotation";
   styleUrls: ["./graph.component.css"]
 })
 export class GraphComponent implements OnInit {
-<<<<<<< HEAD
   @Input() dataSet;
   graphData = [];
   innerdata = [];
@@ -18,14 +17,6 @@ export class GraphComponent implements OnInit {
   ngOnInit() {
     console.log(this.dataSet);
     this.getGraphDatas();
-=======
-  @Input() graphDatas;
-  getGraphData;
-  constructor() {}
-
-  ngOnInit() {
-    console.log(this.graphDatas);
->>>>>>> 2ddb37cde4ea90eb159d65f96dd2db05552ee1be
   }
 
   public lineChartData: ChartDataSets[] = [
@@ -33,7 +24,6 @@ export class GraphComponent implements OnInit {
       data: <any>Array(), //[65, 59, 80, 81, 56, 55, 40],
       label: "Category"
     }
-<<<<<<< HEAD
     // {
     //    data: <any>Array(), //[28, 48, 40, 19, 86, 27, 90],
     //    label: "Series B"
@@ -64,21 +54,6 @@ export class GraphComponent implements OnInit {
   //   "June",
   //   "July"
   // ];
-=======
-    // { data: this.garphData.fundRetrurn, label: "Fund Return" },
-    // { data: this.garphData.benchMark, label: "Bench Mark" }
-  ];
-  //this.garphData.date;
-  public lineChartLabels: Label[] = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July"
-  ];
->>>>>>> 2ddb37cde4ea90eb159d65f96dd2db05552ee1be
   public lineChartOptions: ChartOptions & { annotation: any } = {
     responsive: true,
     scales: {
