@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild, Input } from "@angular/core";
 import { ChartDataSets, ChartOptions } from "chart.js";
 import { Color, BaseChartDirective, Label } from "ng2-charts";
 import * as pluginAnnotations from "chartjs-plugin-annotation";
@@ -9,9 +9,13 @@ import * as pluginAnnotations from "chartjs-plugin-annotation";
   styleUrls: ["./graph.component.css"]
 })
 export class GraphComponent implements OnInit {
+  @Input() graphDatas;
+  getGraphData;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.graphDatas);
+  }
 
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" },
@@ -21,7 +25,10 @@ export class GraphComponent implements OnInit {
       label: "Series C",
       yAxisID: "y-axis-1"
     }
+    // { data: this.garphData.fundRetrurn, label: "Fund Return" },
+    // { data: this.garphData.benchMark, label: "Bench Mark" }
   ];
+  //this.garphData.date;
   public lineChartLabels: Label[] = [
     "January",
     "February",

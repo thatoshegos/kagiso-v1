@@ -33,7 +33,10 @@
                   <li><a href="#">Since Inception</a></li>
                 </ul>
                 <div class="graph-content">
-                  <app-graph></app-graph>
+                  <app-graph
+                    *ngIf="garphDataSet"
+                    [graphDatas]="garphDataSet"
+                  ></app-graph>
                 </div>
                 <ul class="return-list">
                   <li>
