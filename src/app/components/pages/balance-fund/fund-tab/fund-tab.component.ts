@@ -17,6 +17,7 @@ export class FundTabComponent implements OnInit {
   getSelected;
   getPriceData;
   getHeader;
+
   ngOnInit() {
     this.getSelected = "overview";
     this.getTabDateSet = this.getApiData.acf.overview;

@@ -43,6 +43,14 @@ export class WPAPIService {
     return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
   }
   getCSVData(url) {
+<<<<<<< HEAD
     return this.http.get(url, { responseType: "text"});
+=======
+    const headers = new HttpHeaders();
+
+    // headers.append("Access-Control-Allow-Origin", "http://localhost:4200");
+    // headers.append("Access-Control-Allow-Credentials", "true");
+    return this.http.get(url, { responseType: "text" });
+>>>>>>> 2ddb37cde4ea90eb159d65f96dd2db05552ee1be
   }
 }
