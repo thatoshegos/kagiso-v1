@@ -2192,3 +2192,8 @@ h1.black{color: #000 !important}
 .unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 .our-funds-light-green{background: #e3edec; padding: 30px}
 .our-funds-light-green img{max-height: 200px}
+
+
+.shariya-light-green .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
+.shariya-light-green{background: #e3edec; padding: 30px; text-align: center;}
+.shariya-light-green img{max-height: 230px}
