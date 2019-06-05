@@ -7,10 +7,10 @@
         class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom margin-100px-top wow fadeInUp"
         data-wow-delay="0.2s"
       >
-        <div class="bg-white text-center">
+        <div class="bg-white">
           <h2>Contact us</h2>
           <div class="padding-45px-all sm-padding-15px-all inner-match-height">
-            <p class="margin-100px-lr text-center">
+            <p class="margin-100px-lr text-deep-pinktext-deep-pink">
               Our Client Services Team can be reached from Monday to Friday, 8am
               to 5pm on the number below, email or leave a message in the pop up
               message box.
@@ -119,7 +119,7 @@
                       Physical address<br />
                       <span [innerHTML]="page.acf.physical_address"></span>
                       <!-- {{ page.acf.physical_address }} -->
-                      <br />
+                      
 
                       <a [href]="page.acf.google_map_url" class="text-deep-pink"
                         >[view map]</a
@@ -170,10 +170,15 @@
 
                 <div class="box-2 padding-5px-all">
                   <div class="box-2-content padding-20px-all">
-                    <p>
-                      <input type="checkbox" class="robot-check" /> I’m not a
-                      robot
-                    </p>
+                    <!--p>
+                      <input type="checkbox" class="robot-check" /> I’m not a  robot
+                    </p -->
+                    <p><!-- test -->
+                      <label class="check-box"> I’m not a robot
+  <input type="checkbox"  class="robot-check">
+  <span class="checkmark"></span>
+</label>
+                      <!-- Test closed --></p>
                   </div>
                 </div>
               </div>
