@@ -38,7 +38,7 @@ export class InsightYearwiseDataComponent implements OnInit {
       this.isfirst = !toggle;
       this.currentSubCate = subcategory;
     }
-
+    // end  code for accordian
     if (this.getApiData) {
       if (this.getApiData != this.posts) {
         this.wpservice
