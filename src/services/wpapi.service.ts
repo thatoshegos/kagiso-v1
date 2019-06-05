@@ -35,7 +35,6 @@ export class WPAPIService {
   getSecondMenu() {
     return this.http.get(`${this.menuEndPoints}/menus/header-menu-second`);
   }
-
   getPages(id) {
     // const headers = new HttpHeaders().set(
     //   "Content-Type",
@@ -44,10 +43,6 @@ export class WPAPIService {
     return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
   }
   getCSVData(url) {
-    const headers = new HttpHeaders();
-
-    // headers.append("Access-Control-Allow-Origin", "http://localhost:4200");
-    // headers.append("Access-Control-Allow-Credentials", "true");
     return this.http.get(url, { responseType: "text" });
   }
 }
