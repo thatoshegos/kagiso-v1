@@ -2186,7 +2186,8 @@ h1.black{color: #000 !important}
 .unconventional-thinking-right .min-height-440.bg-light-green-v2 img{max-height: 350px; margin: 0 0 0 40px; display:block; padding-top: 15px}
 .unconventional-thinking-right .bg-light-green-v2{background: #e3edec}
 .unconventional-thinking-right .more-btn, .unconventional-thinking-right .more-btn:hover{background: #e3edec url(./assets/images/arrow-icon-1.jpg) no-repeat right;}
-.light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center}
+/* .light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center} */
+.light-green-box {background: #e3edec; padding: 15px; display: block; text-align: center}
 .light-green-box img{margin:0 auto; display: block; min-height: 255px}
 .light-green-box .text-title{color:#000; font-size: 16px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
 .unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
