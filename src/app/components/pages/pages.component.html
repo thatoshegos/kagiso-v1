@@ -602,7 +602,34 @@
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
 <!-- End Balance Fund-->
+<!--Equity alfa fund-->
 
+<div class="balance-fund" *ngIf="page && page.equityAlphaStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.protectorStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.globalEquityStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.islamicEquityStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.islamicbalancedStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.islamicHighYieldStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.islamicGlobalEquityStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.islamicGlobalEquityFeederStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+
+<!--End Equity alpha fund-->
 <!--Fact Sheet Archive-->
 <div class="container" *ngIf="page && page.factsheetStatus">
   <div class="row margin-twelve-top">
