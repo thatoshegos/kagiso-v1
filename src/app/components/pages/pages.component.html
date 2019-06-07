@@ -188,15 +188,18 @@
     <div class="col-md-12 col-sm-12" *ngIf="page && page.ourfunds">
       <div class="col-md-offset-3">
         <div
-        class="col-md-4"
-        *ngFor="let image of page.acf.financial_adviser_image"
-      >
-        <div style="margin-left:0px;">
-          <div class="our-funds-light-green">
-<img [src]="image.image1.url" />
+          class="col-md-4"
+          *ngFor="let image of page.acf.financial_adviser_image"
+        >
+          <div style="margin-left:0px;">
+            <div class="light-green-box">
+              <img [src]="image.image1.url" />
+              <a [routerLink]="image.image1_url"
+                ><div class="text-title">{{ image.title }}</div></a
+              >
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </section>
@@ -474,9 +477,31 @@
         </div>
       </div>
     </div>
+    <div class="row margin-30px-top">
+      <div class="col-md-offset-3">
+        <div
+          class="col-md-4"
+          *ngFor="
+            let fadviserImage of page.acf.financial_adviser_image;
+            let i = index
+          "
+        >
+          <div class="light-green-box">
+            <img [src]="fadviserImage.image1.url" />
+            <a [routerLink]="">
+              <div class="text-title">
+                {{ fadviserImage.title }}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row margin-30px-top margin-30px-bottom">
       <div class=" col-md-8 col-md-offset-2 suscribe">
-        <a href="#" class="btn-meet-leaders">PLATFORMS</a>
+        <a href="#" class="btn-meet-leaders" style="margin-left:70px;"
+          >PLATFORMS</a
+        >
         <a href="#" class="btn-meet-leaders">INVESTMENT APPROCH</a>
       </div>
     </div>
@@ -497,73 +522,77 @@
   </div>
   <div class="row">
     <div
-     class=" bg-white padding-45px-all sm-padding-15px-all inner-match-height   xs-no-padding-lr"
-  >
-  <div class="text-center">
-    <a
-      href="javascript:void(0);"
-      (click)="changeSliderData(page.acf.what_is_a_unit_trust,'unitTrust')"
-      class="padding-10px-all ul-tab "
-       [ngClass]="activeClickedTab=='unitTrust'?'active':'none'"
-      ><span >
-        WHAT ARE UNIT TRUSTS?
-      </span></a
+      class=" bg-white padding-45px-all sm-padding-15px-all inner-match-height   xs-no-padding-lr"
     >
-    |
-    <a
-      href="javascript:void(0);"
-      (click)="changeSliderData(page.acf.why_invest,'whyInvest')"
-      class="padding-10px-all ul-tab"
-      [ngClass]="activeClickedTab=='whyInvest'?'active':'none'"
-      ><span >WHY INVEST? </span></a
-    >
-    |
-    <a
-      href="javascript:void(0);"
-      (click)="changeSliderData(page.acf.your_investment_tax,'taxInvestment')"
-      class="padding-10px-all ul-tab"
-      [ngClass]="activeClickedTab=='taxInvestment'?'active':'none'"
-      ><span > YOUR INVESTMENT & TAX  </span></a
-    >
-    |
-    <a
-      href="javascript:void(0);"
-      (click)="changeSliderData(page.acf.how_do_invest,'doInvest')"
-      class="padding-10px-all ul-tab"
-      [ngClass]="activeClickedTab=='doInvest'?'active':'none'"
-      ><span >HOW DO I INVEST? </span></a
-    >
-  </div> 
-    <div class="row" *ngIf="page && page.newToInvestingStatus">
-      <app-invest-slider [dataset]="getHowToInvestSlider" [fromNewInvesting]="page.newToInvestingStatus" ></app-invest-slider>
+      <div class="text-center">
+        <a
+          href="javascript:void(0);"
+          (click)="changeSliderData(page.acf.what_is_a_unit_trust, 'unitTrust')"
+          class="padding-10px-all ul-tab "
+          [ngClass]="activeClickedTab == 'unitTrust' ? 'active' : 'none'"
+          ><span>
+            WHAT ARE UNIT TRUSTS?
+          </span></a
+        >
+        |
+        <a
+          href="javascript:void(0);"
+          (click)="changeSliderData(page.acf.why_invest, 'whyInvest')"
+          class="padding-10px-all ul-tab"
+          [ngClass]="activeClickedTab == 'whyInvest' ? 'active' : 'none'"
+          ><span>WHY INVEST? </span></a
+        >
+        |
+        <a
+          href="javascript:void(0);"
+          (click)="
+            changeSliderData(page.acf.your_investment_tax, 'taxInvestment')
+          "
+          class="padding-10px-all ul-tab"
+          [ngClass]="activeClickedTab == 'taxInvestment' ? 'active' : 'none'"
+          ><span> YOUR INVESTMENT & TAX </span></a
+        >
+        |
+        <a
+          href="javascript:void(0);"
+          (click)="changeSliderData(page.acf.how_do_invest, 'doInvest')"
+          class="padding-10px-all ul-tab"
+          [ngClass]="activeClickedTab == 'doInvest' ? 'active' : 'none'"
+          ><span>HOW DO I INVEST? </span></a
+        >
+      </div>
+      <div class="row" *ngIf="page && page.newToInvestingStatus">
+        <app-invest-slider
+          [dataset]="getHowToInvestSlider"
+          [fromNewInvesting]="page.newToInvestingStatus"
+        ></app-invest-slider>
+      </div>
     </div>
-  </div>
   </div>
   <div class="row margin-30px-top margin-30px-bottom">
     <app-faq
-    [faqs]="page.acf['qa-ans']"
-    [fromNewInvesting]="page.newToInvestingStatus"
-  ></app-faq>                    
+      [faqs]="page.acf['qa-ans']"
+      [fromNewInvesting]="page.newToInvestingStatus"
+    ></app-faq>
   </div>
 </div>
 
 <!-- End New to Investing -->
 <!--FormDocument start -->
 <div class="container" *ngIf="page && page.formDocumentStatus">
-       
-     <div class="row margin-twelve-top">
-         <h2 [innerHTML]="page.title.rendered"></h2>
-     </div>
-     <div class="row margin-2px-top">
-         <div class="bg-white">
-             <div class="content-div" [innerHTML]="page.content.rendered"></div> 
-         </div>
-     </div>
-     <div class="row margin-5px-top">
-          <div >
-              <app-form-document [formHeading]="page"></app-form-document>
-          </div>
-     </div>
+  <div class="row margin-twelve-top">
+    <h2 [innerHTML]="page.title.rendered"></h2>
+  </div>
+  <div class="row margin-2px-top">
+    <div class="bg-white">
+      <div class="content-div" [innerHTML]="page.content.rendered"></div>
+    </div>
+  </div>
+  <div class="row margin-5px-top">
+    <div>
+      <app-form-document [formHeading]="page"></app-form-document>
+    </div>
+  </div>
 </div>
 
 <!--End FormDocument start-->
@@ -576,11 +605,11 @@
 
 <!--Fact Sheet Archive-->
 <div class="container" *ngIf="page && page.factsheetStatus">
-   <div class="row margin-twelve-top">
-        <h2>{{page.title.rendered }}</h2>
-   </div>
+  <div class="row margin-twelve-top">
+    <h2>{{ page.title.rendered }}</h2>
+  </div>
   <div class="row">
-      <app-fact-sheet-archive></app-fact-sheet-archive>
+    <app-fact-sheet-archive></app-fact-sheet-archive>
   </div>
 </div>
 <!--End Fact sheet archive-->

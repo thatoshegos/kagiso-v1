@@ -66,6 +66,7 @@ export class InsightYearwiseDataComponent implements OnInit {
 
     this.wpservice.getSubcategory("?parent=8").subscribe(subcategories => {
       this.subCategories = subcategories;
+      this.subCategories.sort((a, b) => b.id - a.id);
       console.log(this.subCategories);
     });
   }

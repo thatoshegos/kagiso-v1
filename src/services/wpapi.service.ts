@@ -5,10 +5,10 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class WPAPIService {
-  endpoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
-  menuEndPoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
-  pagesEndPoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
-  postEndpoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  endpoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  menuEndPoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
+  pagesEndPoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
+  postEndpoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
 
   constructor(private http: HttpClient) {}
   getCategory(query) {
