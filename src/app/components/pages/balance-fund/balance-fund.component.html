@@ -9,7 +9,8 @@
       >
         <div class="bg-white text-center">
           <h2>
-            <img src="./assets/images/blanced-fund-bg.jpg" /> Blanced Funds
+            <img src="./assets/images/blanced-fund-bg.jpg" />
+            {{ getBalancedData.title.rendered }}
           </h2>
 
           <!-- btn-list -->
@@ -33,14 +34,30 @@
                   <li><a href="#">Since Inception</a></li>
                 </ul>
                 <div class="graph-content">
-                  <app-graph></app-graph>
+                  <app-graph
+                    *ngIf="getGraphData"
+                    [dataSet]="getGraphData"
+                  ></app-graph>
                 </div>
                 <ul class="return-list">
                   <li>
-                    <a href="#">Fund Return <span>85.00%</span></a>
+                    <a href="#"
+                      >Fund Return
+                      <span>{{ getBalancedData.acf.fund_return }}</span></a
+                    >
                   </li>
-                  <li><a href="#">Benchmark Return 99.70%</a></li>
-                  <li><a href="#">Outperformance 99.30%</a></li>
+                  <li>
+                    <a href="#"
+                      >Benchmark Return
+                      {{ getBalancedData.acf.benchmark_return }}</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Outperformance
+                      {{ getBalancedData.acf.outperformance }}</a
+                    >
+                  </li>
                 </ul>
                 <p>
                   *Average performance in South African Multi Asset High Equity
@@ -57,10 +74,13 @@
                     </div>
                     <div class="col-xs-6 col-md-7" style="padding-left:0">
                       <select>
-                        <option>Blanced Fund</option>
-                        <option>Blanced Fund 1</option>
-                        <option>Blanced Fund 2</option>
-                        <option>Blanced Fund 3</option>
+                        <option>SOUTH AFRICAN FUNDS</option>
+                        <option>EQUITY ALPHA FUND</option>
+                        <option>ISLAMIC EQUITY FUND</option>
+                        <option>BALANCED FUND</option>
+                        <option>ISLAMIC BALANCED FUND</option>
+                        <option>PROTECTOR FUND</option>
+                        <option>STABLE FUND</option>
                       </select>
                     </div>
                   </div>

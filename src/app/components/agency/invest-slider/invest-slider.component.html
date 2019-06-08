@@ -37,7 +37,6 @@
     </div>
   </div>
 </div> -->
-
 <div
   class=" sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top  how-to-investe"
   [ngClass]="!fromNewInvesting ? 'col-md-12 col-sm-12 col-xs-12' : 'row'"
@@ -52,6 +51,7 @@
           [ngStyle]="{ background: 'url(' + slider.background_image.url + ')' }"
         >
           <div class="opacity-extra-medium"></div>
+
           <div
             class="container position-relative one-fourth-screen xs-height-400px"
           >
@@ -61,6 +61,7 @@
                   class="slider-text-top padding-90px-top padding-80px-left xs-padding-40px-lr"
                 >
                   <h3>{{ slider.title }}</h3>
+
                   <p [innerHTML]="slider.content"></p>
                 </div>
               </div>
@@ -68,10 +69,15 @@
           </div>
         </div>
       </div>
+
       <!-- Add Pagination -->
+
       <div class="swiper-pagination"></div>
+
       <!-- Add Arrows -->
+
       <div class="swiper-button-next"></div>
+
       <div class="swiper-button-prev"></div>
     </swiper>
   </div>

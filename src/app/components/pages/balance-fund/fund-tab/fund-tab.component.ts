@@ -17,8 +17,10 @@ export class FundTabComponent implements OnInit {
   getSelected;
   getPriceData;
   getHeader;
+
   ngOnInit() {
     this.getSelected = "overview";
+
     this.getTabDateSet = this.getApiData.acf.overview;
   }
   ngAfterViewInit() {
@@ -30,19 +32,19 @@ export class FundTabComponent implements OnInit {
   }
 
   getTabData(clicked, data) {
-    console.log(this.getApiData);
+    //console.log(this.getApiData);
     var keys = Object.keys(this.getApiData.acf);
     keys.map(key => {
       if (key == clicked) {
         if (clicked == "prices") {
           this.getTabDateSet = null;
-          this.wpservice
-            .getCSVData("assets/images/sample_export_15593344736071.csv")
-            .subscribe(data => {
-              this.getPriceData = this.convertCSVToJson(data);
-              this.getHeader = Object.keys(this.convertCSVToJson(data).data[0]);
-              console.log(this.getPriceData);
-            });
+          var url = this.getCSVByParent(this.getApiData);
+          console.log(url);
+          this.wpservice.getCSVData(`${url}`).subscribe(data => {
+            this.getPriceData = this.convertCSVToJson(data);
+            this.getHeader = Object.keys(this.convertCSVToJson(data).data[0]);
+            console.log(this.getPriceData);
+          });
         } else {
           this.getPriceData = null;
           this.getTabDateSet = this.getApiData.acf[key];
@@ -68,5 +70,78 @@ export class FundTabComponent implements OnInit {
     mainObj.isPrice = true;
     mainObj.data = result;
     return mainObj;
+  }
+  getCSVByParent(data) {
+    if (data.equityAlphaStatus && data.getParent == "individual-investor") {
+      return "assets/data/prices/individual-equity-price.csv";
+    } else if (
+      data.balaceFundStatus &&
+      data.getParent == "individual-investor"
+    ) {
+      return "assets/data/prices/sample_export_15593344736071.csv";
+    } else if (
+      data.protectorStatus &&
+      data.getParent == "individual-investor"
+    ) {
+      return "assets/data/prices/individual-protector.csv";
+    } else if (
+      data.globalEquityStatus &&
+      data.getParent == "individual-investor"
+    ) {
+      return "assets/data/prices/individual-global-equity-price.csv";
+    }
+    //sharia investors
+    else if (data.islamicEquityStatus && data.getParent == "sharia-investor") {
+      return "assets/data/prices/sharia-islamic-equity.csv";
+    } else if (
+      data.islamicbalancedStatus &&
+      data.getParent == "sharia-investor"
+    ) {
+      return "assets/data/prices/sharia-islamic-balanced-fund.csv";
+    } else if (
+      data.islamicHighYieldStatus &&
+      data.getParent == "sharia-investor"
+    ) {
+      return "assets/data/prices/sharia-islamic-high-yeild-fund.csv";
+    } else if (
+      data.islamicGlobalEquityStatus &&
+      data.getParent == "sharia-investor"
+    ) {
+      return "assets/data/prices/sharia-islamic-global-equity-price.csv";
+    } else if (
+      data.islamicGlobalEquityFeederStatus &&
+      data.getParent == "sharia-investor"
+    ) {
+      return "assets/data/prices/sharia-islamic-global-equity-feeder-price.csv";
+    }
+    // Institutional fund
+    else if (
+      data.isInstitutionalEquityStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-equity-price.csv";
+    } else if (
+      data.isInstitutionalBondStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-bond-font-price.csv";
+    } else if (
+      data.isInstitutionalMoneyStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-money-price.csv";
+    } else if (
+      data.isInstitutionalProtectorStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-protected-price.csv";
+    } else if (
+      data.isInstitutionalStableStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-stable-fund-price.csv";
+    }
+
+    // console.log(data);
   }
 }

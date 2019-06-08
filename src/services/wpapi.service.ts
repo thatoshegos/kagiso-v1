@@ -5,10 +5,10 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class WPAPIService {
-  endpoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
-  menuEndPoints = "http://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
-  pagesEndPoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
-  postEndpoint = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  endpoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  menuEndPoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
+  pagesEndPoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
+  postEndpoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
 
   constructor(private http: HttpClient) {}
   getCategory(query) {
@@ -35,7 +35,6 @@ export class WPAPIService {
   getSecondMenu() {
     return this.http.get(`${this.menuEndPoints}/menus/header-menu-second`);
   }
-
   getPages(id) {
     // const headers = new HttpHeaders().set(
     //   "Content-Type",
@@ -44,7 +43,6 @@ export class WPAPIService {
     return this.http.get(`${this.pagesEndPoint}/posts/${id}`);
   }
   getCSVData(url) {
-    const headers = new HttpHeaders().set("Content-Type", "application/json");
     return this.http.get(url, { responseType: "text" });
   }
 }

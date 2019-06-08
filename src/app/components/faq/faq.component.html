@@ -83,22 +83,22 @@
                 [ngClass]="faq == currentFaq && isfirst ? 'in' : 'none'"
                 attr.aria-expanded="{{ isfirst }}"
               >
-                <div class="panel-body faq-pan">
+                <div class="panel-body faq-pan" [innerHTML]="faq.answer_label">
                   <!-- Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book. -->
-                  {{ faq.answer_label }}
+                  <!-- {{ faq.answer_label }} -->
                 </div>
               </div>
             </div>
             <!-- end tab content -->
           </div>
           <div class="padding-30px-top padding-30px-bottom text-center">
-            <!-- <a routerLink="/faq" class="more-btn" *ngIf="!glossaryStatus"
+            <a routerLink="/faq" class="more-btn" *ngIf="!glossaryStatus"
               >MORE</a
-            > -->
+            >
             <a routerLink="/glossary" class="more-btn" *ngIf="glossaryStatus"
               >MORE</a
             >

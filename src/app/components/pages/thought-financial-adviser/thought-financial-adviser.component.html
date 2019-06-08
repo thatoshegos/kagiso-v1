@@ -26,9 +26,11 @@
       *ngFor="let image of financialAdviser.acf.financial_adviser_image"
     >
       <div style="margin-left:0px;">
-        <div class="shariya-light-green"> 
+        <div class="shariya-light-green">
           <img [src]="image.image1.url" />
-          <div class="text-title"><a href="#">Our Sharia Board</a></div>
+          <div class="text-title">
+            <a href="#">{{ image.title }}</a>
+          </div>
         </div>
       </div>
     </div>

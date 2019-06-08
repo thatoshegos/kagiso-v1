@@ -45,6 +45,74 @@ const routes: Routes = [
     path: "institutional-investor/our-funds",
     component: PagesComponent
   },
+  //child of child root for individual investor
+  {
+    path: "individual-investor/our-funds/equity-alpha-fund",
+    component: PagesComponent
+  },
+  {
+    path: "individual-investor/our-funds/balanced-fund",
+    component: PagesComponent
+  },
+  {
+    path: "individual-investor/our-funds/protector-fund",
+    component: PagesComponent
+  },
+  {
+    path: "individual-investor/our-funds/global-equity-fund",
+    component: PagesComponent
+  },
+  {
+    path: "individual-investor/our-funds/complete-fund-range",
+    component: PagesComponent
+  },
+  // end individual investor
+  // sharia investor child of child
+  {
+    path: "sharia-investor/our-funds/islamic-balanced-fund",
+    component: PagesComponent
+  },
+  {
+    path: "sharia-investor/our-funds/islamic-equity-fund",
+    component: PagesComponent
+  },
+  {
+    path: "sharia-investor/our-funds/islamic-global-equity-fund",
+    component: PagesComponent
+  },
+  {
+    path: "sharia-investor/our-funds/islamic-global-equity-feeder-fund",
+    component: PagesComponent
+  },
+  {
+    path: "sharia-investor/our-funds/islamic-high-yield-fund",
+    component: PagesComponent
+  },
+  // end
+  {
+    path: "institutional-investor/our-funds/equity-alpha-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/stable-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/protector-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/bond-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/money-market-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/balanced-fund",
+    component: PagesComponent
+  },
 
   {
     path: "pages/:slug",
