@@ -86,6 +86,32 @@ const routes: Routes = [
   },
   // end
   {
+    path: "institutional-investor/our-funds/equity-alpha-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/stable-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/protector-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/bond-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/money-market-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/balanced-fund",
+    component: PagesComponent
+  },
+
+
+  {
     path: "pages/:slug",
     pathMatch: "full",
     component: PagesComponent

@@ -628,6 +628,22 @@
 <div class="balance-fund" *ngIf="page && page.islamicGlobalEquityFeederStatus">
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
+<div class="balance-fund" *ngIf="page && page.isInstitutionalEquityStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isInstitutionalBondStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isInstitutionalMoneyStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isInstitutionalProtectorStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isInstitutionalStableStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+
 
 <!--End Equity alpha fund-->
 <!--Fact Sheet Archive-->
