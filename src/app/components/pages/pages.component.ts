@@ -262,6 +262,18 @@ export class PagesComponent implements OnInit {
                 console.log(this.page);
               });
             } else if (
+              currentUrl.parent == "individual-investor" &&
+              currentUrl.child == "our-funds" &&
+              currentUrl.schild == "complete-fund-range"
+            ) {
+              this.page.id = 11828;
+              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.completeFundRangeStatus = true;
+                this.page.getParent = "individual-investor";
+                console.log(this.page);
+              });
+            } else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "our-funds"
             ) {

@@ -47,6 +47,7 @@ import { BalanceFundComponent } from "./components/pages/balance-fund/balance-fu
 import { FundTabComponent } from "./components/pages/balance-fund/fund-tab/fund-tab.component";
 import { GraphComponent } from "./components/pages/balance-fund/graph/graph.component";
 import { FactSheetArchiveComponent } from "./components/pages/fact-sheet-archive/fact-sheet-archive.component";
+import { CompleteFundRangeComponent } from './components/pages/complete-fund-range/complete-fund-range.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { FactSheetArchiveComponent } from "./components/pages/fact-sheet-archive
     BalanceFundComponent,
     FundTabComponent,
     GraphComponent,
-    FactSheetArchiveComponent
+    FactSheetArchiveComponent,
+    CompleteFundRangeComponent
   ],
   imports: [
     BrowserModule,
