@@ -35,22 +35,18 @@
       *ngFor="let fimage of fadviser.acf.financial_adviser_image; let i = index"
       attr.data-aos="{{ animationArr[i] }}"
     >
-      <div class="light-green-box">
-        <img [src]="fimage.image1.url" />
-        <a href="{{ fimage.image1_url }}" *ngIf="i < 3">
-          <div class="text-title">{{ fimage.title }}</div>
-        </a>
-      </div>
+      <div class="light-green-box"> 
+      <a href="{{ fimage.image1_url }}" *ngIf="i < 3"
+        ><img [src]="fimage.image1.url"
+      />
+      <div class="text-title">Insite</div>
+    </a>
+    </div>
     </div>
   </div>
 
   <div
-<<<<<<< HEAD
     class="row padding-40px-tb bg-medium-gray-light home-gray-bg margin-40px-top margin-100px-lr xs-margin-40px-lr text-center" style="padding-left: 25px; padding-right: 25px" 
-=======
-    class="row padding-40px-tb bg-medium-gray-light margin-40px-top margin-100px-lr xs-margin-40px-lr text-center"
-    style="padding-left: 25px; padding-right: 25px"
->>>>>>> 2cba81816510dc7694b140ceb30e71661b0e75af
     *ngIf="fadviser"
   >
     <div
