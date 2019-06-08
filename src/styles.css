@@ -380,7 +380,16 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     font-size: 14px;
     font-weight: 400;
 }
+.main-slider .more-btn {
+    padding: 11px 80px 11px 20px;
+    background: #FFFFFF80 url('./assets/images/black-arrow-icon.jpg') no-repeat right;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+}
 .more-btn:hover{background: #c8dbe5 url('./assets/images/arrow-icon-hover.jpg') no-repeat right;}
+.main-slider .more-btn:hover{background: #FFF url('./assets/images/black-arrow-icon-hover.jpg') no-repeat right;}
 
 /* separator */
 .separator-line-verticle-extra-small {width:1px; height: 8px;}
@@ -2183,17 +2192,22 @@ h1.black{color: #000 !important}
     line-height: 1.7!important;
   } 
 .main-slider .swiper-pagination-bullet{background: #000}
-.unconventional-thinking-right .min-height-440.bg-light-green-v2 img{max-height: 350px; margin: 0 0 0 40px; display:block; padding-top: 15px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2{padding: 30px; min-height: 445px; max-height: 445px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2 img{margin: 0 0 0 10px; display:block; max-width: 340px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2 img:hover{transform: scale(1.2)}
 .unconventional-thinking-right .bg-light-green-v2{background: #e3edec}
 .unconventional-thinking-right .more-btn, .unconventional-thinking-right .more-btn:hover{background: #e3edec url(./assets/images/arrow-icon-1.jpg) no-repeat right;}
-.light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center}
-.light-green-box img{margin:0 auto; display: block; min-height: 255px}
+.light-green-box a{background: #e3edec; padding: 30px; display: block; text-align: center}
+.light-green-box img{margin:0 auto; display: block; min-height: 250px}
 .light-green-box .text-title{color:#000; font-size: 16px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
 .unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 .our-funds-light-green{background: #e3edec; padding: 30px}
 .our-funds-light-green img{max-height: 200px}
+.fund-range-btn-holder a:hover, form-btn:hover{color:#323232;}
 
 
 .shariya-light-green .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 .shariya-light-green{background: #e3edec; padding: 30px; text-align: center;}
 .shariya-light-green img{max-height: 230px}
+.home-gray-bg{padding-left:30px; padding-right: 30px}
+.home-gray-bg .col-sm-4{padding-right: 20px; padding-left: 20px}
