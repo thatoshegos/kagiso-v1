@@ -2208,8 +2208,8 @@ h1.black{color: #000 !important}
 .unconventional-thinking-right .more-btn, .unconventional-thinking-right .more-btn:hover{background: #e3edec url(./assets/images/arrow-icon-1.jpg) no-repeat right;}
 /* .light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center} */
 .light-green-box {background: #e3edec; padding: 30px; display: block; text-align: center}
-.light-green-box img{margin:0 auto; display: block; min-height: 255px}
-.light-green-box .text-title{color:#000; font-size: 16px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
+.light-green-box img{margin:0 auto; display: block;}
+.light-green-box .text-title{color:#000; font-weight:400; font-size: 14px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
 .unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 
 .our-funds-light-green{background: #e3edec; padding: 30px; }
@@ -2224,3 +2224,4 @@ h1.black{color: #000 !important}
 .home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
 .content.year-contents p{font-size: 18px !important}
 .red-head{color:#b50c2f;}
+.investment-tab.ul-tab.active{font-weight:normal !important;}

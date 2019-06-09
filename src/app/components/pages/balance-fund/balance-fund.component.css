@@ -5,7 +5,7 @@
   width: 100%;
 }
 .blanced-fund-box .graph-box {
-  border-left: 4px solid #f7f7f7;
+  border-left: 4px solid #f7f7f7; 
 }
 .blanced-fund-box .graph-box .graph-content {
   margin: 0;
@@ -21,7 +21,7 @@
   padding: 0;
   list-style: none;
   text-align: right;
-  font-size: 0;
+  font-size: 0; padding-bottom: 30px;
 }
 .blanced-fund-box .year-list li {
   margin: 0 10px;
@@ -69,7 +69,7 @@
   text-transform: uppercase;
 }
 .blanced-fund-box .return-list li a span {
-  color: #b50c2f;
+  font-weight:600;
 }
 .blanced-fund-box .return-list li a:hover {
   text-decoration: none;
