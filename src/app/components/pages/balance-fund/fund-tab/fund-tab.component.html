@@ -38,6 +38,20 @@
   ></div>
 </div>
 
+<div class="latest" *ngIf="getPriceData && getPriceData.isPrice">
+  <ul>
+    <li style="margin-left:-70px;">
+      <div class="month-start">
+        Latest Price <span class="amt">892.90</span>
+      </div>
+    </li>
+    <li class="right-li">
+      <div class="month-latest-end1">
+        Monthend Price <span class="amt">892.90</span>
+      </div>
+    </li>
+  </ul>
+</div>
 <div class="price-section" *ngIf="getPriceData && getPriceData.isPrice">
   <table id="scrollable" class="table blanced-fund-table table-bordered">
     <thead>
@@ -52,6 +66,9 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div class=" margin-30px-top" *ngIf="getPriceData && getPriceData.isPrice">
+  <a href="" class="more-btn read-more"> DOWNLOAD</a>
 </div>
 <!-- <div id="overview" class="fund-tab-content current">
   <p>

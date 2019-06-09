@@ -63,3 +63,22 @@ ul.fund-tabs li.current {
   max-height: 500px;
   overflow-y: auto;
 }
+.latest ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.latest ul li {
+  display: inline-block;
+  padding: 6px;
+  background-color: #c6dddb;
+}
+.right-li {
+  float: right;
+}
+.amt {
+  color: red;
+  font-family: inherit;
+}
+.more-btn {
+  padding: 7px 59px 7px 20px !important;
+}
