@@ -1,4 +1,4 @@
-<!-- start blanced fund -->
+graph-box<!-- start blanced fund -->
 <section class="wow fadeIn bg-medium-gray-light " style="margin-top:110px">
   <div class="container">
     <div class="row">
@@ -26,7 +26,7 @@
                 <app-fund-tab [getApiData]="getBalancedData"></app-fund-tab>
                 <!-- Tab Menu Closed -->
               </div>
-              <div class="col-md-7 graph-box padding-45px-all">
+              <div class="col-md-7 graph-box padding-30px-all">
                 <ul class="year-list">
                   <li class="current"><a href="#">5 Years</a></li>
                   <li><a href="#">7 Years</a></li>
@@ -43,19 +43,19 @@
                   <li>
                     <a href="#"
                       >Fund Return
-                      <span>{{ getBalancedData.acf.fund_return }}</span></a
+                      <span style="color:#b50c2f">{{ getBalancedData.acf.fund_return }}</span></a
                     >
                   </li>
                   <li>
                     <a href="#"
                       >Benchmark Return
-                      {{ getBalancedData.acf.benchmark_return }}</a
+                      <span>{{ getBalancedData.acf.benchmark_return }}</span></a
                     >
                   </li>
                   <li>
                     <a href="#"
                       >Outperformance
-                      {{ getBalancedData.acf.outperformance }}</a
+                      <span>{{ getBalancedData.acf.outperformance }}</span></a
                     >
                   </li>
                 </ul>

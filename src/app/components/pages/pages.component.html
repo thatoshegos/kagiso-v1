@@ -450,7 +450,7 @@
 <!-- text-Free-Investing-->
 <div class="text-free-investing" *ngIf="page && page.textFreeInvesting">
   <div class="container">
-    <div class="row margin-twelve-top">
+    <div class="row margin-fifteen-top">
       <h2>{{ page.title.rendered }}</h2>
     </div>
     <div class="row">
@@ -497,7 +497,7 @@
         </div>
       </div>
     </div>
-    <div class="row margin-30px-top margin-30px-bottom">
+    <div class="row margin-30px-top margin-50px-bottom">
       <div class=" col-md-8 col-md-offset-2 suscribe">
         <a href="#" class="btn-meet-leaders" style="margin-left:70px;"
           >PLATFORMS</a
@@ -512,7 +512,7 @@
 
 <!--New to Investing -->
 <div class="container" *ngIf="page && page.newToInvestingStatus">
-  <div class="row margin-twelve-top ">
+  <div class="row margin-twelve-top 7">
     <h2>{{ page.title.rendered }}</h2>
   </div>
   <div class="row margin-20px-bottom">
@@ -528,7 +528,7 @@
         <a
           href="javascript:void(0);"
           (click)="changeSliderData(page.acf.what_is_a_unit_trust, 'unitTrust')"
-          class="padding-10px-all ul-tab "
+          class="padding-10px-all ul-tab investment-tab"
           [ngClass]="activeClickedTab == 'unitTrust' ? 'active' : 'none'"
           ><span>
             WHAT ARE UNIT TRUSTS?
