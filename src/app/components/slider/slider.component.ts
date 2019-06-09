@@ -16,8 +16,15 @@ export class SliderComponent implements OnInit {
     prevButton: ".swiper-button-prev",
     spaceBetween: 30
   };
+  getPaginationStatus() {
+    if (this.sliders.length > 1) {
+      this.config.pagination = ".swiper-pagination";
+    } else {
+      this.config.pagination = "";
+    }
+  }
 
   ngOnInit() {
-    // console.log(this.sliders);
+    this.getPaginationStatus();
   }
 }
