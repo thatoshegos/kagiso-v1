@@ -10,6 +10,7 @@ export class InvestSliderComponent implements OnInit {
   @Input() fromNewInvesting;
   slideDatas;
   backgroundUrl;
+  index;
   constructor() {}
   config: SwiperOptions = {
     autoplay: 3000,
@@ -28,6 +29,7 @@ export class InvestSliderComponent implements OnInit {
     }
   }
   ngOnChanges() {
+    this.index = 0;
     this.slideDatas = this.dataset;
   }
 }

@@ -9,14 +9,23 @@
       >
         <div class="bg-white text-center">
           <h2>
-            <img src="./assets/images/blanced-fund-bg.jpg" />
+              <!-- ./assets/images/blanced-fund-bg.jpg -->
+            <img [src]="getBalancedData.acf.fund_icon.url" />
             {{ getBalancedData.title.rendered }}
           </h2>
 
           <!-- btn-list -->
           <ul class="blanced-fund-btn-list">
-            <li><a href="#" class="more-btn">FACT SHEETS</a></li>
-            <li><a href="#" class="red more-btn">INVEST NOW</a></li>
+            <li>
+              <a routerLink="/fact-sheets-archive" class="more-btn"
+                >FACT SHEETS</a
+              >
+            </li>
+            <li>
+              <a routerLink="/tax-free-investing" class="red more-btn"
+                >INVEST NOW</a
+              >
+            </li>
           </ul>
           <!-- btn-list -->
           <div class="inner-match-height">

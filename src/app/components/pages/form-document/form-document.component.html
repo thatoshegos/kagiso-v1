@@ -20,9 +20,10 @@
                   class="accordion-toggle"
                   data-toggle="collapse"
                   data-parent="#accordion"
-                  href="#collapseTwo-{{ i }}"
-                  (click)="getFormData(heading, $event)"
+                  href="javascript:void(0)"
+                  (click)="getFormData(heading, $event, isfirst)"
                 >
+                  <!-- #collapseTwo-{{ i }} -->
                   <div class="panel-title year-post">
                     <!-- <span
                           class="alt-font font-weight-600 text-deep-pink tab-tag"
@@ -33,11 +34,23 @@
                       class="text-extra-dark-gray xs-width-80 display-inline-block"
                       [innerHTML]="heading.headings"
                     ></span>
-                    <div class="indicator faq-plus pull-right"></div>
+                    <div
+                      class="indicator  pull-right"
+                      [ngClass]="
+                        heading == currentSubCate && isfirst
+                          ? 'faq-minus'
+                          : 'faq-plus'
+                      "
+                    ></div>
                   </div>
                 </a>
               </div>
-              <div id="collapseTwo-{{ i }}" class="panel-collapse collapse">
+              <div
+                id="collapseTwo-{{ i }}"
+                class="panel-collapse collapse"
+                [ngClass]="heading == currentSubCate && isfirst ? 'in' : 'none'"
+                attr.aria-expanded="{{ isfirst }}"
+              >
                 <div class="panel-body">
                   <div class="repeat-loop" *ngIf="getFormPageData">
                     <ul>

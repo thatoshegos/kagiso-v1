@@ -11,6 +11,8 @@ export class FactSheetArchiveComponent implements OnInit {
   subCategory;
   getSelected;
   categoryData;
+  currentSubCate;
+  isfirst = false;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
@@ -18,7 +20,19 @@ export class FactSheetArchiveComponent implements OnInit {
       this.getCategories = categories;
     });
   }
-  getYearPost(category, e) {
+  getYearPost(category, e, toggle) {
+    if (this.currentSubCate) {
+      if (category == this.currentSubCate) {
+        this.isfirst = !toggle;
+      } else {
+        this.isfirst = true;
+      }
+      this.currentSubCate = category;
+    } else {
+      this.isfirst = !toggle;
+      this.currentSubCate = category;
+    }
+
     this.categoryData = null;
     this.wpservice.getCategory(`?parent=${category.id}`).subscribe(subCate => {
       this.subCategory = subCate;

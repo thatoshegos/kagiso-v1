@@ -13,10 +13,25 @@ export class FormDocumentComponent implements OnInit {
   getFormPageData;
   apiHitted = true;
   changedSlug;
+  currentSubCate;
+  isfirst = false;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {}
-  getFormData(heading, event) {
+  getFormData(heading, event, toggle) {
+    // accordian data
+    if (this.currentSubCate) {
+      if (heading == this.currentSubCate) {
+        this.isfirst = !toggle;
+      } else {
+        this.isfirst = true;
+      }
+      this.currentSubCate = heading;
+    } else {
+      this.isfirst = !toggle;
+      this.currentSubCate = heading;
+    }
+    // accordian code end
     this.slug = this.slugify(heading.headings);
     if (this.changedSlug) {
       if (this.changedSlug == heading.headings) {
@@ -25,8 +40,10 @@ export class FormDocumentComponent implements OnInit {
         this.apiHitted = true;
       }
     }
+
     if (this.apiHitted) {
       this.wpservice.pages(`?slug=${this.slug}`).subscribe(data => {
+        this.getFormPageData = null;
         this.getFormPageData = data;
         console.log(this.getFormPageData);
         this.changedSlug = heading.headings;

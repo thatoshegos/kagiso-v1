@@ -12,6 +12,7 @@ export class FundRangeComponent implements OnInit {
   viewChangeflag = false;
   viewSChangeFlag = true;
   animation = ["fade-left", "fade-up", "fade-left", "fade-right"];
+  glfundLength;
   constructor() {}
 
   ngOnInit() {
@@ -21,8 +22,9 @@ export class FundRangeComponent implements OnInit {
     this.glFund.title = this.FundRange.acf.global_funds_title;
     this.glFund.desc = this.FundRange.acf.global_funds_discription;
     this.glFund.images = this.FundRange.acf.global_funds_image;
-    // console.log("----");
-    // console.log(this.saFund);
+    this.glfundLength = this.FundRange.acf.south_african_fund_image.length;
+
+    console.log(this.glfundLength);
     // console.log(this.glFund);
   }
   changeView() {
