@@ -382,6 +382,17 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 }
 .more-btn:hover{background: #c8dbe5 url('./assets/images/arrow-icon-hover.jpg') no-repeat right;}
 
+.main-slider .more-btn {
+    padding: 11px 80px 11px 20px;
+    background: #FFFFFF80 url('./assets/images/black-arrow-icon.jpg') no-repeat right;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+}
+.main-slider .more-btn:hover{background: #FFF url('./assets/images/black-arrow-icon-hover.jpg') no-repeat right;}
+.fund-range-btn-holder a:hover{color:#323232;}
+
 /* separator */
 .separator-line-verticle-extra-small {width:1px; height: 8px;}
 .separator-line-verticle-small-thick {width:17px; height: 3px;}
@@ -469,12 +480,16 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     padding: 20px 40px 20px 100px;
     min-width: 175px;
     text-align: center;
-    /* background: url('./assets/images/meet-leader-btnbg.jpg') no-repeat left center #fff; */
     background: url('./assets/images/meet-leader-btnbg.jpg') no-repeat left center #fff;
     
     font-weight: 500;
 }
 .btn-meet-leaders:hover{background: url('./assets/images/meet-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #323232;}
+.meet-leader.btn-meet-leaders{background: url('./assets/images/meet1-leader-btnbg.jpg') no-repeat left center #fff;}
+.meet-leader.btn-meet-leaders:hover{background: url('./assets/images/meet1-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #323232;}
+
+
+
 
 /* button background */
 .btn.btn-white {background:#ffffff; border-color: #ffffff; color: #232323}
@@ -2058,7 +2073,7 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .padding-left_0{padding-left:0 !important}
 .star{color:#b50c2f}
 .clearfix{clear:both}
-.invest-list-img{margin:0; padding:0; list-style-type:none; font-size:0}
+.invest-list-img{margin:0; padding:0 30px; list-style-type:none; font-size:0}
 .invest-list-img li{display:inline-block; margin:0; padding:0 15px; width:25%; font-size:18px; vertical-align:top}
 .invest-list-img li .content-box {background:#e3efed; text-align:center}
 .invest-list-img li .content-box .title{padding:10px; min-height:75px}
@@ -2185,11 +2200,14 @@ h1.black{color: #000 !important}
     line-height: 1.7!important;
   } 
 .main-slider .swiper-pagination-bullet{background: #000}
-.unconventional-thinking-right .min-height-440.bg-light-green-v2 img{max-height: 350px; margin: 0 0 0 40px; display:block; padding-top: 15px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2{padding: 30px; min-height: 445px; max-height: 445px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2 img{margin: 0 0 0 10px; display:block; max-height: 340px}
+.unconventional-thinking-right .min-height-440.bg-light-green-v2 img:hover{transform: scale(1.1)}
+
 .unconventional-thinking-right .bg-light-green-v2{background: #e3edec}
 .unconventional-thinking-right .more-btn, .unconventional-thinking-right .more-btn:hover{background: #e3edec url(./assets/images/arrow-icon-1.jpg) no-repeat right;}
 /* .light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center} */
-.light-green-box {background: #e3edec; padding: 15px; display: block; text-align: center}
+.light-green-box {background: #e3edec; padding: 30px; display: block; text-align: center}
 .light-green-box img{margin:0 auto; display: block; min-height: 255px}
 .light-green-box .text-title{color:#000; font-size: 16px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
 .unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
@@ -2202,3 +2220,7 @@ h1.black{color: #000 !important}
 .shariya-light-green .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 .shariya-light-green{background: #e3edec; padding: 30px; text-align: center;}
 .shariya-light-green img{max-height: 230px}
+
+.home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
+.content.year-contents p{font-size: 18px !important}
+.red-head{color:#b50c2f;}
