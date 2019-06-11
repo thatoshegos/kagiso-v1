@@ -54,5 +54,9 @@ export class HomeComponent implements OnInit {
     // });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.wpservice.readCSVDataFromServer().subscribe(data => {
+    //   console.log(data);
+    // });
+  }
 }
