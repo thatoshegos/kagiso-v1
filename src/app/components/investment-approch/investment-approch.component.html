@@ -5,11 +5,11 @@
     data-wow-delay="0.2s"
   >
     <div style="width:750px; margin:0 auto"
-      class="bg-white text-center margin-100px-lr  xs-no-margin-lr"
+      class="text-center margin-100px-lr  xs-no-margin-lr"
       *ngIf="investment"
     >
       <h2>{{ investment.acf.investment_title }}</h2>
-      <div class="padding-45px-all sm-padding-15px-all inner-match-height">
+      <div class="padding-45px-all sm-padding-15px-all inner-match-height bg-white">
         <p [innerHTML]="investment.acf.investment_content">
           <!-- We buy investments that are priced well below their intrinsic values
           and avoid those that we believe are overpriced.<br /><br />
