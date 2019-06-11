@@ -26,12 +26,12 @@
       *ngFor="let image of financialAdviser.acf.financial_adviser_image"
     >
       <div style="margin-left:0px;">
-        <div class="shariya-light-green">
-          <img [src]="image.image1.url" />
-          <div class="text-title">
-            <a href="#">{{ image.title }}</a>
+        <a href="#">
+          <div class="shariya-light-green">
+            <img [src]="image.image1.url" />
+            <div class="text-title">{{ image.title }}</div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

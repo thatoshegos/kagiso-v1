@@ -193,9 +193,12 @@
         >
           <div style="margin-left:0px;">
             <div class="light-green-box">
-              <img [src]="image.image1.url" />
+              <!-- <img [src]="image.image1.url" /> -->
               <a [routerLink]="image.image1_url"
-                ><div class="text-title">{{ image.title }}</div></a
+                >
+                <img [src]="image.image1.url" />
+                <div class="text-title">{{ image.title }}</div>
+                </a
               >
             </div>
           </div>

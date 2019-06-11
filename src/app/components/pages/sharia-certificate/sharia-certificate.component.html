@@ -6,8 +6,8 @@
         *ngFor="let sharia of shariaCerticate.acf.sharia_image"
       >
         <div class="shariya-light-green">
-          <img [src]="sharia.sharia_image.url" />
           <a [routerLink]="'/' + sharia.sharia_image_url">
+            <img [src]="sharia.sharia_image.url" />
             <div class="text-title">{{ sharia.title }}</div>
           </a>
         </div>

@@ -36,8 +36,8 @@
       attr.data-aos="{{ animationArr[i] }}"
     >
       <div class="light-green-box">
-        <img [src]="fimage.image1.url" />
         <a href="{{ fimage.image1_url }}" *ngIf="i < 3">
+          <img [src]="fimage.image1.url" />
           <div class="text-title">{{ fimage.title }}</div>
         </a>
       </div>
