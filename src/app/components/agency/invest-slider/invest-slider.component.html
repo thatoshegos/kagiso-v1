@@ -42,8 +42,8 @@
   [ngClass]="!fromNewInvesting ? 'col-md-12 col-sm-12 col-xs-12' : 'row'"
   data-wow-delay="0.2s"
 >
-  <div class="bg-white text-center padding-30px-all" *ngIf="dataset">
-    <swiper [config]="config">
+  <div class="bg-white text-center padding-30px-all swiper-container" *ngIf="dataset">
+    <swiper [config]="config" #usefulSwiper>
       <div class="swiper-wrapper">
         <div
           class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
