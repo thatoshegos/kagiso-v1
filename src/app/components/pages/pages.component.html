@@ -76,7 +76,7 @@
     <app-slider [sliders]="page.acf.home_slider"></app-slider>
   </section>
   <div class="container">
-    <section class="wow fadeIn" *ngIf="page && page.saria">
+    <section class="wow fadeIn row" *ngIf="page && page.saria">
       <app-feature-box [DataSets]="page"></app-feature-box>
     </section>
   </div>
@@ -86,7 +86,7 @@
     </div>
   </section>
   <div class="container" *ngIf="page && page.saria">
-    <section class="bg-white" style="margin-top:40px; padding-top: 0">
+    <section  style="margin-top:40px; padding-top: 0">
       <app-fund-range [FundRange]="page"></app-fund-range>
     </section>
     <section class="how-to-invest bg-white" style="margin-top:40px;">

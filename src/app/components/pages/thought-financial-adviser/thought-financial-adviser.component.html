@@ -20,7 +20,28 @@
         <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
       </div> -->
   </div>
-  <div class="col-md-12 col-sm-12" *ngIf="financialAdviser">
+  
+  <div class="col-md-12 col-sm-12 margin-40px-top" *ngIf="financialAdviser">
+      <div class="col-md-1"></div>
+    <div
+      class="col-md-5"
+      *ngFor="let image of financialAdviser.acf.financial_adviser_image"
+    >
+      <div style="margin-left:0px;">
+	  <a [routerLink]="'/' + image.image1_url">
+        <div class="shariya-light-green">
+          <img [src]="image.image1.url" />
+          <div class="text-title">
+            {{ image.title }}
+          </div>
+        </div>
+		</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!--<div class="col-md-12 col-sm-12" *ngIf="financialAdviser">
     <div
       class="col-md-4 col-md-offset-1"
       *ngFor="let image of financialAdviser.acf.financial_adviser_image"
@@ -34,7 +55,9 @@
         </a>
       </div>
     </div>
-  </div>
+  </div>-->
+  
+  
   <div class="col-md-12" *ngIf="financialAdviser">
     <div
       class="row padding-40px-tb bg-medium-gray-light margin-40px-top  text-center"

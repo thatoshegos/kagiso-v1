@@ -3913,7 +3913,7 @@ aside .latest-post li figure {width: 75px;}
     font-weight: 400;
 }
 .fund-range-graph{
-    padding: 0px 15px 10px;
+    padding: 20px;
 }
 .fund-range-graph img {
     width: 100%;
@@ -4038,3 +4038,7 @@ aside .latest-post li figure {width: 75px;}
 .slider-arrow-down img{
     width: 50px;
 }
+.grey-bt-border{
+    border-bottom: 4px solid #f7f7f7!important;
+}
+.fund-range-graph img:hover{transform: scale(1.1)}
