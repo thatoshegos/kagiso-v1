@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, ViewChild, AfterViewInit } from "@angular/core";
+import { SwiperComponent } from 'angular2-useful-swiper';
 
 @Component({
   selector: "app-invest-slider",
   templateUrl: "./invest-slider.component.html",
   styleUrls: ["./invest-slider.component.css"]
 })
-export class InvestSliderComponent implements OnInit {
+export class InvestSliderComponent implements AfterViewInit {
   @Input() dataset;
   @Input() fromNewInvesting;
   slideDatas;
@@ -18,18 +19,23 @@ export class InvestSliderComponent implements OnInit {
     paginationClickable: true,
     nextButton: ".swiper-button-next",
     prevButton: ".swiper-button-prev",
-    spaceBetween: 30
+    spaceBetween: 30,
+	//initialSlide: 0
   };
-  ngOnInit() {
+  @ViewChild('usefulSwiper') public usefulSwiper: SwiperComponent;
+  ngAfterViewInit() {
     if (this.dataset.acf) {
       this.slideDatas = this.dataset.acf.how_do_i_invest;
     } else {
       this.slideDatas = this.dataset;
-      console.log(this.slideDatas);
     }
   }
   ngOnChanges() {
-    this.index = 0;
     this.slideDatas = this.dataset;
+	// console.log('usefulSwiper', this.usefulSwiper);
+	if(this.usefulSwiper) {
+	  this.usefulSwiper.swiper.slideTo(0);
+	  this.usefulSwiper.swiper.startAutoplay();
+	}
   }
 }

@@ -5,6 +5,7 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { MalihuScrollbarModule } from "ngx-malihu-scrollbar";
 
 import { ChartsModule } from "ng2-charts";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -47,7 +48,7 @@ import { BalanceFundComponent } from "./components/pages/balance-fund/balance-fu
 import { FundTabComponent } from "./components/pages/balance-fund/fund-tab/fund-tab.component";
 import { GraphComponent } from "./components/pages/balance-fund/graph/graph.component";
 import { FactSheetArchiveComponent } from "./components/pages/fact-sheet-archive/fact-sheet-archive.component";
-import { CompleteFundRangeComponent } from './components/pages/complete-fund-range/complete-fund-range.component';
+import { CompleteFundRangeComponent } from "./components/pages/complete-fund-range/complete-fund-range.component";
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { CompleteFundRangeComponent } from './components/pages/complete-fund-ran
     HttpClientModule,
     SwiperModule,
     ChartsModule,
-    MalihuScrollbarModule.forRoot()
+    MalihuScrollbarModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

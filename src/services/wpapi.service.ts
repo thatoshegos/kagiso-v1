@@ -45,4 +45,7 @@ export class WPAPIService {
   getCSVData(url) {
     return this.http.get(url, { responseType: "text" });
   }
+  readCSVDataFromServer(){
+     return this.http.get("http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/dailyprices/22.csv",{responseType:"text"});
+  }
 }
