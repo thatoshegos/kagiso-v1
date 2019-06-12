@@ -10,7 +10,7 @@
   <a href="javascript:void(0)" *ngIf="getMessageStatus" (click)="open(content)"
     ><img src="assets/images/leave-message.png"
   /></a>
-  <div class="show-message" *ngIf="!getMessageStatus">Message</div>
+  <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div>
 </div>
 <!-- start scroll to top -->
 <a class="scroll-top-arrow" href="javascript:void(0);"
@@ -18,7 +18,7 @@
 ></a>
 
 <ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-content">
+  <div class="modal-content1">
     <div class="modal-header">
       <button
         type="button"
@@ -28,17 +28,67 @@
       >
         <span aria-hidden="true">&times;</span>
       </button>
-      <h4 class="modal-title">Modal title</h4>
+      <!-- <h4 class="modal-title">Send us an email</h4> -->
+      <div class="box-2-heading padding-15px-all">Send us an email</div>
     </div>
     <div class="modal-body">
-      <p>One fine body&hellip;</p>
+      <div class="box-2 padding-5px-all margin-40px-bottom">
+        <!-- <div class="box-2-heading padding-15px-all">
+          Send us an email
+        </div> -->
+        <div class="box-2-content padding-20px-all">
+          <form id="contact-form" action="javascript:void(0)" method="post">
+            <div>
+              <div id="success-contact-form" class="no-margin-lr"></div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+              />
+              <input
+                type="emailt"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+              />
+              <input
+                type="tel"
+                name="subject"
+                id="subject"
+                placeholder="Telephone"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+              />
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Area of Interest"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+              />
+              <textarea
+                name="comment"
+                id="comment"
+                placeholder="Comment"
+                rows="5"
+                class="bg-light-green no-border medium-textarea margin-5px-bottom"
+              ></textarea>
+              <div class="padding-30px-top text-center ">
+                <a href="#" target="_blank" class="more-btn text-black">SEND</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="modal-footer">
+    <!-- <div class="modal-footer">
       <button type="button" class="btn btn-default" (click)="c('Close click')">
         Close
       </button>
       <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
+    </div> -->
   </div>
   <!-- /.modal-content -->
 </ng-template>
