@@ -118,6 +118,18 @@ export class PagesComponent implements OnInit {
           // if (slug == "equity-alpha-fund") {
           //   this.page.equityAlphaStatus = true;
           // }
+          if (slug == "complete-fund-range") {
+            // this.page.id = 11828;
+            this.page.completeFundRangeStatus = true;
+            // this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+            //   this.page = page;
+            //   this.page.completeFundRangeStatus = true;
+            //   this.page.getParent = "individual-investor";
+            //   console.log(this.page);
+            // });
+
+            //console.log(this.page);
+          }
 
           console.log(this.page);
           if (this.page) {
@@ -261,19 +273,21 @@ export class PagesComponent implements OnInit {
                 this.page.getParent = "individual-investor";
                 console.log(this.page);
               });
-            } else if (
-              currentUrl.parent == "individual-investor" &&
-              currentUrl.child == "our-funds" &&
-              currentUrl.schild == "complete-fund-range"
-            ) {
-              this.page.id = 11828;
-              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
-                this.page = page;
-                this.page.completeFundRangeStatus = true;
-                this.page.getParent = "individual-investor";
-                console.log(this.page);
-              });
-            } else if (
+            }
+            // else if (
+            //   currentUrl.parent == "individual-investor" &&
+            //   currentUrl.child == "our-funds" &&
+            //   currentUrl.schild == "complete-fund-range"
+            // ) {
+            //   this.page.id = 11828;
+            //   this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+            //     this.page = page;
+            //     this.page.completeFundRangeStatus = true;
+            //     this.page.getParent = "individual-investor";
+            //     console.log(this.page);
+            //   });
+            // }
+            else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "our-funds"
             ) {

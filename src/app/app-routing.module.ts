@@ -62,10 +62,10 @@ const routes: Routes = [
     path: "individual-investor/our-funds/global-equity-fund",
     component: PagesComponent
   },
-  {
-    path: "individual-investor/our-funds/complete-fund-range",
-    component: PagesComponent
-  },
+  // {
+  //   path: "individual-investor/our-funds/complete-fund-range",
+  //   component: PagesComponent
+  // },
   // end individual investor
   // sharia investor child of child
   {
