@@ -11,7 +11,14 @@ export class FundRangeComponent implements OnInit {
   glFund = { title: "", desc: "", images: [] };
   viewChangeflag = false;
   viewSChangeFlag = true;
-  animation = ["fade-left", "fade-up", "fade-left", "fade-right", "fade-left"];
+  animation = [
+    "fade-left",
+    "fade-up",
+    "fade-left",
+    "fade-right",
+    "fade-left",
+    "fade-left"
+  ];
   glfundLength;
   constructor() {}
 

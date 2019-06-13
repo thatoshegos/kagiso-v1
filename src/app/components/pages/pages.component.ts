@@ -164,7 +164,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.islamicEquityStatus = true;
                 this.page.getParent = "sharia-investor";
-                console.log(this.page);
+               console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&

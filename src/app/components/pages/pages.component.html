@@ -28,7 +28,7 @@
       </div>
     </section>
   </div>
-  <section style="padding:0px;" class="our-history-area">
+  <section  class="our-history-area">
     <div class="container" *ngIf="page">
       <div class="col-md-10 col-md-offset-1">
         <app-common [history]="page.acf"></app-common>
@@ -186,9 +186,9 @@
   </section>
   <section style="padding:0 !important; margin: -15px 0">
     <div class="col-md-12 col-sm-12" *ngIf="page && page.ourfunds">
-      <div class="col-md-offset-3">
+      <div class="col-md-offset-2">
         <div
-          class="col-md-4"
+          class="col-md-5"
           *ngFor="let image of page.acf.financial_adviser_image"
         >
           <div style="margin-left:0px;">

@@ -27,7 +27,7 @@
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div
-      class="bg-white text-center padding-45px-all  sm-padding-15px-all inner-match-height" 
+      class="bg-white text-center padding-45px-all  sm-padding-15px-all inner-match-height"
     >
       <p
         *ngIf="fundDesign"
@@ -36,7 +36,8 @@
       ></p>
       <div class="inner-match-height" *ngIf="independent">
         <p
-          class="text-deep-pink padding-40px-top" style="padding-top: 0"
+          class="text-deep-pink padding-40px-top"
+          style="padding-top: 0"
           [innerHTML]="independent.independent_thinkers_content"
         ></p>
         <div
@@ -44,13 +45,24 @@
           [innerHTML]="independent.independent_thinkers_video"
         ></div>
       </div>
+      <div class="ownership-structure" *ngIf="owners">
+        <p
+          *ngIf="owners"
+          class="o-text"
+          [innerHTML]="owners.ownership_structure_content"
+        ></p>
+        <div class="text-center">
+          <a class="more-btn read-more" (click)="showData(istrue)"> MORE</a>
+        </div>
+        <div class="show-more-data" *ngIf="istrue && showMoreData">
+          <p class="text-deep-pink padding-40px-top">
+            <strong>{{ showMoreData.kagiso_tiso_holdings_title }}</strong>
+          </p>
+          <p [innerHTML]="showMoreData.kagiso_tiso_holdings_content"></p>
+        </div>
+      </div>
 
-      <p
-        *ngIf="owners"
-        class="o-text"
-        [innerHTML]="owners.ownership_structure_content"
-      ></p>
-      <!--a [href]="" class="more-btn read-more" *ngIf="owners"> MORE</a--> 
+      <!--a [href]="" class="more-btn read-more" *ngIf="owners"> MORE</a-->
 
       <p
         *ngIf="history"
@@ -63,11 +75,96 @@
         [innerHTML]="our_culture.our_culture_content"
       ></p>
       <a [href]="" class="more-btn read-more" *ngIf="our_culture"> MORE</a>
-      <p
-        *ngIf="responsible"
-        class="o-text"
-        [innerHTML]="responsible.responsible_investing_content"
-      ></p>
+      <div class="responsible-investing-content" *ngIf="responsible">
+        <p
+          *ngIf="responsible"
+          class="o-text"
+          [innerHTML]="responsible.responsible_investing_content"
+        ></p>
+        <ul class="invest-list-img">
+          <li>
+            <div class="content-box">
+              <img
+                class="alignnone size-full wp-image-445"
+                src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/UNPRI.jpg"
+                alt=""
+                width="134"
+                height="94"
+              />
+              <div
+                class="title"
+                (click)="getTabData('UNPRI', isActive)"
+                [ngClass]="'UNPRI' == currentTab ? 'active' : 'none'"
+              >
+                UNPRI
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="content-box">
+              <img
+                class="alignnone size-full wp-image-445"
+                src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/carbon.jpg"
+                alt=""
+                width="134"
+                height="94"
+              />
+              <div
+                class="title"
+                (click)="getTabData('corban_disclosure', isActive)"
+                [ngClass]="
+                  'corban_disclosure' == currentTab ? 'active' : 'none'
+                "
+              >
+                CARBON DISCLOSURE
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="content-box">
+              <img
+                class="alignnone size-full wp-image-445"
+                src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/proxy-voting.jpg"
+                alt=""
+                width="134"
+                height="94"
+              />
+              <div
+                class="title"
+                (click)="getTabData('proxy-voting', isActive)"
+                [ngClass]="'proxy-voting' == currentTab ? 'active' : 'none'"
+              >
+                PROXY VOTING
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="content-box">
+              <img
+                class="alignnone size-full wp-image-445"
+                src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/conflict.jpg"
+                alt=""
+                width="134"
+                height="94"
+              />
+              <div
+                class="title"
+                (click)="getTabData('conflict', isActive)"
+                [ngClass]="'conflict' == currentTab ? 'active' : 'none'"
+              >
+                CONFLICTS OF INTEREST
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="tab-data" *ngIf="tabData">
+          <p class="text-deep-pink padding-40px-top">
+            <strong>{{ tabData.title }}</strong>
+          </p>
+          <p [innerHTML]="tabData.content"></p>
+        </div>
+      </div>
+
       <p
         *ngIf="social_corporate"
         class="o-text"

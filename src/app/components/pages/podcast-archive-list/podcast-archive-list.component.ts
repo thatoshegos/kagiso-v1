@@ -10,6 +10,8 @@ export class PodcastArchiveListComponent implements OnInit {
   categories;
   selectedItem;
   podcastVideo;
+  currentData;
+  isfirst = false;
   @Input() getPodcast;
   constructor(private wpservice: WPAPIService) {}
 
@@ -20,8 +22,18 @@ export class PodcastArchiveListComponent implements OnInit {
       this.selectedItem = categories[0];
     });
   }
-  getYearPodcastPost(category, event) {
+  getYearPodcastPost(category, event, toggle) {
     this.selectedItem = category;
+
+    if (this.currentData) {
+      if (this.currentData != category) {
+        this.isfirst = true;
+      } else {
+        this.isfirst = !toggle;
+      }
+    }
+    this.currentData = category;
+
     this.wpservice
       .getQuaterlyImagePostFromCategory(`?categories=${category.id}`)
       .subscribe(podcastVedio => {

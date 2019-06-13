@@ -2229,6 +2229,8 @@ h1.black{color: #000 !important}
 .content.year-contents p{font-size: 18px !important}
 .red-head{color:#b50c2f;}
 .investment-tab.ul-tab.active{font-weight:normal !important;}
+
+/* 
 .modal-dialog{
     margin-top:10px;
 }
@@ -2236,7 +2238,7 @@ h1.black{color: #000 !important}
 padding: 13px;
 background-color:#9FD0C6;  
 }
-/* #c9e0de */
+
 .modal-content{
     border: 7px solid #9FD0C6 ;
     border-radius: 0px;
@@ -2260,7 +2262,7 @@ background-color:#9FD0C6;
     line-height: 1;
     color: #ffffff;
     text-shadow: 0 1px 0 #fff;
-    /* filter: alpha(opacity=20); */
+
     
 }
 .modal-backdrop {
@@ -2274,6 +2276,73 @@ background-color:#9FD0C6;
 }
 .modal-backdrop.show{
     opacity: 0.3;
+}
+.show-message{
+    width: 174px;
+    margin-right: 72px;
+    float: right;
+    padding: 11px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}     */
+.modal-backdrop.show {
+    opacity: 0;
+}
+.box-2-heading{
+    text-align: center;
+}
+.medium-input, .medium-select select, .medium-textarea {
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: normal;
+    border-radius: 0;
+}
+.modal-dialog {
+    margin-top: 5%;
+}
+input, select, textarea {
+    border: 1px solid #ffffff;
+    font-size: 14px;
+    padding: 8px 15px;
+    width: 100%;
+    margin: 0 0 20px;
+    max-width: 100%;
+    resize: none;
+}
+ .modal-header .close {
+    height: 45px;
+    width: 45px;
+    margin-top: -2px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.close {
+    float: right;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    opacity: 1;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 34px;
+    right: 483px;
+    bottom: 10px;
+    left: 396px;
+    z-index: 1040;
+    background-color: #000;
+}
+.modal-content {
+    border: 7px solid #9fd0c6;
+    border-radius: 0;
+    width: 80%;
+    box-shadow: 20px 20px 0px rgba(154, 154, 154, 0.7);
 }
 .show-message{
     width: 174px;
