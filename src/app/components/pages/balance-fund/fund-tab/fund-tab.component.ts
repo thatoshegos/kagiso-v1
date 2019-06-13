@@ -140,6 +140,21 @@ export class FundTabComponent implements OnInit {
       data.getParent == "institutional-investor"
     ) {
       return "assets/data/prices/institutional-stable-fund-price.csv";
+    } else if (
+      data.topFortyTrackerStatus &&
+      data.getParent == "individual-investor"
+    ) {
+      return "assets/data/prices/institutional-stable-fund-price.csv";
+    } else if (
+      data.isdomesticFundStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-stable-fund-price.csv";
+    } else if (
+      data.isGlobalFundInstitutionalStatus &&
+      data.getParent == "institutional-investor"
+    ) {
+      return "assets/data/prices/institutional-stable-fund-price.csv";
     }
 
     // console.log(data);

@@ -656,7 +656,15 @@
 <div class="balance-fund" *ngIf="page && page.isInstitutionalStableStatus">
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
-
+<div class="balance-fund" *ngIf="page && page.topFortyTrackerStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isdomesticFundStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
+<div class="balance-fund" *ngIf="page && page.isGlobalFundInstitutionalStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
 
 <!--End Equity alpha fund-->
 <!--Complete fund range-->
