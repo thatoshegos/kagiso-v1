@@ -100,7 +100,7 @@
                       <a
                         *ngIf="menu.display"
                         [routerLink]="'/' + menu.slug"
-                        >{{ menu.name }}</a
+                        [class]="route.url.includes(menu.slug) ? 'header-menu-selected' : ''">{{ menu.name }}</a
                       >
                     </ng-template>
                   </li>
