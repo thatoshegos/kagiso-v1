@@ -2226,7 +2226,8 @@ h1.black{color: #000 !important}
 .shariya-light-green img{max-height: 230px}
 
 .home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
-.content.year-contents p{font-size: 18px !important}
+/*.content.year-contents p{font-size: 18px !important}*/
+.content.year-contents p{font-size: 16px !important}
 .red-head{color:#b50c2f;}
 .investment-tab.ul-tab.active{font-weight:normal !important;}
 
@@ -2286,9 +2287,36 @@ background-color:#9FD0C6;
     color: #fff;
     text-align: center;
     font-weight: 400;
-}     */
+} 
+    */
+	
+.modal-dialog{
+    margin-top:10px;
+}
+.modal-header{
+padding: 13px;
+background-color:#9FD0C6;  
+}
+.box-2-heading {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .modal-header .close {
+    border: 4px solid white;
+    border-radius: 45px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #fff;
+}
 .modal-backdrop.show {
     opacity: 0;
+    display: none!important;
 }
 .box-2-heading{
     text-align: center;
@@ -2354,3 +2382,6 @@ input, select, textarea {
     text-align: center;
     font-weight: 400;
 }    
+.contact-content{
+    font-size: 18px;
+}

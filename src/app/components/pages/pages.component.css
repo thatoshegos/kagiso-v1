@@ -113,3 +113,17 @@ a.padding-10px-all.ul-tab.active {
   font-weight: 600;
   border-bottom: 3px dotted #c41524;
 }
+.insight-title {
+    background: #bfd6d4;
+    padding: 18px 0px;
+    color: #000;
+}
+.insight-title .text-title{
+    background: url(/assets/images/arrow-icon-2.jpg) no-repeat right;
+    padding-right: 32px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 30px;
+}

@@ -136,7 +136,7 @@ export class FundTabComponent implements OnInit {
     ) {
       return "assets/data/prices/institutional-protected-price.csv";
     } else if (
-      data.isInstitutionalStableStatus &&
+      data.isStableStatus &&
       data.getParent == "institutional-investor"
     ) {
       return "assets/data/prices/institutional-stable-fund-price.csv";

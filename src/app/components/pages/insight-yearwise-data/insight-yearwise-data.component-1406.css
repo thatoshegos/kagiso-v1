@@ -10,38 +10,27 @@
 
 .panel-group .panel + .panel {
   margin-top: 0px !important;
-  margin-bottom: 1px !important;
+  margin-bottom: 3px !important;
 }
 .accordion-style2 .panel {
   margin-top: 0px !important;
-  margin-bottom: 1px !important;
+  margin-bottom: 3px !important;
 }
 .margin-30px-bottom-insight {
   margin-bottom: 30px !important;
 }
 .title {
-  padding: 25px 0 10px 0;
+  padding: 0 0 15px 0;
   padding-left: 0px;
-  color: #B60C2F;
-  font-size: 18px;
+  color: indianred;
+  font-size: 21px;
   font-weight: 400;
 }
 
 .year-list > ul > li .active {
-  color: #B60C2F;
+  color: red;
   font-weight: 800;
 }
 .year-post > span {
   font-weight: 800;
-}
-.accordion-style2 .panel-body{
-    padding: 15px 28px 25px;
-}
-.content.year-contents a {
-    color: #656565;
-    text-decoration: underline;
-    text-decoration-color: #87b8b3;
-}
-.content.year-contents a:hover{
-    color: #87b8b3;
 }

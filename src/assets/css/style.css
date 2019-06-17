@@ -3472,10 +3472,11 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .accordion-style2 .panel {background: transparent; border: none; margin-bottom: 15px; box-shadow: none;}
 .accordion-style2 .panel-title {background: transparent; border: none }
 .accordion-style2 .panel .panel-heading { background: #fff; border-radius:0; padding:18px 28px 19px }
-.accordion-style2 .panel-body{padding: 35px 28px 25px; border-top:none  }
+/*.accordion-style2 .panel-body{padding: 35px 28px 25px; border-top:none  }*/
+.accordion-style2 .panel-body{padding: 25px 28px 25px; border-top:none  }
 .accordion-style2 .panel-heading i { font-size: 25px; margin: 0;}
 .accordion-style2 .panel-title {padding: 0;}
-.accordion-style2 .tab-tag { font-size: 20px; padding: 0; margin-right: 7px; display: inline-block; vertical-align: top; }
+.accordion-style2 .tab-tag { font-size: 16px; padding: 0; margin-right: 7px; display: inline-block; vertical-align: top; }
 .accordion-style2 a, .accordion-style2 a:hover, .accordion-style2 a:hover i { color: #282828;}
 .accordion-style2 .panel-default:last-child {border-bottom: 1px solid rgba(0, 0, 0, 0); margin-bottom: 0;}
 .accordion-style2 { margin-bottom: 0;}
@@ -3618,7 +3619,8 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .author-sharing a { margin-right: 15px; color: #737373 }
 .author-sharing a:hover {color: #000}
 /*.alignnone { margin: 5px 30px 40px 0;}*/
-.aligncenter, div.aligncenter { display: block; margin: 5px auto 5px auto; }
+/*.aligncenter, div.aligncenter { display: block; margin: 5px auto 5px auto; }*/
+.aligncenter, div.aligncenter { display: block; margin: 0px auto 5px auto; }
 .alignright { float:right; margin: 5px 0 30px 40px; }
 .alignleft { float: left; margin: 5px 40px 30px 0; }
 a img.alignright { float: right; margin: 5px 0 40px 30px; }
@@ -4042,3 +4044,49 @@ aside .latest-post li figure {width: 75px;}
     border-bottom: 4px solid #f7f7f7!important;
 }
 .fund-range-graph img:hover{transform: scale(1.1)}
+
+a.btn-suscribe{
+    display: inline-block;
+    background: #9dc4c0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/floatnav_subscribe.png) no-repeat 15px center;
+    padding-left: 60px;
+    margin:0 10px; 
+}
+a.btn-unsuscribe {
+    display: inline-block;
+    background: #9dc4c0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/floatnav_unsubscribe.png) no-repeat 15px center;
+    padding-left: 60px;
+    margin:0 10px; 
+}
+a.btn-video-archive {
+    display: inline-block;
+    background: #9dc4c0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/video_button.png) no-repeat 12px center;
+    padding-left: 60px;
+    margin:0 10px; 
+}
+a.btn-video-archive:hover{
+    background: #5a9fc0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/video_b_button.png) no-repeat 12px center;
+}
+a.btn-unsuscribe span, a.btn-suscribe span, a.btn-video-archive span{
+    padding: 20px 30px 20px 30px;
+    display: block;
+    background: #fff;
+    color: #656565;
+    font-weight: 500;
+}
+a.btn-suscribe:hover{
+    background: #5a9fc0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/floatnav_subscribe.png) no-repeat 15px center;
+}
+a.btn-unsuscribe:hover{
+    background: #5a9fc0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/floatnav_unsubscribe.png) no-repeat 15px center;
+}
+a.btn-video-archive:hover span, a.btn-unsuscribe:hover span, a.btn-suscribe:hover span{
+    background: #c8dbe5;
+}
+.accordion-style2 a {
+    color: #656565!important;
+    text-decoration: underline!important;
+    text-decoration-color: #87b8b3!important;
+}
+.accordion-style2 a:hover{
+    color: #87b8b3!important;
+}

@@ -266,7 +266,7 @@
     <!-- </div>     -->
   </div>
   <div class="col-md-6 col-md-offset-3 margin-10px-top margin-30px-bottom ">
-      <a class="btn-meet-leaders" href="#" style="margin-left:115px;">Video Archive</a>
+      <a class="btn-video-archive" href="#" style="margin-left:115px;">Video Archive</a>
   </div>
   <div class="col-md-12">
     <app-financial-image-two
@@ -355,8 +355,8 @@
   <div class="row margin-40px-top">
     <div class="col-md-6 col-md-offset-3">
       <div class="suscribe">
-        <a href="#" class="btn-meet-leaders">SUSCRIBE</a>
-        <a href="#" class="btn-meet-leaders">UNSUSCRIBE</a>
+        <a href="#" class="btn-suscribe">SUSCRIBE</a>
+        <a href="#" class="btn-unsuscribe">UNSUSCRIBE</a>
       </div>
     </div>
   </div>
@@ -372,8 +372,10 @@
           width="400"
           height="200"
         />
-      </a>
-    </div>
+      
+	  <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
+    </a>
+	</div>
   </div>
 </div>
 <!--End Quaterly status-->
@@ -665,6 +667,7 @@
 <div class="balance-fund" *ngIf="page && page.isGlobalFundInstitutionalStatus">
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
+
 
 <!--End Equity alpha fund-->
 <!--Complete fund range-->

@@ -45,11 +45,14 @@
   <div class="bg-white text-center padding-30px-all swiper-container" *ngIf="dataset">
     <swiper [config]="config" #usefulSwiper>
       <div class="swiper-wrapper">
-        <div
+        <!--<div
           class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
           *ngFor="let slider of slideDatas"
           [ngStyle]="{ background: 'url(' + slider.background_image.url + ')' }"
-        >
+        >-->
+		<div
+          class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+          *ngFor="let slider of slideDatas">
           <div class="opacity-extra-medium"></div>
 
           <div
@@ -62,7 +65,7 @@
                 >
                   <h3>{{ slider.title }}</h3>
 
-                  <p [innerHTML]="slider.content"></p>
+                  <p [innerHTML]="slider.content"></p>fff<img [src]="slider.background_image.url">
                 </div>
               </div>
             </div>

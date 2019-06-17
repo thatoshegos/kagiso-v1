@@ -616,9 +616,11 @@ textarea.input-bg {
   float: left;
   margin-right: 10px !important;
 }
-#contact-form textarea{height: 242px}
+#contact-form textarea{height: 230px}
 
-
+form#contact-form {
+    padding-bottom: 48px;
+}
 .check-box {
   display: block;
   position: relative;
