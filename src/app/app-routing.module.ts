@@ -66,6 +66,10 @@ const routes: Routes = [
     path: "individual-investor/our-funds/top-40-tracker-fund",
     component: PagesComponent
   },
+  {
+    path: "individual-investor/our-funds/stable-fund",
+    component: PagesComponent
+  },
   // end individual investor
   // sharia investor child of child
   {

@@ -285,7 +285,21 @@ export class PagesComponent implements OnInit {
                 this.page.getParent = "individual-investor";
                 console.log(this.page);
               });
-            } else if (
+            }else if (
+              currentUrl.parent == "individual-investor" &&
+              currentUrl.child == "our-funds" &&
+              currentUrl.schild == "stable-fund"
+            ) {
+              this.page.id = 11796;
+              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.individualStableFundStatus = true;
+                this.page.getParent = "individual-investor";
+                console.log(this.page);
+              });
+            }
+            
+            else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "our-funds"
             ) {
