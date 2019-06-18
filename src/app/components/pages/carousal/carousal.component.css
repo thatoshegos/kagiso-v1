@@ -1,0 +1,12 @@
+.list {
+  list-style-type: none;
+  padding: 30px;
+
+  margin-right: 10px;
+}
+.even {
+  background-color: cadetblue;
+}
+.odd {
+  background-color: lightgray;
+}

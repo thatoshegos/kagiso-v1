@@ -63,12 +63,15 @@
       </div>
 
       <!--a [href]="" class="more-btn read-more" *ngIf="owners"> MORE</a-->
+      <div class="history-section" *ngIf="history">
+        <p
+          *ngIf="history"
+          class="o-text"
+          [innerHTML]="history.our_history_content"
+        ></p>
+        <app-carousal></app-carousal>
+      </div>
 
-      <p
-        *ngIf="history"
-        class="o-text"
-        [innerHTML]="history.our_history_content"
-      ></p>
       <p
         *ngIf="our_culture"
         class="o-text"
