@@ -14,6 +14,11 @@ export class BalanceFundComponent implements OnInit {
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
+	this.wpservice
+      .readCSVDataFromServer()
+      .subscribe(data => {
+        console.log('readCSVDataFromServer========', data);
+      });
     this.wpservice
       .getCSVData("assets/images/balance_fund.csv")
       .subscribe(data => {

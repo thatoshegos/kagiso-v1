@@ -46,9 +46,7 @@ export class WPAPIService {
     return this.http.get(url, { responseType: "text" });
   }
   readCSVDataFromServer() {
-    return this.http.get(
-      "http://dev.omangom.com/kagiso/wordpress/?custom_action=get_chart_data&csv_url=http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/dailyprices/111.csv",
-      { responseType: "text" }
-    );
+	const apiUrl  = `http://dev.omangom.com/kagiso/wordpress/?custom_action=get_chart_data&csv_url=http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/dailyprices/111.csv?rand=${new Date().getTime()}`;
+    return this.http.get( apiUrl, { responseType: "text" });
   }
 }
