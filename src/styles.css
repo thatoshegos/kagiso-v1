@@ -47,7 +47,7 @@ Table of contents
 body{ font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:16px; color:#000; font-weight: 300;line-height: 24px;background-color:#E7E7E7; }
 body, html { height: 100%; -moz-osx-font-smoothing: grayscale;}
 a, a:active, a:focus { color: #6f6f6f; text-decoration: none; }
-a:hover, a:active{color: #ff214f; text-decoration: none;}
+a:hover, a:active{color: #b50c2f; text-decoration: none;}
 a:focus, a:active, button:focus, button:active,.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;}
 img {max-width:100%; height:auto; }
 video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
@@ -59,10 +59,10 @@ input[type="button"]:focus{ outline: none; }
 select::-ms-expand{ display:none;}
 iframe { border: 0;}
 p { font-size: 18px;
-	font-weight: 300;
+	font-weight: 400;
   line-height: 1.5;
   text-align: left;
-  color: #000000;}
+  color: #656565;}
   .content>p {
     line-height: 34px !important;
     font-size: 21px !important;
@@ -261,8 +261,8 @@ a.text-very-light-gray-hover:hover {color:#ededed !important;}
 	font-weight: 300;
   line-height: 1.43;
   text-align: center;
-  color: #b60c2f;
-border-bottom: dashed #b60c2f thin;
+  color: #b50c2f;
+border-bottom: dashed #b50c2f thin;
 }
 
 .link_off {
@@ -2060,7 +2060,7 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .contact-sec a.text-deep-pink{font-weight:700}
 .contact-sec .box-2.padding-5px-all{background:#a9d0cc}
 .header-menu-selected {
-	color: #B60C2F !important;
+	color: #b50c2f !important;
 }
 
 /*--------------- About Page ----------------*/
@@ -2181,15 +2181,15 @@ h1.black{color: #000 !important}
       font-size:18px;
       font-weight: 400;
   }
-.main-slider .swiper-pagination-bullet-active{background-color:#b00c2f !important; width:16px; height:16px;}
+.main-slider .swiper-pagination-bullet-active{background-color:#b50c2f !important; width:16px; height:16px;}
 .main-slider .swiper-pagination-bullet{width:16px; height:16px; opacity: 1 !important}
 .main-slider .swiper-container-horizontal > .swiper-pagination-bullets{text-align:right;}
 .main-slider .swiper-button-next, .main-slider .swiper-button-prev{display:none;}
 .main-slider .slider-typography h1{float:left; width:auto;}
 .main-slider .btn-dual{clear:both;}
 
-.swiper-container  .swiper-button-next, .swiper-container  .swiper-button-prev{display:none !important;}
-.swiper-container .swiper-pagination-bullet-active{background-color:#b00c2f !important; width:16px; height:16px;}
+.swiper-container  .swiper-button-next, .swiper-container  .swiper-button-prev{/*display:none !important;*/}
+.swiper-container .swiper-pagination-bullet-active{background-color:#b50c2f !important; width:16px; height:16px;}
 .swiper-container .swiper-pagination-bullet{width:16px; height:16px; opacity: 1 !important; background: #80b4d2}
 .swiper-container .swiper-pagination{text-align:right;}
 .plateform-btn:hover{background:#c8dbe5 url(./assets/images/plateform-icon-hover.jpg) no-repeat right;}
@@ -2226,46 +2226,17 @@ h1.black{color: #000 !important}
 .shariya-light-green img{max-height: 230px}
 
 .home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
-/*.content.year-contents p{font-size: 18px !important}*/
 .content.year-contents p{font-size: 16px !important}
 .red-head{color:#b50c2f;}
 .investment-tab.ul-tab.active{font-weight:normal !important;}
 
 /* 
-.modal-dialog{
-    margin-top:10px;
-}
-.modal-header{
-padding: 13px;
-background-color:#9FD0C6;  
-}
-
 .modal-content{
     border: 7px solid #9FD0C6 ;
     border-radius: 0px;
     width: 80%;
 }
-.box-2-heading {
-    font-size: 24px;
-    color: #fff;
-    font-weight: 700;
-  }
-  .modal-header .close {
-    padding: 11px;
-    margin-top: -2px;
-    border: 4px solid white;
-    border-radius: 45px;
-}
-.close {
-    float: right;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 1;
-    color: #ffffff;
-    text-shadow: 0 1px 0 #fff;
 
-    
-}
 .modal-backdrop {
     position: fixed;
     top: 34px;
@@ -2287,9 +2258,7 @@ background-color:#9FD0C6;
     color: #fff;
     text-align: center;
     font-weight: 400;
-} 
-    */
-	
+}     */
 .modal-dialog{
     margin-top:10px;
 }

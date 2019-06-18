@@ -45,27 +45,29 @@
   <div class="bg-white text-center padding-30px-all swiper-container" *ngIf="dataset">
     <swiper [config]="config" #usefulSwiper>
       <div class="swiper-wrapper">
-        <!--<div
+        <div
           class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
           *ngFor="let slider of slideDatas"
-          [ngStyle]="{ background: 'url(' + slider.background_image.url + ')' }"
-        >-->
-		<div
-          class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
-          *ngFor="let slider of slideDatas">
+        >
           <div class="opacity-extra-medium"></div>
-
           <div
             class="container position-relative one-fourth-screen xs-height-400px"
           >
             <div class="slider-typography text-center">
               <div class="slider-text-middle-main">
                 <div
-                  class="slider-text-top padding-90px-top padding-80px-left xs-padding-40px-lr"
+                  class="slider-text-top padding-70px-top padding-70px-lr xs-padding-40px-lr"
                 >
-                  <h3>{{ slider.title }}</h3>
+                    <div class="how-to-invest-lt">
+                        <h3>{{ slider.title }}</h3>
 
-                  <p [innerHTML]="slider.content"></p>fff<img [src]="slider.background_image.url">
+                        <p [innerHTML]="slider.content"></p>
+                    </div>
+                    <div class="how-to-invest-rt">
+                       <!-- <img [src]="slider.background_image.url"> -->
+                        <img src="https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/howitwork-img.jpg">
+                    </div>
+                    <div class="clear-both"></div>
                 </div>
               </div>
             </div>

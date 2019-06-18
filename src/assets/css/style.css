@@ -47,7 +47,7 @@ Table of contents
 body{ font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:16px; color:#000; font-weight: 300;line-height: 24px;background-color:#E7E7E7; }
 body, html { height: 100%; -moz-osx-font-smoothing: grayscale;}
 a, a:active, a:focus { color: #6f6f6f; text-decoration: none; }
-a:hover, a:active{color: #ff214f; text-decoration: none;}
+a:hover, a:active{color: #b50c2f; text-decoration: none;}
 a:focus, a:active, button:focus, button:active,.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;}
 img {max-width:100%; height:auto; }
 video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
@@ -59,10 +59,10 @@ input[type="button"]:focus{ outline: none; }
 select::-ms-expand{ display:none;}
 iframe { border: 0;}
 p { font-size: 18px;
-	font-weight: 300;
+	font-weight: 400;
   line-height: 1.5;
   text-align: left;
-  color: #000000;}
+  color: #656565;}
 b, strong { font-weight: 600;}
 .last-paragraph-no-margin p:last-of-type {margin-bottom:0}
 .alt-font strong {font-weight: 700 }
@@ -109,6 +109,7 @@ h6 {font-size:25px; line-height:30px}
 .text-black {color:#000}
 .text-extra-dark-gray {color:#232323}
 .text-dark-gray {color:#626262}
+.text-dark-gray-v1 {color:#656565}
 .text-extra-medium-gray {color:#757575}
 .text-medium-gray {color:#939393}
 .text-extra-light-gray {color:#b7b7b7}
@@ -3472,11 +3473,10 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .accordion-style2 .panel {background: transparent; border: none; margin-bottom: 15px; box-shadow: none;}
 .accordion-style2 .panel-title {background: transparent; border: none }
 .accordion-style2 .panel .panel-heading { background: #fff; border-radius:0; padding:18px 28px 19px }
-/*.accordion-style2 .panel-body{padding: 35px 28px 25px; border-top:none  }*/
 .accordion-style2 .panel-body{padding: 25px 28px 25px; border-top:none  }
 .accordion-style2 .panel-heading i { font-size: 25px; margin: 0;}
 .accordion-style2 .panel-title {padding: 0;}
-.accordion-style2 .tab-tag { font-size: 16px; padding: 0; margin-right: 7px; display: inline-block; vertical-align: top; }
+.accordion-style2 .tab-tag { font-size: 20px; padding: 0; margin-right: 7px; display: inline-block; vertical-align: top; }
 .accordion-style2 a, .accordion-style2 a:hover, .accordion-style2 a:hover i { color: #282828;}
 .accordion-style2 .panel-default:last-child {border-bottom: 1px solid rgba(0, 0, 0, 0); margin-bottom: 0;}
 .accordion-style2 { margin-bottom: 0;}
@@ -3619,7 +3619,6 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 .author-sharing a { margin-right: 15px; color: #737373 }
 .author-sharing a:hover {color: #000}
 /*.alignnone { margin: 5px 30px 40px 0;}*/
-/*.aligncenter, div.aligncenter { display: block; margin: 5px auto 5px auto; }*/
 .aligncenter, div.aligncenter { display: block; margin: 0px auto 5px auto; }
 .alignright { float:right; margin: 5px 0 30px 40px; }
 .alignleft { float: left; margin: 5px 40px 30px 0; }
@@ -3939,29 +3938,32 @@ aside .latest-post li figure {width: 75px;}
     background: #BCDAD7 url(../images/form-icon.jpg) no-repeat right;
 }
 .how-to-investe .slider-typography{
-    width: 60%;
+    width: 100%;
+}
+.how-to-investe .swiper-container-horizontal{
+    background: #ececec;
 }
 .how-to-investe .slider-typography h3 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 50px;
-    border-bottom: 1px solid #b50c30;
-    color: #b50c30;
+    border-bottom: 1px solid #b50c2f;
+    color: #b50c2f;
     text-align: left;
 }
 .how-to-investe .slider-typography span{
-    color: #b50c30;
+    color: #b50c2f;
 }
 .how-to-investe .swiper-pagination-white .swiper-pagination-bullet{
     background: #80B6D4;
 }
 .how-to-investe .swiper-pagination-white .swiper-pagination-bullet-active{
-    background: #b50c30;
+    background: #b50c2f;
 }
 .financial-adviser-vedio img{
     width: 100%;
 }
 .faq .panel-title{
-    font-size: 21px;
+    font-size: 18px;
 }
 .faq .accordion-style2 .tab-tag{
     font-size: 18px;
@@ -4044,6 +4046,7 @@ aside .latest-post li figure {width: 75px;}
     border-bottom: 4px solid #f7f7f7!important;
 }
 .fund-range-graph img:hover{transform: scale(1.1)}
+
 
 a.btn-suscribe{
     display: inline-block;
