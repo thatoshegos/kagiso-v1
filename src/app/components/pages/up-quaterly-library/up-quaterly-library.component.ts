@@ -19,7 +19,17 @@ export class UpQuaterlyLibraryComponent implements OnInit {
       this.categories = categories;
       this.categories.sort((a, b) => b.name - a.name);
       this.selectedItem = categories[0];
+      this.wpservice
+        .getQuaterlyImagePostFromCategory(`?categories=${this.selectedItem.id}`)
+        .subscribe(imagePost => {
+          this.imagePosts = imagePost;
+          console.log(this.imagePosts);
+          this.isfirst = true;
+          this.currentSubCate = this.selectedItem;
+        });
     });
+
+    // console.log(this.selectedItem);
   }
   getYearPost(category, event, toggle) {
     if (this.currentSubCate) {

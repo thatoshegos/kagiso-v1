@@ -237,7 +237,7 @@
 
 <!-- Insight Page start-->
 <div class="silders-div" *ngIf="page && page.insightStatus">
-  <app-slider [sliders]="page.acf.home_slider"></app-slider>
+  <app-slider [sliders]="page.acf.home_slider" [insight]="page.insightStatus"></app-slider>
 </div>
 <div class="container" *ngIf="page && page.insightStatus">
   <br /><br />
@@ -619,6 +619,9 @@
 <!-- End Balance Fund-->
 <!--Equity alfa fund-->
 
+<div class="balance-fund" *ngIf="page && page.individualStableFundStatus">
+  <app-balance-fund [getBalancedData]="page"></app-balance-fund>
+</div>
 <div class="balance-fund" *ngIf="page && page.equityAlphaStatus">
   <app-balance-fund [getBalancedData]="page"></app-balance-fund>
 </div>
