@@ -16,11 +16,30 @@ export class InsightYearwiseDataComponent implements OnInit {
   getApiData;
   constructor(private wpservice: WPAPIService, private render: Renderer) {}
   getSubCategoryData(category, event) {
+    var month = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
     this.selectedItem = category;
     this.wpservice
       .getSubcategory(`?parent=${category.id}`)
       .subscribe(subcategories => {
         this.subCategories = subcategories;
+        this.subCategories.sort(
+          (a, b) =>
+            month.indexOf(b.name.split(" ")[0]) -
+            month.indexOf(a.name.split(" ")[0])
+        );
         console.log(this.subCategories);
       });
     // this.render.setElementClass(event.target, "active", true);
