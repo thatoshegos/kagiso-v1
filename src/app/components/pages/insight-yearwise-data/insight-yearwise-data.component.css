@@ -5,16 +5,17 @@
 .accordion-style2 .panel .panel-heading {
   background: #fff;
   border-radius: 0;
-  padding: 33px 28px 22px;
+  padding: 20px 28px 20px;
+  margin-top: 1px;
 }
 
 .panel-group .panel + .panel {
   margin-top: 0px !important;
-  margin-bottom: 1px !important;
+  margin-bottom: 0px !important;
 }
 .accordion-style2 .panel {
   margin-top: 0px !important;
-  margin-bottom: 1px !important;
+  margin-bottom: 0px !important;
 }
 .margin-30px-bottom-insight {
   margin-bottom: 30px !important;
@@ -35,13 +36,6 @@
   font-weight: 800;
 }
 .accordion-style2 .panel-body{
-    padding: 15px 28px 25px;
-}
-.content.year-contents a {
-    color: #656565;
-    text-decoration: underline;
-    text-decoration-color: #87b8b3;
-}
-.content.year-contents a:hover{
-    color: #87b8b3;
+    padding: 0px 28px 25px;
+    border: none;
 }
