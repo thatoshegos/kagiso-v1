@@ -1,0 +1,26 @@
+<div
+  ng2-carouselamos
+  [width]="910"
+  [items]="items"
+  [$item]="itemTemplate"
+  [$prev]="prevTemplate"
+  [$next]="nextTemplate"
+  style="margin-left:-45px; margin-right:-45px;"
+></div>
+
+<ng-template #prevTemplate>
+  <img src="./assets/images/banner-arrow-left.png" />
+</ng-template>
+
+<ng-template #nextTemplate>
+  <img src="./assets/images/banner-arrow-right.png" />
+</ng-template>
+
+<ng-template let-item let-i="index" #itemTemplate>
+  <div style="min-width: 400px; ">
+    <li class="list" [ngClass]="i % 2 == 0 ? 'odd' : 'even'">
+      <span> {{ item.heading }}</span>
+      <p>{{ item.content }}</p>
+    </li>
+  </div>
+</ng-template>

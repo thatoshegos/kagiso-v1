@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { MalihuScrollbarModule } from "ngx-malihu-scrollbar";
+import { Ng2CarouselamosModule } from "ng2-carouselamos";
 
 import { ChartsModule } from "ng2-charts";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -49,6 +50,7 @@ import { FundTabComponent } from "./components/pages/balance-fund/fund-tab/fund-
 import { GraphComponent } from "./components/pages/balance-fund/graph/graph.component";
 import { FactSheetArchiveComponent } from "./components/pages/fact-sheet-archive/fact-sheet-archive.component";
 import { CompleteFundRangeComponent } from "./components/pages/complete-fund-range/complete-fund-range.component";
+import { CarousalComponent } from "./components/pages/carousal/carousal.component";
 
 @NgModule({
   declarations: [
@@ -90,7 +92,8 @@ import { CompleteFundRangeComponent } from "./components/pages/complete-fund-ran
     FundTabComponent,
     GraphComponent,
     FactSheetArchiveComponent,
-    CompleteFundRangeComponent
+    CompleteFundRangeComponent,
+    CarousalComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +102,8 @@ import { CompleteFundRangeComponent } from "./components/pages/complete-fund-ran
     SwiperModule,
     ChartsModule,
     MalihuScrollbarModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    Ng2CarouselamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
