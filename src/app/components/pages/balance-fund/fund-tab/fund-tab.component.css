@@ -6,36 +6,40 @@ ul.fund-tabs {
 }
 ul.fund-tabs li {
   background: #fff;
-  color: #000;
+  color: #656565;
   display: inline-block;
   padding: 10px 0;
   cursor: pointer;
   margin: 0 10px;
   border-bottom: 2px solid #fff;
-  font-size: 16px;
+  font-size: 18px;
+    font-weight: 700;
 }
 ul.fund-tabs li:first-child {
   margin-left: 0;
 }
 ul.fund-tabs li.current {
   background: #fff;
-  color: #b50c2f;
-  border-bottom: 2px dotted #b50c2f;
+  color: #b60c2f;
+  border-bottom: 2px dotted #b60c2f;
 }
 .fund-tab-content {
   display: none;
   background: #fff;
   padding: 15px 0;
-  color: #000;
+  color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
 }
 .fund-tab-content .red {
-  color: #b50c2f;
+  color: #b60c2f;
 }
 .fund-tab-content.current {
   display: inherit;
 }
 .get-tab-data {
-  line-height: 2;
+  line-height: 1.5;
 }
 .blanced-fund-table {
   border-collapse: collapse;
@@ -46,7 +50,7 @@ ul.fund-tabs li.current {
   border-left: 2px solid #fff !important;
   border-right: 2px solid #fff !important;
   padding: 10px 15px;
-  color: #000;
+  color: #656565;
   text-align: left;
   border: 0;
 }

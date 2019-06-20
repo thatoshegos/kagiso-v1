@@ -5,7 +5,7 @@
   width: 100%;
 }
 .blanced-fund-box .graph-box {
-  border-left: 4px solid #f7f7f7; 
+  border-left: 4px solid #d1d1d1; 
 }
 .blanced-fund-box .graph-box .graph-content {
   margin: 0;
@@ -81,9 +81,11 @@
   text-transform: uppercase;
 }
 .blanced-fund-box .graph-box .select-fund select {
-  padding: 11px;
+  padding: 10px;
   border: 1px solid #a8c3be;
   width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .blanced-fund-box .graph-box .select-fund span {
   padding: 10px;
@@ -112,8 +114,8 @@
 }
 .blanced-fund-box ul.fund-tabs li.current {
   background: #fff;
-  color: #b50c2f;
-  border-bottom: 2px dotted #b50c2f;
+  color: #b60c2f;
+  border-bottom: 2px dotted #b60c2f;
 }
 .blanced-fund-box .fund-tab-content {
   display: none;
@@ -122,7 +124,7 @@
   color: #000;
 }
 .blanced-fund-box .fund-tab-content .red {
-  color: #b50c2f;
+  color: #b60c2f;
 }
 .blanced-fund-box .fund-tab-content.current {
   display: inherit;
@@ -155,7 +157,7 @@
 .fund-img-box {
   margin: 0;
   padding: 0;
-  border-top: #f7f7f7 4px solid;
+  border-top: #d1d1d1 4px solid;
 }
 .fund-img-box ul {
   list-style-type: none;
@@ -197,4 +199,39 @@
 .blanced-fund-btn-list li a.red {
   background: url("../../../../assets/images/red-arrow-icon.jpg") no-repeat
     right;
+}
+
+a.btn-invest-now-red span{
+    padding: 10px 20px 10px 20px;
+    display: block;
+    background: #e9c2c9;
+    font-size: 14px;
+    color: #656565;
+    font-weight: 500;
+}
+a.btn-invest-now-red span:hover{
+    background: #d98b9c;
+    color: #333;
+}
+a.btn-invest-now-red{
+    display: inline-block;
+    background: #b30b2e url(https://dev.omangom.com/kagiso/red-arrow-icon.6be28c54a0d555ff2462.jpg) no-repeat right center;
+    padding-right: 50px;
+}
+a.btn-invest-now-green span{
+    padding: 10px 20px 10px 20px;
+    display: block;
+    background: #c5dad7;
+    font-size: 14px;
+    color: #656565;
+    font-weight: 500;
+}
+a.btn-invest-now-green span:hover{
+    background: #c5d9e2;
+    color: #333;
+}
+a.btn-invest-now-green{
+    display: inline-block;
+    background: #b30b2e url(https://dev.omangom.com/kagiso/arrow-icon.7df4ea734180f4c8726f.jpg) no-repeat right center;
+    padding-right: 50px;
 }

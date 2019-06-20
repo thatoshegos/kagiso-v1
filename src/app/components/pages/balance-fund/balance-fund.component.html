@@ -1,5 +1,5 @@
 <!-- start blanced fund -->
-<section class="wow fadeIn bg-medium-gray-light " style="margin-top:110px">
+<section class="wow fadeIn bg-medium-gray-light " style="margin-top:110px; padding-bottom:0px;">
   <div class="container">
     <div class="row">
       <!-- start Unconventional thinking box item -->
@@ -7,7 +7,7 @@
         class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking blanced-fund-box"
         data-wow-delay="0.2s"
       >
-        <div class="bg-white text-center">
+        <div class="text-center">
           <h2>
             <!-- ./assets/images/blanced-fund-bg.jpg -->
             <img [src]="getBalancedData.acf.fund_icon.url" />
@@ -17,25 +17,25 @@
           <!-- btn-list -->
           <ul class="blanced-fund-btn-list">
             <li>
-              <a routerLink="/fact-sheets-archive" class="more-btn"
-                >FACT SHEETS</a
+              <a routerLink="/fact-sheets-archive" class="btn-invest-now-green"
+                ><span>FACT SHEETS</span></a
               >
             </li>
             <li>
-              <a routerLink="/tax-free-investing" class="red more-btn"
-                >INVEST NOW</a
+              <a routerLink="/tax-free-investing" class="btn-invest-now-red"
+                ><span>INVEST NOW</span></a
               >
             </li>
           </ul>
           <!-- btn-list -->
-          <div class="inner-match-height">
+          <div class="inner-match-height bg-white">
             <div class="row">
               <div class="col-md-5 padding-45px-all">
                 <!-- Tab Menu -->
                 <app-fund-tab [getApiData]="getBalancedData"></app-fund-tab>
                 <!-- Tab Menu Closed -->
               </div>
-              <div class="col-md-7 graph-box padding-30px-all">
+              <div class="col-md-7 graph-box padding-45px-all">
                 <ul class="year-list">
                   <li class="current"><a href="#">5 Years</a></li>
                   <li><a href="#">7 Years</a></li>
@@ -100,7 +100,7 @@
               </div>
             </div>
           </div>
-          <div class="fund-img-box">
+          <div class="fund-img-box bg-white">
             <ul>
               <li
                 class="col-md-3"
@@ -111,7 +111,7 @@
                     <img [src]="image.image_icon.url" class="img-responsive" />
                     <!-- ./assets/images/blanced-fund-tree.jpg -->
                   </div>
-                  <div class="title">{{ image.title }}</div>
+                 <!-- <div class="title">{{ image.title }}</div> -->
                 </a>
               </li>
 
@@ -119,19 +119,9 @@
             </ul>
           </div>
         </div>
-
-        <!-- end Unconventional thinking box item -->
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end blanced fund -->
-<!-- Test -->
-<section class="wow fadeIn bg-medium-gray-light">
-  <div class="container">
-    <div
+<div
       _ngcontent-c15=""
-      class="col-md-10 col-md-offset-1  margin-30px-bottom"
+      class="col-md-10 col-md-offset-1 margin-50px-top"
     >
       <div _ngcontent-c15="" class=" col-md-12 blanced-fund-btn">
         <a
@@ -144,7 +134,15 @@
         >
       </div>
     </div>
-
+        <!-- end Unconventional thinking box item -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end blanced fund -->
+<!-- Test -->
+<section class="wow fadeIn bg-medium-gray-light">
+  <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div

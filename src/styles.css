@@ -64,7 +64,7 @@ p { font-size: 18px;
   text-align: left;
   color: #656565;}
   .content>p {
-    line-height: 34px !important;
+    line-height: 1.5 !important;
     font-size: 21px !important;
     text-align: justify !important;
     font-weight: 400 !important;
@@ -270,7 +270,7 @@ border-bottom: dashed #b60c2f thin;
 	font-weight: 300;
   line-height: 1.6;
   text-align: center;
-  color: #000;
+  color: #656565;
 }
 
 /* ===================================
@@ -375,7 +375,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .more-btn {
     padding: 11px 80px 11px 20px;
     background: #BCDAD7 url('./assets/images/arrow-icon.jpg') no-repeat right;
-    color: #000;
+    color: #656565;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -385,7 +385,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .main-slider .more-btn {
     padding: 11px 80px 11px 20px;
     background: #FFFFFF80 url('./assets/images/black-arrow-icon.jpg') no-repeat right;
-    color: #000;
+    color: #656565;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -475,18 +475,17 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .btn i {margin-left: 6px; vertical-align: middle; position: relative; top:-1px}
 .btn-meet-leaders {
     display: inline-block;
-    color: #323232;
+    color: #656565;
     font-size: 18px;
     padding: 20px 40px 20px 100px;
     min-width: 175px;
     text-align: center;
     background: url('./assets/images/meet-leader-btnbg.jpg') no-repeat left center #fff;
-    
     font-weight: 500;
 }
-.btn-meet-leaders:hover{background: url('./assets/images/meet-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #323232;}
+.btn-meet-leaders:hover{background: url('./assets/images/meet-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #656565;}
 .meet-leader.btn-meet-leaders{background: url('./assets/images/meet1-leader-btnbg.jpg') no-repeat left center #fff;}
-.meet-leader.btn-meet-leaders:hover{background: url('./assets/images/meet1-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #323232;}
+.meet-leader.btn-meet-leaders:hover{background: url('./assets/images/meet1-leader-btnbg-hover.jpg') no-repeat left center #c8dbe5; color: #656565;}
 
 
 
@@ -1887,7 +1886,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     list-style: none;
     padding: 5px 10px 5px 30px;
     text-align: left;
-    background: url('./assets/images/bullet.png') no-repeat left 11px; color:#000
+    background: url('./assets/images/bullet.png') no-repeat left 11px; color:#656565;
 }
 
 .our-history-area {
@@ -1940,14 +1939,16 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 }
 .corporate-social-area {
     background: url('./assets/images/children.jpg') no-repeat top center;
-    background-size: contain;
     padding-bottom: 80px;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .committed-transformation-area {
     background: url('./assets/images/kaleidoscope.jpg') no-repeat center top;
-    background-size: 200%;
     padding-bottom: 80px;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*================================ 
@@ -2076,7 +2077,7 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .invest-list-img{margin:0; padding:0 30px; list-style-type:none; font-size:0}
 .invest-list-img li{display:inline-block; margin:0; padding:0 15px; width:25%; font-size:18px; vertical-align:top}
 .invest-list-img li .content-box {background:#e3efed; text-align:center}
-.invest-list-img li .content-box .title{padding:10px; min-height:75px}
+.invest-list-img li .content-box .title{padding:10px; min-height:75px; color: #656565;}
 .invest-list-img li .content-box .active{color:#b60c2f;}
 .invest-list-img li .content-box p{display:none}
 .invest-list-img li img{width:100%; max-width:100%; margin:0; padding:0}
@@ -2086,7 +2087,7 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .year-list ul li{display: inline-block; border-left:1px solid #000; padding: 0 10px}
 .year-list ul li:first-child{border-left:0;}
 .year-list ul li.active a{color:#b60c2f}
-.year-list ul li a{color:#000; font-weight: 700}
+.year-list ul li a{color:#656565; font-weight: 700}
 
 .year-details{border-bottom:15px solid #f7f7f7; padding: 30px 0 0 0; color:#000;}
 
@@ -2213,20 +2214,20 @@ h1.black{color: #000 !important}
     width: 120%;
 }*/
 .light-green-box img:hover{transform: scale(1.1)}
-.light-green-box .text-title{color:#000; font-weight:400; font-size: 14px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
-.unconventional-thinking-right .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
+.light-green-box .text-title{color:#656565; font-weight:400; font-size: 14px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
+.unconventional-thinking-right .text-title{color:#656565; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 
 .our-funds-light-green{background: #e3edec; padding: 30px; }
 .our-funds-light-green img{max-height: 200px}
 .our-funds-light-green a .text-title{color:#000; font-size: 16px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 15px 0 0 0}
 .shariya-light-green img:hover{transform: scale(1.1)}
 
-.shariya-light-green .text-title{color:#000; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
+.shariya-light-green .text-title{color:#656565; font-size: 18px;line-height: 21px; background: #e3edec url(./assets/images/simple-arrow-icon.jpg) no-repeat right center; display: inline-block; padding-right: 20px; text-transform: uppercase; margin: 20px 0 0 0}
 .shariya-light-green{background: #e3edec; padding: 30px; text-align: center;}
 .shariya-light-green img{max-height: 230px}
 
 .home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
-.content.year-contents p{font-size: 16px !important}
+.content.year-contents p{font-size: 18px !important}
 .red-head{color:#b60c2f;}
 .investment-tab.ul-tab.active{font-weight:normal !important;}
 
