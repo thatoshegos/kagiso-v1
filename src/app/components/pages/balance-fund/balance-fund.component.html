@@ -9,7 +9,7 @@
       >
         <div class="bg-white text-center">
           <h2>
-              <!-- ./assets/images/blanced-fund-bg.jpg -->
+            <!-- ./assets/images/blanced-fund-bg.jpg -->
             <img [src]="getBalancedData.acf.fund_icon.url" />
             {{ getBalancedData.title.rendered }}
           </h2>
@@ -52,7 +52,9 @@
                   <li>
                     <a href="#"
                       >Fund Return
-                      <span style="color:#b50c2f">{{ getBalancedData.acf.fund_return }}</span></a
+                      <span style="color:#b50c2f">{{
+                        getBalancedData.acf.fund_return
+                      }}</span></a
                     >
                   </li>
                   <li>
@@ -68,21 +70,29 @@
                     >
                   </li>
                 </ul>
-                <p>{{getBalancedData.acf.notes}}</p>
+                <p>{{ getBalancedData.acf.notes }}</p>
                 <div class="select-fund">
                   <div class="row">
                     <div class="col-xs-6 col-md-5" style="padding-right:0">
                       <span>Select Another funds</span>
                     </div>
-                    <div class="col-xs-6 col-md-7" style="padding-left:0">					
-                      <select>
-                        <option>SOUTH AFRICAN FUNDS</option>
-                        <option>EQUITY ALPHA FUND</option>
+                    <div class="col-xs-6 col-md-7" style="padding-left:0">
+                      <select (change)="getFundOnChange($event)">
+                        <option value="">Please select Fund</option>
+                        <option
+                          *ngFor="let fund of getBalancedData.acf.fund_list"
+                          [value]="fund.fund_url"
+                          [attr.selected]="
+                            currentRoute == fund.fund_url ? true : null
+                          "
+                          >{{ fund.fund_title }}</option
+                        >
+                        <!-- <option>EQUITY ALPHA FUND</option>
                         <option>ISLAMIC EQUITY FUND</option>
                         <option>BALANCED FUND</option>
                         <option>ISLAMIC BALANCED FUND</option>
                         <option>PROTECTOR FUND</option>
-                        <option>STABLE FUND</option>
+                        <option>STABLE FUND</option> -->
                       </select>
                     </div>
                   </div>
