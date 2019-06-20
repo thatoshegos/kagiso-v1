@@ -20,7 +20,7 @@
   <div style="min-width: 400px; ">
     <li class="list" [ngClass]="i % 2 == 0 ? 'odd' : 'even'">
       <span> {{ item.heading }}</span>
-      <p>{{ item.content }}</p>
+      <span [innerHTML]="item.content"></span>
     </li>
   </div>
 </ng-template>
