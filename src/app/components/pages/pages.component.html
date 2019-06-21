@@ -28,23 +28,26 @@
       </div>
     </section>
   </div>
-  <section  class="our-history-area margin-80px-top">
+  <section class="our-history-area margin-80px-top">
     <div class="container" *ngIf="page">
       <div class="col-md-10 col-md-offset-1">
         <app-common [history]="page.acf"></app-common>
-        
+        <div class="bg-white history-slider-area">
+          <app-carousal></app-carousal>
+        </div>  
       </div>
       
     </div>
   </section>
-  <section class="our-culture-area">
+
+  <section class="our-culture-area margin-40px-top">
     <div class="container" *ngIf="page">
       <div class="col-md-10 col-md-offset-1">
         <app-common [our_culture]="page.acf"></app-common>
       </div>
     </div>
   </section>
-  <section class="responsible-investing-area" *ngIf="page">
+  <section class="responsible-investing-area margin-40px-top" *ngIf="page">
     <div class="container">
       <div class="col-md-10 col-md-offset-1">
         <app-common [responsible]="page.acf"></app-common>
@@ -61,7 +64,7 @@
       </div>
     </div>
   </section>
-  <section class="committed-transformation-area " *ngIf="page">
+  <section class="committed-transformation-area margin-40px-top" *ngIf="page">
     <div class="container">
       <div class="col-md-10 col-md-offset-1">
         <app-common [transformation]="page.acf"></app-common>

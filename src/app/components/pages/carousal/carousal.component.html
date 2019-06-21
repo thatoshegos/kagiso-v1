@@ -1,11 +1,9 @@
 <div
   ng2-carouselamos
-  [width]="910"
   [items]="items"
   [$item]="itemTemplate"
   [$prev]="prevTemplate"
   [$next]="nextTemplate"
-  style="margin-left:-45px; margin-right:-45px;"
 ></div>
 
 <ng-template #prevTemplate>
@@ -17,10 +15,12 @@
 </ng-template>
 
 <ng-template let-item let-i="index" #itemTemplate>
-  <div style="min-width: 400px; ">
+  <div class="history-slider-items">
     <li class="list" [ngClass]="i % 2 == 0 ? 'odd' : 'even'">
-      <span> {{ item.heading }}</span>
-      <span [innerHTML]="item.content"></span>
+      <div class="hsi-icon-holder" [innerHTML]="item.icon"></div>
+      <div class="hsi-title"> {{ item.heading }}</div>
+      <div class="hsi-year"> {{ item.year }}</div>
+      <div class="hsi-details" [innerHTML]="item.content"></div>
     </li>
   </div>
 </ng-template>

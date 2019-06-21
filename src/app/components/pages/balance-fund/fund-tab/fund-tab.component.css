@@ -30,7 +30,16 @@ ul.fund-tabs li.current {
   color: #656565;
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
+    line-height: 1.5;
+    text-align: left;
+}
+.fund-tab-content p{
+  background: #fff;
+  padding: 15px 0;
+  color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 .fund-tab-content .red {
   color: #b60c2f;

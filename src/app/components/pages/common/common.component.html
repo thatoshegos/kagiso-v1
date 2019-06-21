@@ -63,13 +63,13 @@
       </div>
 
       <!--a [href]="" class="more-btn read-more" *ngIf="owners"> MORE</a-->
-      <div class="history-section" *ngIf="history">
+     <div class="history-section" *ngIf="history">
         <p
           *ngIf="history"
           class="o-text"
           [innerHTML]="history.our_history_content"
         ></p>
-        <app-carousal></app-carousal>
+        
       </div>
 
       <p
@@ -189,16 +189,16 @@
     class="col-md-12 margin-30px-top margin-30px-bottom"
     *ngIf="transformation"
   >
-    <div class=" col-md-8 col-md-offset-2 suscribe ">
-       <a href="#" class="btn-our-fund" style="margin-right:20px;"
+    <div _ngcontent-c6="" class="col-md-9 col-md-offset-2 suscribe ">
+       <a routerLink="/complete-fund-range" class="btn-our-fund" style="margin-right:20px;"
         ><span>OUR FUNDS</span></a
       >
-      <a href="#" class="btn-news-literature"><span>NEWS & LITERATURE</span></a>
+      <a routerLink="/insights" class="btn-news-literature"><span>NEWS & LITERATURE</span></a>
     </div>
   </div>
   <!-- <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="bg-white text-center">
-      <iframe
+    <div class="bg-white text-center"> LITERATURE
+      <iframeLITERATURE
         width="100%"
         height="615"
         src="https://www.youtube.com/embed/ukzFI9rgwfU"
