@@ -17,9 +17,13 @@ export class BalanceFundComponent implements OnInit {
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
   ngOnInit() {
-    this.wpservice.readCSVDataFromServer().subscribe(data => {
-      console.log("readCSVDataFromServer========", data);
-    });
+    //console.log("balance fund");
+
+    this.wpservice
+      .readCSVDataFromServer(this.getBalancedData.acf.prices)
+      .subscribe(data => {
+        //console.log(data);
+      });
     this.wpservice
       .getCSVData("assets/images/balance_fund.csv")
       .subscribe(data => {
@@ -56,8 +60,8 @@ export class BalanceFundComponent implements OnInit {
     // console.log(this.router.url);
     this.currentRoute = this.router.url;
     this.selectedRoute = e.target.value;
-    console.log(this.selectedRoute);
-    console.log(this.currentRoute);
+    // console.log(this.selectedRoute);
+    // console.log(this.currentRoute);
     this.router.navigate(["/" + e.target.value]);
   }
 }
