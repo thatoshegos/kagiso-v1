@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { MalihuScrollbarModule } from "ngx-malihu-scrollbar";
@@ -97,6 +98,7 @@ import { CarousalComponent } from "./components/pages/carousal/carousal.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     SwiperModule,

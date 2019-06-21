@@ -13,6 +13,7 @@ export class AppComponent {
   getMessageStatus = true;
   public location = "/";
   title = "kagiso";
+  model: any = {};
   constructor(private router: Router, private modalService: NgbModal) {
     this.location = router.url;
     //console.log(router.url);

@@ -15,7 +15,7 @@ export class GraphComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.dataSet);
+    // console.log(this.dataSet);
     this.getGraphDatas();
   }
 
@@ -147,12 +147,12 @@ export class GraphComponent implements OnInit {
       this.lineChartLabels.push(date);
     });
 
-    console.log(this.lineChartLabels);
+    //console.log(this.lineChartLabels);
     this.refresh_chart();
   }
   refresh_chart() {
     setTimeout(() => {
-      console.log(this.chart.chart.config);
+      // console.log(this.chart.chart.config);
 
       if (this.chart && this.chart.chart && this.chart.chart.config) {
         // this.chart.chart.config.data.labels = this.labels_line;

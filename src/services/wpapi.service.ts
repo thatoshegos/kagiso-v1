@@ -9,6 +9,8 @@ export class WPAPIService {
   menuEndPoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
   pagesEndPoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
   postEndpoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  csvDataEndPoint =
+    "http://dev.omangom.com/kagiso/wordpress/?custom_action=get_chart_data&csv_url=";
 
   constructor(private http: HttpClient) {}
   getCategory(query) {
@@ -45,8 +47,9 @@ export class WPAPIService {
   getCSVData(url) {
     return this.http.get(url, { responseType: "text" });
   }
-  readCSVDataFromServer() {
-	const apiUrl  = `http://dev.omangom.com/kagiso/wordpress/?custom_action=get_chart_data&csv_url=http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/dailyprices/111.csv?rand=${new Date().getTime()}`;
-    return this.http.get( apiUrl, { responseType: "text" });
+  readCSVDataFromServer(csvUrl) {
+    const apiUrl = `
+  ${this.csvDataEndPoint}${csvUrl}?rand=${new Date().getTime()}`;
+    return this.http.get(apiUrl, { responseType: "text" });
   }
 }
