@@ -616,10 +616,12 @@ textarea.input-bg {
   float: left;
   margin-right: 10px !important;
 }
-#contact-form textarea{height: 230px}
+#contact-form textarea {
+  height: 230px;
+}
 
 form#contact-form {
-    padding-bottom: 28px;
+  padding-bottom: 28px;
 }
 .check-box {
   display: block;
@@ -632,7 +634,7 @@ form#contact-form {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: normal
+  font-weight: normal;
 }
 
 /* Hide the browser's default checkbox */
@@ -687,4 +689,8 @@ form#contact-form {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.is-invalid {
+  border: 1px solid #aa1118;
 }

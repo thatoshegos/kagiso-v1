@@ -55,24 +55,26 @@
           Send us an email
         </div> -->
         <div class="box-2-content padding-20px-all">
-          <form name="form" #f="ngForm" novalidate>
+          <form
+            name="form"
+            #f="ngForm"
+            (ngSubmit)="f.form.valid && submitForm(f)"
+            novalidate
+          >
             <div>
               <div id="success-contact-form" class="no-margin-lr"></div>
               <input
                 type="text"
                 name="name"
-                [(ngModel)]="model.firstName"
-                #firstName="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+                [(ngModel)]="model.name"
+                #name="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
                 placeholder="Name"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
                 required
               />
-              <div
-                *ngIf="f.submitted && firstName.invalid"
-                class="invalid-feedback"
-              >
-                <div *ngIf="firstName.errors.required">Name is required</div>
+              <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                <div *ngIf="name.errors.required">Name is required</div>
               </div>
               <input
                 type="emailt"
@@ -83,12 +85,14 @@
                 placeholder="E-mail"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
                 required
+                email
               />
               <div
                 *ngIf="f.submitted && email.invalid"
                 class="invalid-feedback"
               >
                 <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">Invalid email address</div>
               </div>
               <input
                 type="tel"
@@ -111,16 +115,40 @@
                 type="text"
                 name="subject"
                 id="subject"
+                [(ngModel)]="model.intrest"
+                #intrest="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && intrest.invalid }"
                 placeholder="Area of Interest"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
+                required
               />
+              <div
+                *ngIf="f.submitted && intrest.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="intrest.errors.required">
+                  This field is required
+                </div>
+              </div>
               <textarea
                 name="comment"
                 id="comment"
+                [(ngModel)]="model.comment"
+                #comment="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && comment.invalid }"
                 placeholder="Comment"
                 rows="5"
                 class="bg-light-green no-border medium-textarea margin-5px-bottom"
+                required
               ></textarea>
+              <div
+                *ngIf="f.submitted && comment.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="comment.errors.required">
+                  Comment is required
+                </div>
+              </div>
               <div class="padding-30px-top text-center ">
                 <!-- <a href="#" target="_blank" class="more-btn text-black">SEND</a> -->
                 <input type="submit" class="more-btn text-black" vlaue="SEND" />

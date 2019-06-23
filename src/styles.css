@@ -2354,3 +2354,10 @@ input, select, textarea {
 .contact-content{
     font-size: 18px;
 }
+.is-invalid{
+    border-color: #aa1118;
+}
+.invalid-feedback {
+    font-size: 14px;
+    color: #aa1118;
+  }
