@@ -102,7 +102,42 @@
             </div>
           </div>
           <div class="fund-img-box bg-white">
-            <ul>
+		  <ul class="fund-subcatagory-box">
+                <li class="col-md-3">
+                    <a routerLink="/about-us" class="btn-tax-free">
+                        <div class="link-img-box">
+                            
+                        </div>
+                        <div class="title">TAX FREE</div>
+                    </a>
+                </li>
+                <li class="col-md-3">
+                    <a routerLink="/meet-the-fund-manager" class="btn-top-10-holdings">
+                        <div class="link-img-box">
+                            
+                        </div>
+                        <div class="title">TOP 10 HOLDINGS</div>
+                    </a>
+                </li>
+                <li class="col-md-3">
+                    <a routerLink="/faq"  class="btn-form">
+                        <div class="link-img-box">
+                            
+                        </div>
+                        <div class="title">FORMS</div>
+                    </a>
+                </li>
+                <li class="col-md-3">
+                    <a routerLink="/faq" class="btn-platforms">
+                        <div class="link-img-box">
+                            
+                        </div>
+                        <div class="title">PLATEFORMS</div>
+                    </a>
+                </li>
+                <div class="clearfix"></div>
+              </ul>
+            <!--<ul>
               <li
                 class="col-md-3"
                 *ngFor="let image of getBalancedData.acf.image"
@@ -110,14 +145,14 @@
                 <a href="#">
                   <div class="img-box">
                     <img [src]="image.image_icon.url" class="img-responsive" />
-                    <!-- ./assets/images/blanced-fund-tree.jpg -->
+                    
                   </div>
                 <div class="title">{{ image.title }}</div>
                 </a>
               </li>
 
               <div class="clearfix"></div>
-            </ul>
+            </ul>-->
           </div>
         </div>
 <div
@@ -125,15 +160,18 @@
       class="col-md-10 col-md-offset-1 margin-50px-top"
     >
       <div _ngcontent-c15="" class=" col-md-12 blanced-fund-btn">
-        <a
+       <!-- <a
           _ngcontent-c15=""
           class="btn-meet-leaders"
           href="#"
           style="margin-right:10px;"
           *ngFor="let buttonLink of getBalancedData.acf.buttons"
           >{{ buttonLink.name }}</a
-        >
-      </div>
+        >-->
+		<a _ngcontent-c15="" class="btn-green-white btn-investment-approch" routerLink="/about-us"><span>INVESTMENT APPROACH</span></a>
+		<a _ngcontent-c15="" class="btn-green-white btn-meet-fund-manager" routerLink="/meet-the-fund-manager"><span>MEET THE FUND MANAGER</span></a>
+		<a _ngcontent-c15="" class="btn-green-white btn-meet-faqs" routerLink="/faq"><span>FAQ’s</span></a>
+     </div>
     </div>
         <!-- end Unconventional thinking box item -->
       </div>
