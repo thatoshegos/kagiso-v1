@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { WPAPIService } from "../../../../services/wpapi.service";
+import { ToastrManager } from "ng6-toastr-notifications";
 
 @Component({
   selector: "app-contact-us",
@@ -7,7 +8,9 @@ import { WPAPIService } from "../../../../services/wpapi.service";
   styleUrls: ["./contact-us.component.css"]
 })
 export class ContactUsComponent implements OnInit {
-  constructor(private wpservice: WPAPIService) {}
+  model: any = {};
+  response;
+  constructor(private wpservice: WPAPIService, public toastr: ToastrManager) {}
   page = null;
   ngOnInit() {
     this.wpservice.pages("?slug=contact-us").subscribe(page => {
@@ -16,6 +19,17 @@ export class ContactUsComponent implements OnInit {
         this.page = page;
         console.log(this.page);
       });
+    });
+  }
+  submitForm() {
+    // console.log(this.model);
+    this.wpservice.saveContact(this.model).subscribe(data => {
+      this.response = data;
+
+      if (this.response.success) {
+        console.log(this.response);
+        this.toastr.successToastr("Contact save successfully !", "success!");
+      }
     });
   }
 }

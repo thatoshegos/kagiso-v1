@@ -2356,6 +2356,7 @@ input, select, textarea {
     font-size: 18px;
 }
 
+
 .history-slider-area .ng2-carouselamos-wrapper{
     width: 100%!important;
 }
@@ -2375,3 +2376,12 @@ input, select, textarea {
     color: #fff;
     padding-top: 10px;
 }
+
+.is-invalid{
+    border-color: #aa1118;
+}
+.invalid-feedback {
+    font-size: 14px;
+    color: #aa1118;
+  }
+
