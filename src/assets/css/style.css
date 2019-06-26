@@ -4121,14 +4121,59 @@ a.btn-news-literature:hover{
     background: #5a9fc0 url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/news&literature.png) no-repeat 8px center;
 }
 
+.btn-unpri, .btn-carbon, .btn-proxy-voting, .btn-conflict{
+    height: 114px;
+    width: 163px; 
+}
+
+.invest-list-img li .content-box .title{
+    cursor: pointer;
+}
+.btn-unpri{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/UNPRI.jpg) no-repeat center;
+    background-size: contain;
+}
+.btn-carbon{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/carbon.jpg) no-repeat center;
+    background-size: contain;
+}
+.btn-proxy-voting{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/proxy-voting.jpg) no-repeat center;
+    background-size: contain;
+}
+.btn-conflict{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/conflict.jpg) no-repeat center;
+    background-size: contain;
+}
+.content-box:hover .btn-unpri{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/UNPRI-over.jpg) no-repeat center;
+    background-size: contain;
+}
+.content-box:hover .btn-carbon{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/carbon-over.jpg) no-repeat center;
+    background-size: contain;
+}
+.content-box:hover .btn-proxy-voting{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/proxy-voting-over.jpg) no-repeat center;
+    background-size: contain;
+}
+.content-box:hover .btn-conflict{
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/conflict-over.jpg) no-repeat center;
+    background-size: contain;
+}
+.invest-list-img .content-box:hover .title{
+    background:#c6d9e3;
+}
+
 .accordion-style2 a {
     color: #656565!important;
     text-decoration: underline!important;
     text-decoration-color: #87b8b3!important;
 }
+/*
 .accordion-style2 a:hover{
     color: #87b8b3!important;
-}
+}*/
 .responsible-investing-content p a{
     color: #656565!important;
     text-decoration: underline!important;

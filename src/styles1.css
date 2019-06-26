@@ -2375,6 +2375,7 @@ input, select, textarea {
     color: #fff;
     padding-top: 10px;
 }
+
 .is-invalid{
     border-color: #aa1118;
 }

@@ -260,20 +260,16 @@ a.btn-invest-now-green{
 }
 
 .btn-tax-free .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree.png) no-repeat;
-    opacity: 0.5;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
 }
 .btn-top-10-holdings .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10.png) no-repeat;
-    opacity: 0.5;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10-over.png) no-repeat;
 }
 .btn-form .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms.png) no-repeat;
-    opacity: 0.5;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms-over.png) no-repeat;
 }
 .btn-platforms .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
-    opacity: 0.5;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
 }
 
 .btn-green-white{
@@ -283,7 +279,8 @@ a.btn-invest-now-green{
     background-size:60px!important;
 }
 .btn-green-white span{
-    padding: 20px 30px 20px 30px;
+    padding: 16px 30px;
+    height: 60px;
     display: block;
     background: #fff;
     color: #656565;
@@ -293,20 +290,26 @@ a.btn-invest-now-green{
     background: #c8dbe5;
 }
 .btn-investment-approch{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
 }
 .btn-meet-fund-manager{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager.png) left center no-repeat #80ada7;
 }
 .btn-meet-faqs{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-faqs.png) left center no-repeat #80ada7;
+}
+.btn-meet-insights{
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights.png) left center no-repeat #80ada7;
 }
 .btn-investment-approch:hover{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-fund-manager:hover{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-faqs:hover{
-    background: url(https://dev.omangom.com/kagiso/meet-leader-btnbg.490a6125302342f475a2.jpg) left center no-repeat #a9d0cd;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-faqs-over.png) left center no-repeat #5b9dbe;
+}
+.btn-meet-insights:hover{
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
 }
