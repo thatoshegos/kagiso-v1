@@ -4222,6 +4222,17 @@ a.btn-news-literature:hover{
         height: 254px!important;
     }
 }
-
+@media only screen and (min-width: 992px) and (max-width: 1088px) {
+    header nav .navbar-nav.text-normal > li > a {
+        font-size: 16px;
+        margin: 0px 8px!important;
+    }
+    header nav .navbar-nav > li > a {
+        margin: 0px 5px!important;
+    }
+    .invester-login-btn{
+        padding: 0px 36px 0px 0px!important;
+    }
+}
 
 
