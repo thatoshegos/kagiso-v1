@@ -3999,7 +3999,7 @@ aside .latest-post li figure {width: 75px;}
 .right-fixed-link {
     position: fixed;
     right: 0px;
-    top: 46vh;
+    top: 350px;
     width: 70px;
     z-index: 99;
 }
@@ -4011,7 +4011,7 @@ aside .latest-post li figure {width: 75px;}
 .btn-leave-message{
     position: fixed;
     right: -200px;
-    top: 52.7vh;
+    top: 412px;
     height: 62px;
     width: 300px;
     background: url(../images/leave-msa.jpg) no-repeat right 0;
@@ -4170,10 +4170,7 @@ a.btn-news-literature:hover{
     text-decoration: underline!important;
     text-decoration-color: #87b8b3!important;
 }
-/*
-.accordion-style2 a:hover{
-    color: #87b8b3!important;
-}*/
+
 .responsible-investing-content p a{
     color: #656565!important;
     text-decoration: underline!important;
@@ -4182,3 +4179,49 @@ a.btn-news-literature:hover{
 .responsible-investing-content p a:hover{
     color: #87b8b3!important;
 }
+
+
+
+/* ============== Font Responsive Css === */
+@media only screen and (min-width: 1088px) and (max-width: 1130px) {
+    h2{
+        font-size: 30px!important;
+    }
+    header nav .navbar-nav.text-normal > li > a{
+        font-size: 16px;
+        margin: 0px 15px!important;
+    }
+    header nav .navbar-nav > li > a {
+        margin: 0 16px;
+    }
+    header ul.first:nth-of-type(1) li:first-child a {
+        margin-right: 0px;
+    }
+    nav.navbar.navbar-default ul.nav > li:first-child  a{
+        margin-left: 0px!important;
+    }
+    .light-green-box{
+        min-height: 280px;
+        height: auto!important;
+    }
+    .one-fourth-screen{
+        height: 520px!important;
+    }
+    .btn-unpri, .btn-carbon, .btn-proxy-voting, .btn-conflict {
+        height: 98px;
+        width: 140px;
+    }
+    .invest-list-img li, .fund-img-box ul li{
+        padding: 0 5px!important;
+    }
+    .link-img-box{
+        width: 100%!important;
+        height: 180px!important;
+    }
+    #contact-form textarea{
+        height: 254px!important;
+    }
+}
+
+
+
