@@ -50,7 +50,7 @@
     >
       <div class="opacity-extra-medium"></div>
       <div
-        class="container position-relative one-fourth-screen xs-height-400px"
+        class="container position-relative one-fourth-screen xs-height-500px"
       >
         <div class="slider-typography text-center">
           <div class="slider-text-middle-main">
@@ -61,9 +61,10 @@
                 }}</span>
                 <span>{{ slider.image_title1 }}</span>
               </h1>
-              <div class="btn-dual" *ngIf="slider.image_title2">
+              <div class="btn-dual m-center" *ngIf="slider.image_title2">
                 <a
-                  [routerLink]="'/' + slider.image_url"
+                  href="{{ slider.image_url }}"
+                  target="_blank"
                   class="more-btn"
                   >{{ slider.image_title2 }}</a
                 >

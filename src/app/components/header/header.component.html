@@ -25,7 +25,7 @@
 
       <!-- start logo -->
       <div class="row">
-        <div class="col-md-3 col-xs-5 text-center">
+        <div class="col-md-3 col-xs-7 text-center">
           <a
             routerLink="/"
             routerLinkActive="active"
@@ -40,7 +40,7 @@
           /></a>
         </div>
         <!-- end logo -->
-        <div class="col-md-8">
+        <div class="col-md-8  col-xs-7">
           <div class="row top-nav">
             <div class="col-md-12">
               <ul class="nav navbar-nav first pull-right" *ngIf="menuItems.primary">
@@ -50,7 +50,7 @@
                     [class]="route.url.includes(menu.slug) ? 'header-menu-selected' : ''">{{ menu.name }}</a>
                 </li>
                 <li class="invester-login-btn">
-                  <a href="https://investoronline.kagisoam.co.za" target="_blank">
+                  <a href="https://investoronline.kagisoam.co.za">
                     <img src="assets/images/bag-iocn.png" />
                     INVESTOR LOGIN</a
                   >
@@ -107,7 +107,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-2 col-xs-5 width-auto no-padding">
+            <div class="col-md-2 col-xs-5 width-auto no-padding m-hide">
               <div class="header-searchbar">
                 <a href="#search-header" class="header-search-form text-white"
                   ><img src="assets/images/search-icon.png"

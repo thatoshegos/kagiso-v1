@@ -42,12 +42,12 @@
   <ul>
     <li style="margin-left:-70px;">
       <div class="month-start">
-        Latest price: <span class="amt">892.90</span>
+        Latest Price <span class="amt">892.90</span>
       </div>
     </li>
     <li class="right-li">
       <div class="month-latest-end1">
-        Month end: <span class="amt">892.90</span>
+        Monthend Price <span class="amt">892.90</span>
       </div>
     </li>
   </ul>
@@ -61,8 +61,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let getPrice of getPriceData.data">
-        <td>{{ getPrice.DATE }}</td>
-        <td>{{ getPrice["Price"] | number: "1.2-2" }}</td>
+        <td>{{ getPrice.Date }}</td>
+        <td>{{ getPrice["price\r"] | number: "1.2-2" }}</td>
       </tr>
     </tbody>
   </table>

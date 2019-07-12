@@ -22,3 +22,11 @@
 .section-heading {
   margin-bottom: 14 3px;
 }
+
+
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+   .p-text {
+      text-align: left;
+    } 
+}

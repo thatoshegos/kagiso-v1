@@ -2,3 +2,9 @@
   padding: 20px;
   text-align: justify;
 }
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+   .p-text {
+      text-align: left;
+    } 
+}

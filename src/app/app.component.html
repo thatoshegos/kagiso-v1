@@ -15,16 +15,12 @@
 
 <div class="right-fixed-link">
   <a href="javascript:void(0)"><img src="assets/images/invest-now.png"/></a>
-  <a href="javascript:void(0)" class="leave-message"
-    ><img src="assets/images/leave-message.png"
-  /></a>
+  <a href="javascript:void(0)" class="leave-message" 
+        ><img src="assets/images/leave-message.png"
+      /></a>
   <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
 </div>
-<div
-  class="btn-leave-message"
-  *ngIf="getMessageStatus"
-  (click)="open(content)"
-></div>
+<div class="btn-leave-message" *ngIf="getMessageStatus" (click)="open(content)"> </div>
 <!-- start scroll to top -->
 <a class="scroll-top-arrow" href="javascript:void(0);"
   ><i class="fas fa-arrow-up"></i
@@ -55,103 +51,46 @@
           Send us an email
         </div> -->
         <div class="box-2-content padding-20px-all">
-          <form
-            name="form"
-            #f="ngForm"
-            (ngSubmit)="f.form.valid && submitForm(f)"
-            novalidate
-          >
+          <form id="contact-form" action="javascript:void(0)" method="post">
             <div>
               <div id="success-contact-form" class="no-margin-lr"></div>
               <input
                 type="text"
                 name="name"
-                [(ngModel)]="model.name"
-                #name="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                id="name"
                 placeholder="Name"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
-                required
               />
-              <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
-                <div *ngIf="name.errors.required">Name is required</div>
-              </div>
               <input
                 type="emailt"
                 name="email"
-                [(ngModel)]="model.email"
-                #email="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                id="email"
                 placeholder="E-mail"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
-                required
-                email
               />
-              <div
-                *ngIf="f.submitted && email.invalid"
-                class="invalid-feedback"
-              >
-                <div *ngIf="email.errors.required">Email is required</div>
-                <div *ngIf="email.errors.email">Invalid email address</div>
-              </div>
               <input
                 type="tel"
                 name="subject"
                 id="subject"
-                [(ngModel)]="model.mobile"
-                #mobile="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && mobile.invalid }"
                 placeholder="Telephone"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
-                required
               />
-              <div
-                *ngIf="f.submitted && mobile.invalid"
-                class="invalid-feedback"
-              >
-                <div *ngIf="mobile.errors.required">Telephone is required</div>
-              </div>
               <input
                 type="text"
                 name="subject"
                 id="subject"
-                [(ngModel)]="model.intrest"
-                #intrest="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && intrest.invalid }"
                 placeholder="Area of Interest"
                 class="bg-light-green no-border medium-input margin-5px-bottom"
-                required
               />
-              <div
-                *ngIf="f.submitted && intrest.invalid"
-                class="invalid-feedback"
-              >
-                <div *ngIf="intrest.errors.required">
-                  This field is required
-                </div>
-              </div>
               <textarea
                 name="comment"
                 id="comment"
-                [(ngModel)]="model.comment"
-                #comment="ngModel"
-                [ngClass]="{ 'is-invalid': f.submitted && comment.invalid }"
                 placeholder="Comment"
                 rows="5"
                 class="bg-light-green no-border medium-textarea margin-5px-bottom"
-                required
               ></textarea>
-              <div
-                *ngIf="f.submitted && comment.invalid"
-                class="invalid-feedback"
-              >
-                <div *ngIf="comment.errors.required">
-                  Comment is required
-                </div>
-              </div>
               <div class="padding-30px-top text-center ">
-                <!-- <a href="#" target="_blank" class="more-btn text-black">SEND</a> -->
-                <input type="submit" class="more-btn text-black" vlaue="SEND" />
+                <a href="#" target="_blank" class="more-btn text-black">SEND</a>
               </div>
             </div>
           </form>

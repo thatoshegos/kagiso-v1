@@ -288,7 +288,7 @@ border-bottom: dashed #b60c2f thin;
 .bg-medium-gray-light {background-color:#D1D1D1;}
 .bg-extra-light-gray {background-color:#CDCDCD}
 .bg-medium-light-gray {background-color:#ededed}
-.bg-light-gray {background-color:#f7f7f7}
+.bg-light-gray {background-color:#e7e7e7}
 .bg-very-light-gray {background-color:#fafafa}
 .bg-deep-pink {background-color:#ff214f;}
 .bg-light-green{background-color:#e5efee;}
@@ -2367,10 +2367,124 @@ input, select, textarea {
     color: #fff;
     padding-top: 10px;
 }
-.is-invalid{
-    border-color: #aa1118;
+.width-750px{
+    width: 750px;
+    margin: 0 auto;
 }
-.invalid-feedback {
-    font-size: 14px;
-    color: #aa1118;
-  }
+.m-hide{
+    display: block;
+}
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+    .m-hide{
+        display: none;
+    }
+    .m-center{
+        text-align: center;
+    }
+    h2 {
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .btn-leave-message{
+        right: -1000px;
+    }
+    header nav.navbar-default, nav.navbar.bootsnav {
+        border-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    nav.navbar.bootsnav .navbar-toggle{
+        margin-right: 15px;
+    }
+    .nav-header-container .text-center{
+        text-align: left;
+    }
+    .main-slider .slider-typography h1 {
+        float: none;
+        text-align: center;
+        width: auto;
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .slider-typography{
+        width: 100%;
+        left: auto;
+    }
+    section {
+        padding: 15px 0 0px;
+    }
+    .link_on, .link_off{
+        font-size: 20px;
+    }
+    .block{
+        display: block;
+    }
+    .fund-range-graph-area .col-md-4:last-child{
+        margin-top: 30px;
+    }
+    .fund-range-btn-holder {
+        padding: 0px 0px 30px;
+    }
+    .how-to-investe, .faq{
+        display: none;
+    }
+    .width-750px{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .hsi-details-1 {
+        font-size: 16px;
+    }
+    .hsi-title-1 {
+        font-size: 20px;
+    }
+    .invest-list-img li{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .invest-list-img li:last-child{
+        margin-bottom: 0px;
+    }
+    .invest-list-img li .content-box .title{
+        min-height: auto;
+    }
+    .btn-unpri, .btn-carbon, .btn-proxy-voting, .btn-conflict {
+        height: 150px;
+        width: 100%;
+        background-color: #a5ceca;
+    }
+    .tab-data{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .suscribe a{
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .ownership-structure img{
+        width: 100%;
+        height: auto;
+    }
+    .adviser-image img{
+        width: 100%;
+        height: auto;
+    }
+    .year-list ul li {
+        border: 1px solid #bfbfbf!important;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+    .year-list ul{
+        padding: 15px 0;
+    }
+}
+.video-hide{
+    display: none;
+}

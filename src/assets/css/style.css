@@ -279,7 +279,7 @@ border-bottom: dashed #b60c2f thin;
 .bg-medium-gray-light {background-color:#D1D1D1;}
 .bg-extra-light-gray {background-color:#CDCDCD}
 .bg-medium-light-gray {background-color:#ededed}
-.bg-light-gray {background-color:#f7f7f7}
+.bg-light-gray {background-color:#e7e7e7}
 .bg-very-light-gray {background-color:#fafafa}
 .bg-deep-pink {background-color:#ff214f;}
 .bg-light-green{background-color:#e5efee;}
@@ -4060,7 +4060,7 @@ aside .latest-post li figure {width: 75px;}
     width: 50px;
 }
 .grey-bt-border{
-    border-bottom: 4px solid #f7f7f7!important;
+    border-bottom: 4px solid #e7e7e7!important;
 }
 .fund-range-graph img:hover{transform: scale(1.1)}
 
@@ -4146,19 +4146,19 @@ a.btn-news-literature:hover{
     background-size: contain;
 }
 .content-box:hover .btn-unpri{
-    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/UNPRI-over.jpg) no-repeat center;
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/UNPRI-over.jpg) no-repeat center #9dc3d8;
     background-size: contain;
 }
 .content-box:hover .btn-carbon{
-    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/carbon-over.jpg) no-repeat center;
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/carbon-over.jpg) no-repeat center #9dc3d8;
     background-size: contain;
 }
 .content-box:hover .btn-proxy-voting{
-    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/proxy-voting-over.jpg) no-repeat center;
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/proxy-voting-over.jpg) no-repeat center #9dc3d8;
     background-size: contain;
 }
 .content-box:hover .btn-conflict{
-    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/conflict-over.jpg) no-repeat center;
+    background: url(http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/conflict-over.jpg) no-repeat center #9dc3d8;
     background-size: contain;
 }
 .invest-list-img .content-box:hover .title{
@@ -4183,7 +4183,7 @@ a.btn-news-literature:hover{
 
 
 /* ============== Font Responsive Css === */
-@media only screen and (min-width: 1088px) and (max-width: 1130px) {
+@media only screen and (min-width: 992px) and (max-width: 1130px) {
     h2{
         font-size: 30px!important;
     }
@@ -4225,13 +4225,13 @@ a.btn-news-literature:hover{
 @media only screen and (min-width: 992px) and (max-width: 1088px) {
     header nav .navbar-nav.text-normal > li > a {
         font-size: 16px;
-        margin: 0px 8px!important;
+        margin: 0px 7.7px!important;
     }
     header nav .navbar-nav > li > a {
         margin: 0px 5px!important;
     }
     .invester-login-btn{
-        padding: 0px 36px 0px 0px!important;
+        padding: 0px 32px 0px 0px!important;
     }
 }
 
