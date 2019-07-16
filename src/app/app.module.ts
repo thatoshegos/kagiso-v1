@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { MalihuScrollbarModule } from "ngx-malihu-scrollbar";
 import { Ng2CarouselamosModule } from "ng2-carouselamos";
+import { AmChartsModule } from "@amcharts/amcharts3-angular";
 
 import { ChartsModule } from "ng2-charts";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -103,7 +104,8 @@ import { CarousalComponent } from "./components/pages/carousal/carousal.componen
     ChartsModule,
     MalihuScrollbarModule.forRoot(),
     NgbModule.forRoot(),
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    AmChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
