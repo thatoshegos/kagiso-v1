@@ -41,20 +41,27 @@ export class GraphComponent implements OnInit, OnDestroy {
         value1: +this.dataSet.fundReturn[i]
       });
     }
+    return data;
     // console.log(this.data);
   }
   makeRandomDataProvider() {
     const dataProvider = [];
-
+    // for (var i = 0; i < this.dataSet.dates.length; i++) {
+    //   dataProvider.push({
+    //     month: this.dataSet.dates[i],
+    //     value: +this.dataSet.benchMark[i],
+    //     value1: +this.dataSet.fundReturn[i]
+    //   });
+    // }
     dataProvider.push(
       {
         month: "1986-02",
         value: 33,
-        value1: 50
+        value1: 50.4
       },
       {
         month: "1986-03",
-        value: 20,
+        value: 20.5,
         value1: 10
       },
       {
@@ -80,7 +87,7 @@ export class GraphComponent implements OnInit, OnDestroy {
       {
         month: "1986-08",
         value: 7,
-        value1: 50
+        value1: 50.5
       },
       {
         month: "1986-09",
@@ -421,15 +428,18 @@ export class GraphComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Create chartdiv1
 
-    //console.log(this.makeRandomDataProvider());
+    console.log(this.makeDataSet());
+    console.log(this.makeRandomDataProvider());
 
-    this.options = this.makeOptions(this.makeRandomDataProvider());
+    if (this.makeDataSet()) {
+      this.options = this.makeOptions(this.makeDataSet());
 
-    // Create chartdiv2
-    this.chart2 = this.AmCharts.makeChart(
-      "chartdiv2",
-      this.makeOptions(this.makeRandomDataProvider())
-    );
+      // Create chartdiv2
+      this.chart2 = this.AmCharts.makeChart(
+        "chartdiv2",
+        this.makeOptions(this.makeDataSet())
+      );
+    }
   }
   // ngAfterViewInit() {
   //   this.options = this.makeOptions(this.makeDataSet());
