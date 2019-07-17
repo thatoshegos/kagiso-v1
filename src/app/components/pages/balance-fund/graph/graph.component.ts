@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy, Input } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Input,
+  AfterViewInit
+} from "@angular/core";
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 // import { ChartDataSets, ChartOptions } from "chart.js";
 // import { Color, BaseChartDirective, Label } from "ng2-charts";
@@ -14,13 +20,29 @@ export class GraphComponent implements OnInit, OnDestroy {
   @Input() dataSet;
   graphData = [];
   innerdata = [];
+  // data = [];
+  dataObj = {
+    month: null as string,
+    value: null as number,
+    value1: null as number
+  };
 
   public options: any;
   private chart2: AmChart;
   private timer: any;
 
   constructor(private AmCharts: AmChartsService) {}
-
+  makeDataSet() {
+    const data = [];
+    for (var i = 0; i < this.dataSet.dates.length; i++) {
+      data.push({
+        month: this.dataSet.dates[i],
+        value: +this.dataSet.benchMark[i],
+        value1: +this.dataSet.fundReturn[i]
+      });
+    }
+    // console.log(this.data);
+  }
   makeRandomDataProvider() {
     const dataProvider = [];
 
@@ -327,6 +349,7 @@ export class GraphComponent implements OnInit, OnDestroy {
   }
 
   makeOptions(dataProvider) {
+    // console.log(this.makeDataSet());
     return {
       type: "serial",
       theme: "light",
@@ -397,6 +420,9 @@ export class GraphComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Create chartdiv1
+
+    //console.log(this.makeRandomDataProvider());
+
     this.options = this.makeOptions(this.makeRandomDataProvider());
 
     // Create chartdiv2
@@ -404,22 +430,16 @@ export class GraphComponent implements OnInit, OnDestroy {
       "chartdiv2",
       this.makeOptions(this.makeRandomDataProvider())
     );
-
-    // this.timer = setInterval(() => {
-    //   // Update chartdiv1
-    //   this.options = this.makeOptions(this.makeRandomDataProvider());
-
-    //   // Update chartdiv2
-    //   this.AmCharts.updateChart(this.chart2, () => {
-    //     this.chart2.dataProvider = this.makeRandomDataProvider();
-    //   });
-    // }, 3000);
-    setTimeout(() => {
-      // alert("fg");
-      var div = $("#chartdiv2").find("amcharts-chart-div");
-      console.log($(div).find("a"));
-    }, 5000);
   }
+  // ngAfterViewInit() {
+  //   this.options = this.makeOptions(this.makeDataSet());
+
+  //   // Create chartdiv2
+  //   this.chart2 = this.AmCharts.makeChart(
+  //     "chartdiv2",
+  //     this.makeOptions(this.makeDataSet())
+  //   );
+  // }
 
   ngOnDestroy() {
     //clearInterval(this.timer);
