@@ -339,10 +339,12 @@ a.btn-invest-now-green{
     }
     .blanced-fund-box .graph-box .select-fund span{
         border-right: 1px solid #a8c3be;
+        font-size: 16px;
     }
     .blanced-fund-box .graph-box .select-fund select{
         margin-left: -10px;
         margin-top: 20px;
+        font-size: 16px;
     }
     .fund-img-box ul li{
         float: none;
@@ -359,5 +361,8 @@ a.btn-invest-now-green{
     .blanced-fund-btn a{
         display: block;
         margin-bottom: 20px;
+    }
+    .btn-green-white span{
+        font-size: 16px;
     }
 }
