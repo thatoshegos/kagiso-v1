@@ -127,3 +127,24 @@ a.padding-10px-all.ul-tab.active {
     display: inline-block;
     line-height: 30px;
 }
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+    .up-image ul li{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .suscribe{
+        padding-bottom: 0px;
+    }
+    .suscribe a{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .up-image ul{
+        margin-bottom: 0px;
+    }
+    .insight-title{
+        margin-bottom: 20px;
+    }
+}

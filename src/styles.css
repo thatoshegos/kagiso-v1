@@ -2484,6 +2484,16 @@ input, select, textarea {
     .year-list ul{
         padding: 15px 0;
     }
+    .content-div p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+    .content-div {
+        padding: 30px;
+        margin: 4px 0px 0px 0px;
+    }
 }
 .video-hide{
     display: none;

@@ -334,7 +334,7 @@
 <!-- end annual Report -->
 
 <!---Quaterly Status-->
-<div class="container" *ngIf="page && page.quaterlyStatus">
+<div class="container xs-margin-50px-top" *ngIf="page && page.quaterlyStatus">
   <div
     class="row margin-twelve-top sm-margin-four-bottom xs-margin-15px-bottom wow fadeInUp padding-30px-top"
     data-wow-delay="0.6s"
@@ -346,7 +346,7 @@
   </div>
   <div class="clearfix"></div>
 
-  <div class="up-image margin-40px-top">
+  <div class="up-image margin-40px-top xs-no-margin-top">
     <ul>
       <li
         *ngFor="let quaterlyData of page.acf.up_quarterly; let i = index"
@@ -356,7 +356,7 @@
       </li>
     </ul>
   </div>
-  <div class="row margin-40px-top">
+  <div class="row margin-40px-top xs-no-margin-top">
     <div class="col-md-12 text-center">
       <div class="suscribe">
         <a href="#" class="btn-suscribe"><span>SUSCRIBE</span></a>
@@ -364,7 +364,7 @@
       </div>
     </div>
   </div>
-  <div class="row margin-40px-top quaterly-image-1 margin-40px-bottom">
+  <div class="row margin-40px-top quaterly-image-1 margin-40px-bottom xs-margin-20px-top xs-margin-20px-bottom">
     <div
       class="col-md-4"
       *ngFor="let quaterly of page.acf.up_quarterly_second_images"
@@ -386,7 +386,7 @@
 <!-- Start up Quaterly Library -->
 
 <div class="container" *ngIf="page && page.quaterlyLibraryStatus">
-  <div class="row margin-twelve-top">
+  <div class="row margin-twelve-top xs-margin-70px-top">
     <h2>{{ page.title.rendered }}</h2>
   </div>
   <div class="row margin-30px-bottom">
@@ -500,7 +500,7 @@
         >
           <div class="light-green-box">
             <img [src]="fadviserImage.image1.url" />
-            <a [routerLink]="">
+			<a [routerLink]="'/' + fadviserImage.image1_url">
               <div class="text-title">
                 {{ fadviserImage.title }}
               </div>
@@ -524,17 +524,17 @@
 
 <!--New to Investing -->
 <div class="container" *ngIf="page && page.newToInvestingStatus">
-  <div class="row margin-twelve-top 7">
+  <div class="row margin-twelve-top 7 xs-margin-70px-top">
     <h2>{{ page.title.rendered }}</h2>
   </div>
-  <div class="row margin-20px-bottom">
+  <div class="row margin-20px-bottom xs-margin-30px-bottom">
     <div class="bg-white">
       <div class="content-div" [innerHTML]="page.content.rendered"></div>
     </div>
   </div>
-  <div class="row">
+  <div class="row m-hide">
     <div
-      class=" bg-white padding-45px-all sm-padding-15px-all inner-match-height   xs-no-padding-lr"
+      class=" bg-white padding-45px-all sm-padding-15px-all inner-match-height xs-no-padding-lr"
     >
       <div class="text-center">
         <a
@@ -581,7 +581,7 @@
       </div>
     </div>
   </div>
-  <div class="row margin-30px-top margin-30px-bottom">
+  <div class="row margin-30px-top margin-30px-bottom m-hide">
     <app-faq
       [faqs]="page.acf['qa-ans']"
       [fromNewInvesting]="page.newToInvestingStatus"
