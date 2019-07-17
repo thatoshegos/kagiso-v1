@@ -24,7 +24,7 @@ export class BalanceFundComponent implements OnInit {
       .getCSVData("assets/images/balance_fund.csv")
       .subscribe(data => {
         this.getGraphData = this.makeDataSets(data);
-        // console.log(this.getGraphData);
+        console.log(this.getGraphData);
       });
     this.currentRoute = this.router.url.slice(1);
     this.selectedRoute = "";
