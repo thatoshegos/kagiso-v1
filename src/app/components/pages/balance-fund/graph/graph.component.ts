@@ -38,20 +38,58 @@ export class GraphComponent implements OnInit, OnDestroy {
         value1: +this.dataSet.fundReturn[i]
       });
     }
-    /*
-    console.log("data 1=======================", data);
     data.sort(function(_a, _b) {
       const a: any = _a.month;
       const b: any = _b.month;
-      console.log(`${b} - ${a}`, b - a);
       return b - a;
     });
-    console.log("data 2=======================", data);
-    */
     return data;
   }
 
   makeOptions(dataProvider) {
+	  function getMonthNameByNum(pNum) {
+		  switch(pNum) {
+			  case 0:
+				return 'Jan';
+			  break;
+			  case 1:
+				return 'Feb';
+			  break;
+			  case 2:
+				return 'Mar';
+			  break;
+			  case 3:
+				return 'Apr';
+			  break;
+			  case 4:
+				return 'May';
+			  break;
+			  case 5:
+				return 'Jun';
+			  break;
+			  case 6:
+				return 'Jul';
+			  break;
+			  case 7:
+				return 'Aug';
+			  break;
+			  case 8:
+				return 'Sep';
+			  break;
+			  case 9:
+				return 'Oct';
+			  break;
+			  case 10:
+				return 'Nov';
+			  break;
+			  case 11:
+				return 'Dec';
+			  break;
+			  default:
+				return '';
+			  break;
+		  }
+	  }
     return {
       type: "serial",
       theme: "light",
@@ -101,14 +139,32 @@ export class GraphComponent implements OnInit, OnDestroy {
       },
       categoryField: "month",
       categoryAxis: {
-        parseDates: true
+        parseDates: false,
+		categoryFunction: function(category, dataItem, categoryAxis){
+			const m = getMonthNameByNum(dataItem.month.getMonth());
+			return ''+m+' '+dataItem.month.getDate()+', '+dataItem.month.getFullYear();
+		},
+		labelFunction: function(valueText, serialDataItem, categoryAxis) {
+			return ''+parseInt(serialDataItem.dataContext.month.getFullYear(), 10);
+		},
+		showFirstLabel: false,
+		startOnAxis: false,
+		equalSpacing: true,
       },
+	  /*
+	  categoryAxesSettings: {
+		minPeriod: "yyyy",
+		autoGridCount: false,
+		equalSpacing: true,
+		gridCount: 1000,
+		labelRotation: 90, //recommended if you have a lot of labels
+		axisHeight: 50  //recommended to avoid overlap with the scrollbar
+	  },*/
       export: {
         enabled: true
       }
     };
   }
-
   ngOnInit() {
     // Create chartdiv1
 
