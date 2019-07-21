@@ -1,5 +1,7 @@
 <!-- start blanced fund -->
-<section class="wow fadeIn bg-gray-light margin-100px-top xs-margin-80px-top xs-margin-15px-lr">
+<section
+  class="wow fadeIn bg-gray-light margin-100px-top xs-margin-80px-top xs-margin-15px-lr"
+>
   <div class="container">
     <div class="row">
       <!-- start Unconventional thinking box item -->
@@ -37,17 +39,33 @@
               </div>
               <div class="col-md-7 graph-box padding-45px-all">
                 <ul class="year-list">
-                  <li class="current"><a href="#">5 Years</a></li>
-                  <li><a href="#">7 Years</a></li>
-                  <li><a href="#">10 Years</a></li>
-                  <li><a href="#">Since Inception</a></li>
+                  <li class="current">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(5)"
+                      >5 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(7)"
+                      >7 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(10)"
+                      >10 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV()"
+                      >Since Inception</a
+                    >
+                  </li>
                 </ul>
                 <div class="graph-content">
                   <app-graph
                     *ngIf="getGraphData"
                     [dataSet]="getGraphData"
                   ></app-graph>
-				  <!--<img src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
+                  <!--<img src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
                 </div>
                 <ul class="return-list">
                   <li>
@@ -74,10 +92,16 @@
                 <p>{{ getBalancedData.acf.notes }}</p>
                 <div class="select-fund">
                   <div class="row">
-                    <div class="col-xs-12 col-md-6 xs-padding-20px-right" style="padding-right:0">
+                    <div
+                      class="col-xs-12 col-md-6 xs-padding-20px-right"
+                      style="padding-right:0"
+                    >
                       <span>Select Another funds</span>
                     </div>
-                    <div class="col-xs-12 col-md-6 xs-padding-20px-left" style="padding-left:0">
+                    <div
+                      class="col-xs-12 col-md-6 xs-padding-20px-left"
+                      style="padding-left:0"
+                    >
                       <select (change)="getFundOnChange($event)">
                         <option value="">Please select Fund</option>
                         <option
@@ -102,47 +126,39 @@
             </div>
           </div>
           <div class="fund-img-box bg-white">
-		<!--  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/about-us" style="margin-right:10px;">TAX FREE</a>
+            <!--  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/about-us" style="margin-right:10px;">TAX FREE</a>
 		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/meet-the-fund-manager" style="margin-right:10px;">TOP 10 HOLDINGS</a>
 		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">FORMS</a>
 		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">PLATEFORMS</a> -->
-		  
-              <ul class="fund-subcatagory-box">
-                <li class="col-md-3">
-                    <a href="#" class="btn-tax-free">
-                        <div class="link-img-box">
-                            
-                        </div>
-                        <div class="title">TAX FREE</div>
-                    </a>
-                </li>
-                <li class="col-md-3">
-                    <a href="#" class="btn-top-10-holdings">
-                        <div class="link-img-box">
-                            
-                        </div>
-                        <div class="title">TOP 10 HOLDINGS</div>
-                    </a>
-                </li>
-                <li class="col-md-3">
-                    <a href="#" class="btn-form">
-                        <div class="link-img-box">
-                            
-                        </div>
-                        <div class="title">FORMS</div>
-                    </a>
-                </li>
-                <li class="col-md-3">
-                    <a href="#" class="btn-platforms">
-                        <div class="link-img-box">
-                            
-                        </div>
-                        <div class="title">PLATEFORMS</div>
-                    </a>
-                </li>
-                <div class="clearfix"></div>
-              </ul>
-          <!--  <ul>
+
+            <ul class="fund-subcatagory-box">
+              <li class="col-md-3">
+                <a href="#" class="btn-tax-free">
+                  <div class="link-img-box"></div>
+                  <div class="title">TAX FREE</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a href="#" class="btn-top-10-holdings">
+                  <div class="link-img-box"></div>
+                  <div class="title">TOP 10 HOLDINGS</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a href="#" class="btn-form">
+                  <div class="link-img-box"></div>
+                  <div class="title">FORMS</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a href="#" class="btn-platforms">
+                  <div class="link-img-box"></div>
+                  <div class="title">PLATEFORMS</div>
+                </a>
+              </li>
+              <div class="clearfix"></div>
+            </ul>
+            <!--  <ul>
               <li
                 class="col-md-3"
                 *ngFor="let image of getBalancedData.acf.image"
@@ -159,12 +175,12 @@
             </ul> -->
           </div>
         </div>
-<div
-      _ngcontent-c15=""
-      class="text-center margin-50px-top xs-margin-30px-top"
-    >
-      <div _ngcontent-c15="" class="blanced-fund-btn">
-       <!-- <a
+        <div
+          _ngcontent-c15=""
+          class="text-center margin-50px-top xs-margin-30px-top"
+        >
+          <div _ngcontent-c15="" class="blanced-fund-btn">
+            <!-- <a
           _ngcontent-c15=""
           class="btn-meet-leaders"
           href="#"
@@ -172,11 +188,26 @@
           *ngFor="let buttonLink of getBalancedData.acf.buttons"
           >{{ buttonLink.name }}</a
         >-->
-		<a _ngcontent-c15="" class="btn-green-white btn-investment-approch" routerLink="/about-us"><span>INVESTMENT APPROACH</span></a>
-		<a _ngcontent-c15="" class="btn-green-white btn-meet-fund-manager" routerLink="/meet-the-fund-manager"><span>MEET THE FUND MANAGER</span></a>
-		<a _ngcontent-c15="" class="btn-green-white btn-meet-faqs" routerLink="/faq"><span>FAQ’s</span></a>
-      </div>
-    </div>
+            <a
+              _ngcontent-c15=""
+              class="btn-green-white btn-investment-approch"
+              routerLink="/about-us"
+              ><span>INVESTMENT APPROACH</span></a
+            >
+            <a
+              _ngcontent-c15=""
+              class="btn-green-white btn-meet-fund-manager"
+              routerLink="/meet-the-fund-manager"
+              ><span>MEET THE FUND MANAGER</span></a
+            >
+            <a
+              _ngcontent-c15=""
+              class="btn-green-white btn-meet-faqs"
+              routerLink="/faq"
+              ><span>FAQ’s</span></a
+            >
+          </div>
+        </div>
         <!-- end Unconventional thinking box item -->
       </div>
     </div>

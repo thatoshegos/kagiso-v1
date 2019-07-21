@@ -24,12 +24,21 @@ export class BalanceFundComponent implements OnInit {
       .getCSVData("assets/images/balance_fund.csv")
       .subscribe(data => {
         this.getGraphData = this.makeDataSets(data);
-        console.log(this.getGraphData);
+        //console.log(this.getGraphData);
       });
     this.currentRoute = this.router.url.slice(1);
     this.selectedRoute = "";
   }
-  makeDataSets(data) {
+  getConditionalCSV(years = null) {
+    if (years != null) {
+      alert(years);
+      this.createDataConditionalDataset(years);
+    }
+  }
+  createDataConditionalDataset(length) {
+    console.log(this.getGraphData);
+  }
+  makeDataSets(data, cond = null) {
     var lines = data.split("\n");
     var result = [];
     var headers = lines[0].split(",");
