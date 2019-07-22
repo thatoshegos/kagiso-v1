@@ -47,6 +47,7 @@ export class GraphComponent implements OnInit, OnDestroy {
   }
 
   makeOptions(dataProvider) {
+<<<<<<< HEAD
     function getMonthNameByNum(pNum) {
       switch (pNum) {
         case 0:
@@ -90,6 +91,51 @@ export class GraphComponent implements OnInit, OnDestroy {
           break;
       }
     }
+=======
+	  function getMonthNameByNum(pNum) {
+		  switch(pNum) {
+			  case 0:
+				return 'Jan';
+			  break;
+			  case 1:
+				return 'Feb';
+			  break;
+			  case 2:
+				return 'Mar';
+			  break;
+			  case 3:
+				return 'Apr';
+			  break;
+			  case 4:
+				return 'May';
+			  break;
+			  case 5:
+				return 'Jun';
+			  break;
+			  case 6:
+				return 'Jul';
+			  break;
+			  case 7:
+				return 'Aug';
+			  break;
+			  case 8:
+				return 'Sep';
+			  break;
+			  case 9:
+				return 'Oct';
+			  break;
+			  case 10:
+				return 'Nov';
+			  break;
+			  case 11:
+				return 'Dec';
+			  break;
+			  default:
+				return '';
+			  break;
+		  }
+	  }
+>>>>>>> 6ddf6647704a7dab89fc0ef8ed4f8d8f8a28d984
     return {
       type: "serial",
       theme: "light",
@@ -140,6 +186,7 @@ export class GraphComponent implements OnInit, OnDestroy {
       categoryField: "month",
       categoryAxis: {
         parseDates: false,
+<<<<<<< HEAD
         categoryFunction: function(category, dataItem, categoryAxis) {
           const m = getMonthNameByNum(dataItem.month.getMonth());
           return (
@@ -161,6 +208,20 @@ export class GraphComponent implements OnInit, OnDestroy {
         equalSpacing: true
       },
       /*
+=======
+		categoryFunction: function(category, dataItem, categoryAxis){
+			const m = getMonthNameByNum(dataItem.month.getMonth());
+			return ''+m+' '+dataItem.month.getDate()+', '+dataItem.month.getFullYear();
+		},
+		labelFunction: function(valueText, serialDataItem, categoryAxis) {
+			return ''+parseInt(serialDataItem.dataContext.month.getFullYear(), 10);
+		},
+		showFirstLabel: false,
+		startOnAxis: false,
+		equalSpacing: true,
+      },
+	  /*
+>>>>>>> 6ddf6647704a7dab89fc0ef8ed4f8d8f8a28d984
 	  categoryAxesSettings: {
 		minPeriod: "yyyy",
 		autoGridCount: false,
