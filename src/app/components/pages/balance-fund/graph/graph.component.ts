@@ -47,54 +47,54 @@ export class GraphComponent implements OnInit, OnDestroy {
   }
 
   makeOptions(dataProvider) {
-	  function getMonthNameByNum(pNum) {
-		  switch(pNum) {
-			  case 0:
-				return 'Jan';
-			  break;
-			  case 1:
-				return 'Feb';
-			  break;
-			  case 2:
-				return 'Mar';
-			  break;
-			  case 3:
-				return 'Apr';
-			  break;
-			  case 4:
-				return 'May';
-			  break;
-			  case 5:
-				return 'Jun';
-			  break;
-			  case 6:
-				return 'Jul';
-			  break;
-			  case 7:
-				return 'Aug';
-			  break;
-			  case 8:
-				return 'Sep';
-			  break;
-			  case 9:
-				return 'Oct';
-			  break;
-			  case 10:
-				return 'Nov';
-			  break;
-			  case 11:
-				return 'Dec';
-			  break;
-			  default:
-				return '';
-			  break;
-		  }
-	  }
+    function getMonthNameByNum(pNum) {
+      switch (pNum) {
+        case 0:
+          return "Jan";
+          break;
+        case 1:
+          return "Feb";
+          break;
+        case 2:
+          return "Mar";
+          break;
+        case 3:
+          return "Apr";
+          break;
+        case 4:
+          return "May";
+          break;
+        case 5:
+          return "Jun";
+          break;
+        case 6:
+          return "Jul";
+          break;
+        case 7:
+          return "Aug";
+          break;
+        case 8:
+          return "Sep";
+          break;
+        case 9:
+          return "Oct";
+          break;
+        case 10:
+          return "Nov";
+          break;
+        case 11:
+          return "Dec";
+          break;
+        default:
+          return "";
+          break;
+      }
+    }
     return {
       type: "serial",
       theme: "light",
       marginTop: 0,
-      marginRight: 80,
+      marginRight: 0,
       dataProvider: dataProvider,
       valueAxes: [
         {
@@ -140,18 +140,27 @@ export class GraphComponent implements OnInit, OnDestroy {
       categoryField: "month",
       categoryAxis: {
         parseDates: false,
-		categoryFunction: function(category, dataItem, categoryAxis){
-			const m = getMonthNameByNum(dataItem.month.getMonth());
-			return ''+m+' '+dataItem.month.getDate()+', '+dataItem.month.getFullYear();
-		},
-		labelFunction: function(valueText, serialDataItem, categoryAxis) {
-			return ''+parseInt(serialDataItem.dataContext.month.getFullYear(), 10);
-		},
-		showFirstLabel: false,
-		startOnAxis: false,
-		equalSpacing: true,
+        categoryFunction: function(category, dataItem, categoryAxis) {
+          const m = getMonthNameByNum(dataItem.month.getMonth());
+          return (
+            "" +
+            m +
+            " " +
+            dataItem.month.getDate() +
+            ", " +
+            dataItem.month.getFullYear()
+          );
+        },
+        labelFunction: function(valueText, serialDataItem, categoryAxis) {
+          return (
+            "" + parseInt(serialDataItem.dataContext.month.getFullYear(), 10)
+          );
+        },
+        showFirstLabel: false,
+        startOnAxis: false,
+        equalSpacing: true
       },
-	  /*
+      /*
 	  categoryAxesSettings: {
 		minPeriod: "yyyy",
 		autoGridCount: false,
