@@ -3,7 +3,9 @@ import {
   OnInit,
   OnDestroy,
   Input,
-  AfterViewInit
+  OnChanges,
+  AfterViewInit,
+  SimpleChanges
 } from "@angular/core";
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 declare var $: JQueryStatic;
@@ -13,11 +15,12 @@ declare var $: JQueryStatic;
   templateUrl: "./graph.component.html",
   styleUrls: ["./graph.component.css"]
 })
-export class GraphComponent implements OnInit, OnDestroy {
+export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   @Input() dataSet;
   graphData = [];
   innerdata = [];
   // data = [];
+  newData;
   dataObj = {
     month: null as string,
     value: null as number,
@@ -47,7 +50,6 @@ export class GraphComponent implements OnInit, OnDestroy {
   }
 
   makeOptions(dataProvider) {
-<<<<<<< HEAD
     function getMonthNameByNum(pNum) {
       switch (pNum) {
         case 0:
@@ -91,51 +93,6 @@ export class GraphComponent implements OnInit, OnDestroy {
           break;
       }
     }
-=======
-	  function getMonthNameByNum(pNum) {
-		  switch(pNum) {
-			  case 0:
-				return 'Jan';
-			  break;
-			  case 1:
-				return 'Feb';
-			  break;
-			  case 2:
-				return 'Mar';
-			  break;
-			  case 3:
-				return 'Apr';
-			  break;
-			  case 4:
-				return 'May';
-			  break;
-			  case 5:
-				return 'Jun';
-			  break;
-			  case 6:
-				return 'Jul';
-			  break;
-			  case 7:
-				return 'Aug';
-			  break;
-			  case 8:
-				return 'Sep';
-			  break;
-			  case 9:
-				return 'Oct';
-			  break;
-			  case 10:
-				return 'Nov';
-			  break;
-			  case 11:
-				return 'Dec';
-			  break;
-			  default:
-				return '';
-			  break;
-		  }
-	  }
->>>>>>> 6ddf6647704a7dab89fc0ef8ed4f8d8f8a28d984
     return {
       type: "serial",
       theme: "light",
@@ -169,7 +126,7 @@ export class GraphComponent implements OnInit, OnDestroy {
             "<div style='font-size:14px; color:#333;'><strong><span style='color:#e2161a'>Bench Mark</span> [[value]]</strong></div>",
           bulletBorderAlpha: 1,
           bulletColor: "#a11c0d",
-          bulletSize: 5,
+          bulletSize: 4,
           lineColor: "#e84835",
           hideBulletsCount: 50,
           lineThickness: 2,
@@ -186,7 +143,6 @@ export class GraphComponent implements OnInit, OnDestroy {
       categoryField: "month",
       categoryAxis: {
         parseDates: false,
-<<<<<<< HEAD
         categoryFunction: function(category, dataItem, categoryAxis) {
           const m = getMonthNameByNum(dataItem.month.getMonth());
           return (
@@ -208,20 +164,6 @@ export class GraphComponent implements OnInit, OnDestroy {
         equalSpacing: true
       },
       /*
-=======
-		categoryFunction: function(category, dataItem, categoryAxis){
-			const m = getMonthNameByNum(dataItem.month.getMonth());
-			return ''+m+' '+dataItem.month.getDate()+', '+dataItem.month.getFullYear();
-		},
-		labelFunction: function(valueText, serialDataItem, categoryAxis) {
-			return ''+parseInt(serialDataItem.dataContext.month.getFullYear(), 10);
-		},
-		showFirstLabel: false,
-		startOnAxis: false,
-		equalSpacing: true,
-      },
-	  /*
->>>>>>> 6ddf6647704a7dab89fc0ef8ed4f8d8f8a28d984
 	  categoryAxesSettings: {
 		minPeriod: "yyyy",
 		autoGridCount: false,
@@ -248,7 +190,19 @@ export class GraphComponent implements OnInit, OnDestroy {
       );
     }
   }
+  ngOnChanges(changes: SimpleChanges) {
+    this.newData = this.makeDataSet();
+    console.log(this.newData);
+    if (this.newData) {
+      this.options = this.makeOptions(this.makeDataSet());
 
+      // Create chartdiv2
+      this.chart2 = this.AmCharts.makeChart(
+        "chartdiv2",
+        this.makeOptions(this.makeDataSet())
+      );
+    }
+  }
   ngOnDestroy() {
     if (this.chart2) {
       this.AmCharts.destroyChart(this.chart2);

@@ -14,6 +14,7 @@ export class BalanceFundComponent implements OnInit {
   getGraphData;
   currentRoute;
   selectedRoute;
+  csvData;
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
   ngOnInit() {
@@ -23,6 +24,7 @@ export class BalanceFundComponent implements OnInit {
     this.wpservice
       .getCSVData("assets/images/balance_fund.csv")
       .subscribe(data => {
+        this.csvData = data;
         this.getGraphData = this.makeDataSets(data);
         //console.log(this.getGraphData);
       });
@@ -31,15 +33,38 @@ export class BalanceFundComponent implements OnInit {
   }
   getConditionalCSV(years = null) {
     if (years != null) {
-      alert(years);
-      this.createDataConditionalDataset(years);
+      //this.createDataConditionalDataset(years);
+      this.getGraphData = this.makeDataSets(this.csvData, years);
     }
   }
   createDataConditionalDataset(length) {
-    console.log(this.getGraphData);
+    // console.log(this.getGraphData);
   }
   makeDataSets(data, cond = null) {
     var lines = data.split("\n");
+    var yearCond = cond * 12;
+    var showYear;
+    var startingPoint;
+    //console.log(lines);
+    if (cond) {
+      if (lines.length == yearCond) {
+        showYear = lines.length;
+      } else if (lines.length > yearCond) {
+        showYear = yearCond;
+        startingPoint = lines.length - yearCond;
+      } else {
+        showYear = lines.length;
+      }
+    } else {
+      showYear = lines.length;
+    }
+
+    if (startingPoint) {
+      startingPoint = startingPoint - 1;
+    } else {
+      startingPoint = 1;
+    }
+    console.log(startingPoint);
     var result = [];
     var headers = lines[0].split(",");
     var dates = [];
@@ -50,7 +75,7 @@ export class BalanceFundComponent implements OnInit {
       fundReturn: null,
       benchMark: null
     };
-    for (var i = 1; i < lines.length - 1; i++) {
+    for (var i = startingPoint; i < lines.length - 1; i++) {
       var currentline = lines[i].split(",");
       dates.push(currentline[0]);
       fundReturn.push(currentline[1]);
@@ -59,6 +84,7 @@ export class BalanceFundComponent implements OnInit {
     graphDataSet.dates = dates;
     graphDataSet.fundReturn = fundReturn;
     graphDataSet.benchMark = benchMark;
+
     return graphDataSet;
   }
   getFundOnChange(e) {
