@@ -6,13 +6,13 @@
   >
     Overview
   </li>
-  <li
+  <!--<li
     data-tab="details"
     (click)="getTabData('details', 'This is Detail')"
     [ngClass]="{ current: getSelected == 'details' }"
   >
     Details
-  </li>
+  </li>-->
   <li
     class=""
     [ngClass]="{ current: getSelected == 'prices' }"
@@ -40,14 +40,14 @@
 
 <div class="latest" *ngIf="getPriceData && getPriceData.isPrice">
   <ul>
-    <li style="margin-left:-70px;">
-      <div class="month-start">
+    <li style="margin-left:-28px;">
+      <div class="month-start" >
         Latest Price <span class="amt">892.90</span>
       </div>
     </li>
     <li class="right-li">
       <div class="month-latest-end1">
-        Monthend Price <span class="amt">892.90</span>
+        Month End Price <span class="amt">892.90</span>
       </div>
     </li>
   </ul>
