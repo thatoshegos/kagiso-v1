@@ -253,7 +253,7 @@ a.text-very-light-gray-hover:hover {color:#ededed !important;}
   line-height: 1.43;
   text-align: center;
   color: #b60c2f;
-border-bottom: dashed #b60c2f thin;
+/*border-bottom: dashed #b60c2f thin;*/
 }
 
 .link_off {
@@ -3889,7 +3889,7 @@ aside .latest-post li figure {width: 75px;}
 }
 .slider-typography h1 span {
     padding: 0px 20px;
-    background: #00000030;
+    background: #00000060;
     line-height: 65px;
     display: block;
     margin-bottom: 5px;
