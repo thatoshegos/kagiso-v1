@@ -10,7 +10,7 @@ export class SliderComponent implements OnInit {
   @Input() insight;
   constructor() {}
   config: SwiperOptions = {
-    autoplay: 3000,
+    autoplay: 7000,
     pagination: ".swiper-pagination",
     paginationClickable: true,
     nextButton: ".swiper-button-next",

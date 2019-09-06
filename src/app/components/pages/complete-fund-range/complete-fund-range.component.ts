@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CompleteFundRangeComponent implements OnInit {
   @Input() tableDate;
+  isHideConditionOn = false;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isHideConditionOn = this.tableDate.isInstitutionalCompleteFundRange;
+    console.log(this.tableDate);
+  }
 }

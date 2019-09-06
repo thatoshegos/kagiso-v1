@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
     primary: null,
     secondry: null
   };
+  spacialClass = "";
   secondMenus = null;
   activeStatus = false;
   parentMenu = [
@@ -29,10 +30,10 @@ export class HeaderComponent implements OnInit {
       activeClass: ""
     },
 
-    {
+      {
       name: "Institutional Investor",
       slug: "institutional-investor",
-      defulturl: "institutional-investor/our-funds",
+      defulturl: "institutional-investor/investment-approach",
       activeClass: ""
     }
     // {
@@ -153,9 +154,9 @@ export class HeaderComponent implements OnInit {
       name: "Institutional Investor",
       slug: "institutional-investor",
       childrens: [
-        {
-          name: "INVEST WITH US",
-          slug: "invest-with-us",
+ {
+          name: "INVESTMENT APPROACH",
+          slug: "investment-approach",
           parent: "individual-investor",
           id: 1,
           display: true
@@ -219,8 +220,14 @@ export class HeaderComponent implements OnInit {
       //console.log(this.route.url);
 
       if (this.route.url.includes("institutional-investor")) {
-        this.childrenMenu[0]["display"] = false;
+        this.childrenMenu[0]["name"] = "INVESTMENT APPROACH";
+        this.childrenMenu[0]["slug"] = "investment-approach";
+        this.childrenMenu[0]["display"] = true;
+        this.spacialClass = "is-institutional-menu";
       } else {
+        this.spacialClass = "";
+        this.childrenMenu[0]["name"] = "INVEST WITH US";
+        this.childrenMenu[0]["slug"] = "invest-with-us";
         this.childrenMenu[0]["display"] = true;
       }
       if (val instanceof RoutesRecognized) {

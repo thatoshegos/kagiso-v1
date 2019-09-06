@@ -15,6 +15,9 @@ const routes: Routes = [
     pathMatch: "full",
     component: ContactUsComponent
   },
+    {path:"glossary",
+    pathMatch:"full",
+    component:PagesComponent},
 
   {
     path: "individual-investor/invest-with-us",
@@ -39,6 +42,10 @@ const routes: Routes = [
   {
     path: "sharia-investor/podcast-archive",
     pathMatch: "full",
+    component: PagesComponent
+  },
+    {
+        path: "institutional-investor/investment-approach",
     component: PagesComponent
   },
   {
@@ -88,6 +95,10 @@ const routes: Routes = [
     path: "sharia-investor/our-funds/islamic-global-equity-feeder-fund",
     component: PagesComponent
   },
+    {
+    path: "individual-investor/our-funds/global-equity-feeder-fund",
+    component: PagesComponent
+  },
   {
     path: "sharia-investor/our-funds/islamic-high-yield-fund",
     component: PagesComponent
@@ -99,6 +110,22 @@ const routes: Routes = [
   },
   {
     path: "institutional-investor/our-funds/stable-fund",
+    component: PagesComponent
+  },
+    {
+    path: "institutional-investor/our-funds/managed-equity-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/core-equity-fund",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/managed-equity-fund-capped-swix",
+    component: PagesComponent
+  },
+  {
+    path: "institutional-investor/our-funds/managed-equity-fund-swix-index",
     component: PagesComponent
   },
   {
@@ -121,9 +148,55 @@ const routes: Routes = [
     path: "institutional-investor/our-funds/domestic-balanced-fund",
     component: PagesComponent
   },
+    {
+    path: "institutional-investor/our-funds/complete-fund-range",
+    component: PagesComponent
+  },
+
 
   {
     path: "institutional-investor/our-funds/global-balanced-fund",
+    component: PagesComponent
+  },
+    
+    {
+    path: "about-us/our-history",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/responsible-investing",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/our-culture",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/ownership-structure",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/corporate-social-investment",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/committed-to-transformation",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/investment-approach",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
+    path: "about-us/meet-our-leaders",
+    pathMatch: "full",
     component: PagesComponent
   },
   {
