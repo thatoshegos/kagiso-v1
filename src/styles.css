@@ -381,7 +381,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     font-weight: 400;
     width: 175px;
 }
-.more-btn span{background-color: #c8dcda;padding: 11px 50px 11px 45px}
+.more-btn span{background-color: #c8dcda;padding: 11px 52px 11px 45px}
 .more-btn span:hover{background-color: #c8dbe5}
 .more-btn:hover{background:  #9ec5d9 url('./assets/images/buttons-new/buttons_more.png') no-repeat right;}
 
